@@ -1,5 +1,6 @@
 ADT
 alevin
+ALSF
 AnnData
 barcoding
 dataset
@@ -11,10 +12,14 @@ HTAN
 janeroe
 johndoe
 microenvironment
+mortem
 Nextflow
 ScPCA
 SingleCellExperiment
+SRA
+subdiagnosis
 transcriptionally
 transcriptomics
+xenografts
 XXXX
 XXXXXXXX
