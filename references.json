@@ -1,1 +1,2257 @@
-[]
+[
+  {
+    "publisher": "Elsevier BV",
+    "issue": "2",
+    "DOI": "10.1016/j.cell.2020.03.053",
+    "type": "article-journal",
+    "page": "236-249",
+    "source": "Crossref",
+    "title": "The Human Tumor Atlas Network: Charting Tumor Transitions across Space and Time at Single-Cell Resolution",
+    "volume": "181",
+    "author": [
+      {
+        "given": "Orit",
+        "family": "Rozenblatt-Rosen"
+      },
+      {
+        "given": "Aviv",
+        "family": "Regev"
+      },
+      {
+        "given": "Philipp",
+        "family": "Oberdoerffer"
+      },
+      {
+        "given": "Tal",
+        "family": "Nawy"
+      },
+      {
+        "given": "Anna",
+        "family": "Hupalowska"
+      },
+      {
+        "given": "Jennifer E.",
+        "family": "Rood"
+      },
+      {
+        "given": "Orr",
+        "family": "Ashenberg"
+      },
+      {
+        "given": "Ethan",
+        "family": "Cerami"
+      },
+      {
+        "given": "Robert J.",
+        "family": "Coffey"
+      },
+      {
+        "given": "Emek",
+        "family": "Demir"
+      },
+      {
+        "given": "Li",
+        "family": "Ding"
+      },
+      {
+        "given": "Edward D.",
+        "family": "Esplin"
+      },
+      {
+        "given": "James M.",
+        "family": "Ford"
+      },
+      {
+        "given": "Jeremy",
+        "family": "Goecks"
+      },
+      {
+        "given": "Sharmistha",
+        "family": "Ghosh"
+      },
+      {
+        "given": "Joe W.",
+        "family": "Gray"
+      },
+      {
+        "given": "Justin",
+        "family": "Guinney"
+      },
+      {
+        "given": "Sean E.",
+        "family": "Hanlon"
+      },
+      {
+        "given": "Shannon K.",
+        "family": "Hughes"
+      },
+      {
+        "given": "E. Shelley",
+        "family": "Hwang"
+      },
+      {
+        "given": "Christine A.",
+        "family": "Iacobuzio-Donahue"
+      },
+      {
+        "given": "Judit",
+        "family": "Jané-Valbuena"
+      },
+      {
+        "given": "Bruce E.",
+        "family": "Johnson"
+      },
+      {
+        "given": "Ken S.",
+        "family": "Lau"
+      },
+      {
+        "given": "Tracy",
+        "family": "Lively"
+      },
+      {
+        "given": "Sarah A.",
+        "family": "Mazzilli"
+      },
+      {
+        "given": "Dana",
+        "family": "Pe’er"
+      },
+      {
+        "given": "Sandro",
+        "family": "Santagata"
+      },
+      {
+        "given": "Alex K.",
+        "family": "Shalek"
+      },
+      {
+        "given": "Denis",
+        "family": "Schapiro"
+      },
+      {
+        "given": "Michael P.",
+        "family": "Snyder"
+      },
+      {
+        "given": "Peter K.",
+        "family": "Sorger"
+      },
+      {
+        "given": "Avrum E.",
+        "family": "Spira"
+      },
+      {
+        "given": "Sudhir",
+        "family": "Srivastava"
+      },
+      {
+        "given": "Kai",
+        "family": "Tan"
+      },
+      {
+        "given": "Robert B.",
+        "family": "West"
+      },
+      {
+        "given": "Elizabeth H.",
+        "family": "Williams"
+      },
+      {
+        "given": "Denise",
+        "family": "Aberle"
+      },
+      {
+        "given": "Samuel I.",
+        "family": "Achilefu"
+      },
+      {
+        "given": "Foluso O.",
+        "family": "Ademuyiwa"
+      },
+      {
+        "given": "Andrew C.",
+        "family": "Adey"
+      },
+      {
+        "given": "Rebecca L.",
+        "family": "Aft"
+      },
+      {
+        "given": "Rachana",
+        "family": "Agarwal"
+      },
+      {
+        "given": "Ruben A.",
+        "family": "Aguilar"
+      },
+      {
+        "given": "Fatemeh",
+        "family": "Alikarami"
+      },
+      {
+        "given": "Viola",
+        "family": "Allaj"
+      },
+      {
+        "given": "Christopher",
+        "family": "Amos"
+      },
+      {
+        "given": "Robert A.",
+        "family": "Anders"
+      },
+      {
+        "given": "Michael R.",
+        "family": "Angelo"
+      },
+      {
+        "given": "Kristen",
+        "family": "Anton"
+      },
+      {
+        "given": "Orr",
+        "family": "Ashenberg"
+      },
+      {
+        "given": "Jon C.",
+        "family": "Aster"
+      },
+      {
+        "given": "Ozgun",
+        "family": "Babur"
+      },
+      {
+        "given": "Amir",
+        "family": "Bahmani"
+      },
+      {
+        "given": "Akshay",
+        "family": "Balsubramani"
+      },
+      {
+        "given": "David",
+        "family": "Barrett"
+      },
+      {
+        "given": "Jennifer",
+        "family": "Beane"
+      },
+      {
+        "given": "Diane E.",
+        "family": "Bender"
+      },
+      {
+        "given": "Kathrin",
+        "family": "Bernt"
+      },
+      {
+        "given": "Lynne",
+        "family": "Berry"
+      },
+      {
+        "given": "Courtney B.",
+        "family": "Betts"
+      },
+      {
+        "given": "Julie",
+        "family": "Bletz"
+      },
+      {
+        "given": "Katie",
+        "family": "Blise"
+      },
+      {
+        "given": "Adrienne",
+        "family": "Boire"
+      },
+      {
+        "given": "Genevieve",
+        "family": "Boland"
+      },
+      {
+        "given": "Alexander",
+        "family": "Borowsky"
+      },
+      {
+        "given": "Kristopher",
+        "family": "Bosse"
+      },
+      {
+        "given": "Matthew",
+        "family": "Bott"
+      },
+      {
+        "given": "Ed",
+        "family": "Boyden"
+      },
+      {
+        "given": "James",
+        "family": "Brooks"
+      },
+      {
+        "given": "Raphael",
+        "family": "Bueno"
+      },
+      {
+        "given": "Erik A.",
+        "family": "Burlingame"
+      },
+      {
+        "given": "Qiuyin",
+        "family": "Cai"
+      },
+      {
+        "given": "Joshua",
+        "family": "Campbell"
+      },
+      {
+        "given": "Wagma",
+        "family": "Caravan"
+      },
+      {
+        "given": "Ethan",
+        "family": "Cerami"
+      },
+      {
+        "given": "Hassan",
+        "family": "Chaib"
+      },
+      {
+        "given": "Joseph M.",
+        "family": "Chan"
+      },
+      {
+        "given": "Young Hwan",
+        "family": "Chang"
+      },
+      {
+        "given": "Deyali",
+        "family": "Chatterjee"
+      },
+      {
+        "given": "Ojasvi",
+        "family": "Chaudhary"
+      },
+      {
+        "given": "Alyce A.",
+        "family": "Chen"
+      },
+      {
+        "given": "Bob",
+        "family": "Chen"
+      },
+      {
+        "given": "Changya",
+        "family": "Chen"
+      },
+      {
+        "given": "Chia-hui",
+        "family": "Chen"
+      },
+      {
+        "given": "Feng",
+        "family": "Chen"
+      },
+      {
+        "given": "Yu-An",
+        "family": "Chen"
+      },
+      {
+        "given": "Milan G.",
+        "family": "Chheda"
+      },
+      {
+        "given": "Koei",
+        "family": "Chin"
+      },
+      {
+        "given": "Roxanne",
+        "family": "Chiu"
+      },
+      {
+        "given": "Shih-Kai",
+        "family": "Chu"
+      },
+      {
+        "given": "Rodrigo",
+        "family": "Chuaqui"
+      },
+      {
+        "given": "Jaeyoung",
+        "family": "Chun"
+      },
+      {
+        "given": "Luis",
+        "family": "Cisneros"
+      },
+      {
+        "given": "Robert J.",
+        "family": "Coffey"
+      },
+      {
+        "given": "Graham A.",
+        "family": "Colditz"
+      },
+      {
+        "given": "Kristina",
+        "family": "Cole"
+      },
+      {
+        "given": "Natalie",
+        "family": "Collins"
+      },
+      {
+        "given": "Kevin",
+        "family": "Contrepois"
+      },
+      {
+        "given": "Lisa M.",
+        "family": "Coussens"
+      },
+      {
+        "given": "Allison L.",
+        "family": "Creason"
+      },
+      {
+        "given": "Daniel",
+        "family": "Crichton"
+      },
+      {
+        "given": "Christina",
+        "family": "Curtis"
+      },
+      {
+        "given": "Tanja",
+        "family": "Davidsen"
+      },
+      {
+        "given": "Sherri R.",
+        "family": "Davies"
+      },
+      {
+        "given": "Ino",
+        "family": "de Bruijn"
+      },
+      {
+        "given": "Laura",
+        "family": "Dellostritto"
+      },
+      {
+        "given": "Angelo",
+        "family": "De Marzo"
+      },
+      {
+        "given": "Emek",
+        "family": "Demir"
+      },
+      {
+        "given": "David G.",
+        "family": "DeNardo"
+      },
+      {
+        "given": "Dinh",
+        "family": "Diep"
+      },
+      {
+        "given": "Li",
+        "family": "Ding"
+      },
+      {
+        "given": "Sharon",
+        "family": "Diskin"
+      },
+      {
+        "given": "Xengie",
+        "family": "Doan"
+      },
+      {
+        "given": "Julia",
+        "family": "Drewes"
+      },
+      {
+        "given": "Stephen",
+        "family": "Dubinett"
+      },
+      {
+        "given": "Michael",
+        "family": "Dyer"
+      },
+      {
+        "given": "Jacklynn",
+        "family": "Egger"
+      },
+      {
+        "given": "Jennifer",
+        "family": "Eng"
+      },
+      {
+        "given": "Barbara",
+        "family": "Engelhardt"
+      },
+      {
+        "given": "Graham",
+        "family": "Erwin"
+      },
+      {
+        "given": "Edward D.",
+        "family": "Esplin"
+      },
+      {
+        "given": "Laura",
+        "family": "Esserman"
+      },
+      {
+        "given": "Alex",
+        "family": "Felmeister"
+      },
+      {
+        "given": "Heidi S.",
+        "family": "Feiler"
+      },
+      {
+        "given": "Ryan C.",
+        "family": "Fields"
+      },
+      {
+        "given": "Stephen",
+        "family": "Fisher"
+      },
+      {
+        "given": "Keith",
+        "family": "Flaherty"
+      },
+      {
+        "given": "Jennifer",
+        "family": "Flournoy"
+      },
+      {
+        "given": "James M.",
+        "family": "Ford"
+      },
+      {
+        "given": "Angelo",
+        "family": "Fortunato"
+      },
+      {
+        "given": "Allison",
+        "family": "Frangieh"
+      },
+      {
+        "given": "Jennifer L.",
+        "family": "Frye"
+      },
+      {
+        "given": "Robert S.",
+        "family": "Fulton"
+      },
+      {
+        "given": "Danielle",
+        "family": "Galipeau"
+      },
+      {
+        "given": "Siting",
+        "family": "Gan"
+      },
+      {
+        "given": "Jianjiong",
+        "family": "Gao"
+      },
+      {
+        "given": "Long",
+        "family": "Gao"
+      },
+      {
+        "given": "Peng",
+        "family": "Gao"
+      },
+      {
+        "given": "Vianne R.",
+        "family": "Gao"
+      },
+      {
+        "given": "Tim",
+        "family": "Geiger"
+      },
+      {
+        "given": "Ajit",
+        "family": "George"
+      },
+      {
+        "given": "Gad",
+        "family": "Getz"
+      },
+      {
+        "given": "Sharmistha",
+        "family": "Ghosh"
+      },
+      {
+        "given": "Marios",
+        "family": "Giannakis"
+      },
+      {
+        "given": "David L.",
+        "family": "Gibbs"
+      },
+      {
+        "given": "William E.",
+        "family": "Gillanders"
+      },
+      {
+        "given": "Jeremy",
+        "family": "Goecks"
+      },
+      {
+        "given": "Simon P.",
+        "family": "Goedegebuure"
+      },
+      {
+        "given": "Alanna",
+        "family": "Gould"
+      },
+      {
+        "given": "Kate",
+        "family": "Gowers"
+      },
+      {
+        "given": "Joe W.",
+        "family": "Gray"
+      },
+      {
+        "given": "William",
+        "family": "Greenleaf"
+      },
+      {
+        "given": "Jeremy",
+        "family": "Gresham"
+      },
+      {
+        "given": "Jennifer L.",
+        "family": "Guerriero"
+      },
+      {
+        "given": "Tuhin K.",
+        "family": "Guha"
+      },
+      {
+        "given": "Alexander R.",
+        "family": "Guimaraes"
+      },
+      {
+        "given": "Justin",
+        "family": "Guinney"
+      },
+      {
+        "given": "David",
+        "family": "Gutman"
+      },
+      {
+        "given": "Nir",
+        "family": "Hacohen"
+      },
+      {
+        "given": "Sean",
+        "family": "Hanlon"
+      },
+      {
+        "given": "Casey R.",
+        "family": "Hansen"
+      },
+      {
+        "given": "Olivier",
+        "family": "Harismendy"
+      },
+      {
+        "given": "Kathleen A.",
+        "family": "Harris"
+      },
+      {
+        "given": "Aaron",
+        "family": "Hata"
+      },
+      {
+        "given": "Akimasa",
+        "family": "Hayashi"
+      },
+      {
+        "given": "Cody",
+        "family": "Heiser"
+      },
+      {
+        "given": "Karla",
+        "family": "Helvie"
+      },
+      {
+        "given": "John M.",
+        "family": "Herndon"
+      },
+      {
+        "given": "Gilliam",
+        "family": "Hirst"
+      },
+      {
+        "given": "Frank",
+        "family": "Hodi"
+      },
+      {
+        "given": "Travis",
+        "family": "Hollmann"
+      },
+      {
+        "given": "Aaron",
+        "family": "Horning"
+      },
+      {
+        "given": "James J.",
+        "family": "Hsieh"
+      },
+      {
+        "given": "Shannon",
+        "family": "Hughes"
+      },
+      {
+        "given": "Won Jae",
+        "family": "Huh"
+      },
+      {
+        "given": "Stephen",
+        "family": "Hunger"
+      },
+      {
+        "given": "Shelley E.",
+        "family": "Hwang"
+      },
+      {
+        "given": "Christine A.",
+        "family": "Iacobuzio-Donahue"
+      },
+      {
+        "given": "Heba",
+        "family": "Ijaz"
+      },
+      {
+        "given": "Benjamin",
+        "family": "Izar"
+      },
+      {
+        "given": "Connor A.",
+        "family": "Jacobson"
+      },
+      {
+        "given": "Samuel",
+        "family": "Janes"
+      },
+      {
+        "given": "Judit",
+        "family": "Jané-Valbuena"
+      },
+      {
+        "given": "Reyka G.",
+        "family": "Jayasinghe"
+      },
+      {
+        "given": "Lihua",
+        "family": "Jiang"
+      },
+      {
+        "given": "Brett E.",
+        "family": "Johnson"
+      },
+      {
+        "given": "Bruce",
+        "family": "Johnson"
+      },
+      {
+        "given": "Tao",
+        "family": "Ju"
+      },
+      {
+        "given": "Humam",
+        "family": "Kadara"
+      },
+      {
+        "given": "Klaus",
+        "family": "Kaestner"
+      },
+      {
+        "given": "Jacob",
+        "family": "Kagan"
+      },
+      {
+        "given": "Lukas",
+        "family": "Kalinke"
+      },
+      {
+        "given": "Robert",
+        "family": "Keith"
+      },
+      {
+        "given": "Aziz",
+        "family": "Khan"
+      },
+      {
+        "given": "Warren",
+        "family": "Kibbe"
+      },
+      {
+        "given": "Albert H.",
+        "family": "Kim"
+      },
+      {
+        "given": "Erika",
+        "family": "Kim"
+      },
+      {
+        "given": "Junhyong",
+        "family": "Kim"
+      },
+      {
+        "given": "Annette",
+        "family": "Kolodzie"
+      },
+      {
+        "given": "Mateusz",
+        "family": "Kopytra"
+      },
+      {
+        "given": "Eran",
+        "family": "Kotler"
+      },
+      {
+        "given": "Robert",
+        "family": "Krueger"
+      },
+      {
+        "given": "Kostyantyn",
+        "family": "Krysan"
+      },
+      {
+        "given": "Anshul",
+        "family": "Kundaje"
+      },
+      {
+        "given": "Uri",
+        "family": "Ladabaum"
+      },
+      {
+        "given": "Blue B.",
+        "family": "Lake"
+      },
+      {
+        "given": "Huy",
+        "family": "Lam"
+      },
+      {
+        "given": "Rozelle",
+        "family": "Laquindanum"
+      },
+      {
+        "given": "Ken S.",
+        "family": "Lau"
+      },
+      {
+        "given": "Ashley M.",
+        "family": "Laughney"
+      },
+      {
+        "given": "Hayan",
+        "family": "Lee"
+      },
+      {
+        "given": "Marc",
+        "family": "Lenburg"
+      },
+      {
+        "given": "Carina",
+        "family": "Leonard"
+      },
+      {
+        "given": "Ignaty",
+        "family": "Leshchiner"
+      },
+      {
+        "given": "Rochelle",
+        "family": "Levy"
+      },
+      {
+        "given": "Jerry",
+        "family": "Li"
+      },
+      {
+        "given": "Christine G.",
+        "family": "Lian"
+      },
+      {
+        "given": "Kian-Huat",
+        "family": "Lim"
+      },
+      {
+        "given": "Jia-Ren",
+        "family": "Lin"
+      },
+      {
+        "given": "Yiyun",
+        "family": "Lin"
+      },
+      {
+        "given": "Qi",
+        "family": "Liu"
+      },
+      {
+        "given": "Ruiyang",
+        "family": "Liu"
+      },
+      {
+        "given": "Tracy",
+        "family": "Lively"
+      },
+      {
+        "given": "William J.R.",
+        "family": "Longabaugh"
+      },
+      {
+        "given": "Teri",
+        "family": "Longacre"
+      },
+      {
+        "given": "Cynthia X.",
+        "family": "Ma"
+      },
+      {
+        "given": "Mary Catherine",
+        "family": "Macedonia"
+      },
+      {
+        "given": "Tyler",
+        "family": "Madison"
+      },
+      {
+        "given": "Christopher A.",
+        "family": "Maher"
+      },
+      {
+        "given": "Anirban",
+        "family": "Maitra"
+      },
+      {
+        "given": "Netta",
+        "family": "Makinen"
+      },
+      {
+        "given": "Danika",
+        "family": "Makowski"
+      },
+      {
+        "given": "Carlo",
+        "family": "Maley"
+      },
+      {
+        "given": "Zoltan",
+        "family": "Maliga"
+      },
+      {
+        "given": "Diego",
+        "family": "Mallo"
+      },
+      {
+        "given": "John",
+        "family": "Maris"
+      },
+      {
+        "given": "Nick",
+        "family": "Markham"
+      },
+      {
+        "given": "Jeffrey",
+        "family": "Marks"
+      },
+      {
+        "given": "Daniel",
+        "family": "Martinez"
+      },
+      {
+        "given": "Robert J.",
+        "family": "Mashl"
+      },
+      {
+        "given": "Ignas",
+        "family": "Masilionais"
+      },
+      {
+        "given": "Jennifer",
+        "family": "Mason"
+      },
+      {
+        "given": "Joan",
+        "family": "Massagué"
+      },
+      {
+        "given": "Pierre",
+        "family": "Massion"
+      },
+      {
+        "given": "Marissa",
+        "family": "Mattar"
+      },
+      {
+        "given": "Richard",
+        "family": "Mazurchuk"
+      },
+      {
+        "given": "Linas",
+        "family": "Mazutis"
+      },
+      {
+        "given": "Sarah A.",
+        "family": "Mazzilli"
+      },
+      {
+        "given": "Eliot T.",
+        "family": "McKinley"
+      },
+      {
+        "given": "Joshua F.",
+        "family": "McMichael"
+      },
+      {
+        "given": "Daniel",
+        "family": "Merrick"
+      },
+      {
+        "given": "Matthew",
+        "family": "Meyerson"
+      },
+      {
+        "given": "Julia R.",
+        "family": "Miessner"
+      },
+      {
+        "given": "Gordon B.",
+        "family": "Mills"
+      },
+      {
+        "given": "Meredith",
+        "family": "Mills"
+      },
+      {
+        "given": "Suman B.",
+        "family": "Mondal"
+      },
+      {
+        "given": "Motomi",
+        "family": "Mori"
+      },
+      {
+        "given": "Yuriko",
+        "family": "Mori"
+      },
+      {
+        "given": "Elizabeth",
+        "family": "Moses"
+      },
+      {
+        "given": "Yael",
+        "family": "Mosse"
+      },
+      {
+        "given": "Jeremy L.",
+        "family": "Muhlich"
+      },
+      {
+        "given": "George F.",
+        "family": "Murphy"
+      },
+      {
+        "given": "Nicholas E.",
+        "family": "Navin"
+      },
+      {
+        "given": "Tal",
+        "family": "Nawy"
+      },
+      {
+        "given": "Michel",
+        "family": "Nederlof"
+      },
+      {
+        "given": "Reid",
+        "family": "Ness"
+      },
+      {
+        "given": "Stephanie",
+        "family": "Nevins"
+      },
+      {
+        "given": "Milen",
+        "family": "Nikolov"
+      },
+      {
+        "given": "Ajit Johnson",
+        "family": "Nirmal"
+      },
+      {
+        "given": "Garry",
+        "family": "Nolan"
+      },
+      {
+        "given": "Edward",
+        "family": "Novikov"
+      },
+      {
+        "given": "Philipp",
+        "family": "Oberdoerffer"
+      },
+      {
+        "given": "Brendan",
+        "family": "O’Connell"
+      },
+      {
+        "given": "Michael",
+        "family": "Offin"
+      },
+      {
+        "given": "Stephen T.",
+        "family": "Oh"
+      },
+      {
+        "given": "Anastasiya",
+        "family": "Olson"
+      },
+      {
+        "given": "Alex",
+        "family": "Ooms"
+      },
+      {
+        "given": "Miguel",
+        "family": "Ossandon"
+      },
+      {
+        "given": "Kouros",
+        "family": "Owzar"
+      },
+      {
+        "given": "Swapnil",
+        "family": "Parmar"
+      },
+      {
+        "given": "Tasleema",
+        "family": "Patel"
+      },
+      {
+        "given": "Gary J.",
+        "family": "Patti"
+      },
+      {
+        "given": "Dana",
+        "family": "Pe’er"
+      },
+      {
+        "given": "Itsik",
+        "family": "Pe'er"
+      },
+      {
+        "given": "Tao",
+        "family": "Peng"
+      },
+      {
+        "given": "Daniel",
+        "family": "Persson"
+      },
+      {
+        "given": "Marvin",
+        "family": "Petty"
+      },
+      {
+        "given": "Hanspeter",
+        "family": "Pfister"
+      },
+      {
+        "given": "Kornelia",
+        "family": "Polyak"
+      },
+      {
+        "given": "Kamyar",
+        "family": "Pourfarhangi"
+      },
+      {
+        "given": "Sidharth V.",
+        "family": "Puram"
+      },
+      {
+        "given": "Qi",
+        "family": "Qiu"
+      },
+      {
+        "given": "Álvaro",
+        "family": "Quintanal-Villalonga"
+      },
+      {
+        "given": "Arjun",
+        "family": "Raj"
+      },
+      {
+        "given": "Marisol",
+        "family": "Ramirez-Solano"
+      },
+      {
+        "given": "Rumana",
+        "family": "Rashid"
+      },
+      {
+        "given": "Ashley N.",
+        "family": "Reeb"
+      },
+      {
+        "given": "Aviv",
+        "family": "Regev"
+      },
+      {
+        "given": "Mary",
+        "family": "Reid"
+      },
+      {
+        "given": "Adam",
+        "family": "Resnick"
+      },
+      {
+        "given": "Sheila M.",
+        "family": "Reynolds"
+      },
+      {
+        "given": "Jessica L.",
+        "family": "Riesterer"
+      },
+      {
+        "given": "Scott",
+        "family": "Rodig"
+      },
+      {
+        "given": "Joseph T.",
+        "family": "Roland"
+      },
+      {
+        "given": "Sonia",
+        "family": "Rosenfield"
+      },
+      {
+        "given": "Asaf",
+        "family": "Rotem"
+      },
+      {
+        "given": "Sudipta",
+        "family": "Roy"
+      },
+      {
+        "given": "Orit",
+        "family": "Rozenblatt-Rosen"
+      },
+      {
+        "given": "Charles M.",
+        "family": "Rudin"
+      },
+      {
+        "given": "Marc D.",
+        "family": "Ryser"
+      },
+      {
+        "given": "Sandro",
+        "family": "Santagata"
+      },
+      {
+        "given": "Maria",
+        "family": "Santi-Vicini"
+      },
+      {
+        "given": "Kazuhito",
+        "family": "Sato"
+      },
+      {
+        "given": "Denis",
+        "family": "Schapiro"
+      },
+      {
+        "given": "Deborah",
+        "family": "Schrag"
+      },
+      {
+        "given": "Nikolaus",
+        "family": "Schultz"
+      },
+      {
+        "given": "Cynthia L.",
+        "family": "Sears"
+      },
+      {
+        "given": "Rosalie C.",
+        "family": "Sears"
+      },
+      {
+        "given": "Subrata",
+        "family": "Sen"
+      },
+      {
+        "given": "Triparna",
+        "family": "Sen"
+      },
+      {
+        "given": "Alex",
+        "family": "Shalek"
+      },
+      {
+        "given": "Jeff",
+        "family": "Sheng"
+      },
+      {
+        "given": "Quanhu",
+        "family": "Sheng"
+      },
+      {
+        "given": "Kooresh I.",
+        "family": "Shoghi"
+      },
+      {
+        "given": "Martha J.",
+        "family": "Shrubsole"
+      },
+      {
+        "given": "Yu",
+        "family": "Shyr"
+      },
+      {
+        "given": "Alexander B.",
+        "family": "Sibley"
+      },
+      {
+        "given": "Kiara",
+        "family": "Siex"
+      },
+      {
+        "given": "Alan J.",
+        "family": "Simmons"
+      },
+      {
+        "given": "Dinah S.",
+        "family": "Singer"
+      },
+      {
+        "given": "Shamilene",
+        "family": "Sivagnanam"
+      },
+      {
+        "given": "Michal",
+        "family": "Slyper"
+      },
+      {
+        "given": "Michael P.",
+        "family": "Snyder"
+      },
+      {
+        "given": "Artem",
+        "family": "Sokolov"
+      },
+      {
+        "given": "Sheng-Kwei",
+        "family": "Song"
+      },
+      {
+        "given": "Peter K.",
+        "family": "Sorger"
+      },
+      {
+        "given": "Austin",
+        "family": "Southard-Smith"
+      },
+      {
+        "given": "Avrum",
+        "family": "Spira"
+      },
+      {
+        "given": "Sudhir",
+        "family": "Srivastava"
+      },
+      {
+        "given": "Janet",
+        "family": "Stein"
+      },
+      {
+        "given": "Phillip",
+        "family": "Storm"
+      },
+      {
+        "given": "Elizabeth",
+        "family": "Stover"
+      },
+      {
+        "given": "Siri H.",
+        "family": "Strand"
+      },
+      {
+        "given": "Timothy",
+        "family": "Su"
+      },
+      {
+        "given": "Damir",
+        "family": "Sudar"
+      },
+      {
+        "given": "Ryan",
+        "family": "Sullivan"
+      },
+      {
+        "given": "Lea",
+        "family": "Surrey"
+      },
+      {
+        "given": "Mario",
+        "family": "Suvà"
+      },
+      {
+        "given": "Kai",
+        "family": "Tan"
+      },
+      {
+        "given": "Nadezhda V.",
+        "family": "Terekhanova"
+      },
+      {
+        "given": "Luke",
+        "family": "Ternes"
+      },
+      {
+        "given": "Lisa",
+        "family": "Thammavong"
+      },
+      {
+        "given": "Guillaume",
+        "family": "Thibault"
+      },
+      {
+        "given": "George V.",
+        "family": "Thomas"
+      },
+      {
+        "given": "Vésteinn",
+        "family": "Thorsson"
+      },
+      {
+        "given": "Ellen",
+        "family": "Todres"
+      },
+      {
+        "given": "Linh",
+        "family": "Tran"
+      },
+      {
+        "given": "Madison",
+        "family": "Tyler"
+      },
+      {
+        "given": "Yasin",
+        "family": "Uzun"
+      },
+      {
+        "given": "Anil",
+        "family": "Vachani"
+      },
+      {
+        "given": "Eliezer",
+        "family": "Van Allen"
+      },
+      {
+        "given": "Simon",
+        "family": "Vandekar"
+      },
+      {
+        "given": "Deborah J.",
+        "family": "Veis"
+      },
+      {
+        "given": "Sébastien",
+        "family": "Vigneau"
+      },
+      {
+        "given": "Arastoo",
+        "family": "Vossough"
+      },
+      {
+        "given": "Angela",
+        "family": "Waanders"
+      },
+      {
+        "given": "Nikhil",
+        "family": "Wagle"
+      },
+      {
+        "given": "Liang-Bo",
+        "family": "Wang"
+      },
+      {
+        "given": "Michael C.",
+        "family": "Wendl"
+      },
+      {
+        "given": "Robert",
+        "family": "West"
+      },
+      {
+        "given": "Elizabeth H.",
+        "family": "Williams"
+      },
+      {
+        "given": "Chi-yun",
+        "family": "Wu"
+      },
+      {
+        "given": "Hao",
+        "family": "Wu"
+      },
+      {
+        "given": "Hung-Yi",
+        "family": "Wu"
+      },
+      {
+        "given": "Matthew A.",
+        "family": "Wyczalkowski"
+      },
+      {
+        "given": "Yubin",
+        "family": "Xie"
+      },
+      {
+        "given": "Xiaolu",
+        "family": "Yang"
+      },
+      {
+        "given": "Clarence",
+        "family": "Yapp"
+      },
+      {
+        "given": "Wenbao",
+        "family": "Yu"
+      },
+      {
+        "given": "Yinyin",
+        "family": "Yuan"
+      },
+      {
+        "given": "Dadong",
+        "family": "Zhang"
+      },
+      {
+        "given": "Kun",
+        "family": "Zhang"
+      },
+      {
+        "given": "Mianlei",
+        "family": "Zhang"
+      },
+      {
+        "given": "Nancy",
+        "family": "Zhang"
+      },
+      {
+        "given": "Yantian",
+        "family": "Zhang"
+      },
+      {
+        "given": "Yanyan",
+        "family": "Zhao"
+      },
+      {
+        "given": "Daniel Cui",
+        "family": "Zhou"
+      },
+      {
+        "given": "Zilu",
+        "family": "Zhou"
+      },
+      {
+        "given": "Houxiang",
+        "family": "Zhu"
+      },
+      {
+        "given": "Qin",
+        "family": "Zhu"
+      },
+      {
+        "given": "Xiangzhu",
+        "family": "Zhu"
+      },
+      {
+        "given": "Yuankun",
+        "family": "Zhu"
+      },
+      {
+        "given": "Xiaowei",
+        "family": "Zhuang"
+      }
+    ],
+    "container-title": "Cell",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          4
+        ]
+      ]
+    },
+    "URL": "https://doi.org/ggtkzd",
+    "container-title-short": "Cell",
+    "PMCID": "PMC7376497",
+    "PMID": "32302568",
+    "id": "udPM4KR1",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.1016/j.cell.2020.03.053"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "4",
+    "DOI": "10.1038/nprot.2017.149",
+    "type": "article-journal",
+    "page": "599-604",
+    "source": "Crossref",
+    "title": "Exponential scaling of single-cell RNA-seq in the past decade",
+    "volume": "13",
+    "author": [
+      {
+        "given": "Valentine",
+        "family": "Svensson"
+      },
+      {
+        "given": "Roser",
+        "family": "Vento-Tormo"
+      },
+      {
+        "given": "Sarah A",
+        "family": "Teichmann"
+      }
+    ],
+    "container-title": "Nature Protocols",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          3,
+          1
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gc5ndt",
+    "container-title-short": "Nat Protoc",
+    "PMID": "29494575",
+    "id": "ALU8zyix",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.1038/nprot.2017.149"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "8",
+    "DOI": "10.1038/s41588-022-01141-9",
+    "type": "article-journal",
+    "page": "1192-1201",
+    "source": "Crossref",
+    "title": "Cancer cell states recur across tumor types and form specific interactions with the tumor microenvironment",
+    "volume": "54",
+    "author": [
+      {
+        "given": "Dalia",
+        "family": "Barkley"
+      },
+      {
+        "given": "Reuben",
+        "family": "Moncada"
+      },
+      {
+        "given": "Maayan",
+        "family": "Pour"
+      },
+      {
+        "given": "Deborah A.",
+        "family": "Liberman"
+      },
+      {
+        "given": "Ian",
+        "family": "Dryg"
+      },
+      {
+        "given": "Gregor",
+        "family": "Werba"
+      },
+      {
+        "given": "Wei",
+        "family": "Wang"
+      },
+      {
+        "given": "Maayan",
+        "family": "Baron"
+      },
+      {
+        "given": "Anjali",
+        "family": "Rao"
+      },
+      {
+        "given": "Bo",
+        "family": "Xia"
+      },
+      {
+        "given": "Gustavo S.",
+        "family": "França"
+      },
+      {
+        "given": "Alejandro",
+        "family": "Weil"
+      },
+      {
+        "given": "Deborah F.",
+        "family": "Delair"
+      },
+      {
+        "given": "Cristina",
+        "family": "Hajdu"
+      },
+      {
+        "given": "Amanda W.",
+        "family": "Lund"
+      },
+      {
+        "given": "Iman",
+        "family": "Osman"
+      },
+      {
+        "given": "Itai",
+        "family": "Yanai"
+      }
+    ],
+    "container-title": "Nature Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          8
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gqtn64",
+    "container-title-short": "Nat Genet",
+    "PMCID": "PMC9886402",
+    "PMID": "35931863",
+    "id": "10Z0RGQgO",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.1038/s41588-022-01141-9"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "3",
+    "DOI": "10.1038/s41592-022-01408-3",
+    "type": "article-journal",
+    "page": "316-322",
+    "source": "Crossref",
+    "title": "Alevin-fry unlocks rapid, accurate and memory-frugal quantification of single-cell RNA-seq data",
+    "volume": "19",
+    "author": [
+      {
+        "given": "Dongze",
+        "family": "He"
+      },
+      {
+        "given": "Mohsen",
+        "family": "Zakeri"
+      },
+      {
+        "given": "Hirak",
+        "family": "Sarkar"
+      },
+      {
+        "given": "Charlotte",
+        "family": "Soneson"
+      },
+      {
+        "given": "Avi",
+        "family": "Srivastava"
+      },
+      {
+        "given": "Rob",
+        "family": "Patro"
+      }
+    ],
+    "container-title": "Nature Methods",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gptg86",
+    "container-title-short": "Nat Methods",
+    "PMCID": "PMC8933848",
+    "PMID": "35277707",
+    "id": "hYvj5GBC",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.1038/s41592-022-01408-3"
+  },
+  {
+    "publisher": "Cold Spring Harbor Laboratory",
+    "issue": "10",
+    "abstract": "<jats:p>A revolution in cellular measurement technology is under way: For the first time, we have the ability to monitor global gene regulation in thousands of individual cells in a single experiment. Such experiments will allow us to discover new cell types and states and trace their developmental origins. They overcome fundamental limitations inherent in measurements of bulk cell population that have frustrated efforts to resolve cellular states. Single-cell genomics and proteomics enable not only precise characterization of cell state, but also provide a stunningly high-resolution view of transitions between states. These measurements may finally make explicit the metaphor that C.H. Waddington posed nearly 60 years ago to explain cellular plasticity: Cells are residents of a vast “landscape” of possible states, over which they travel during development and in disease. Single-cell technology helps not only locate cells on this landscape, but illuminates the molecular mechanisms that shape the landscape itself. However, single-cell genomics is a field in its infancy, with many experimental and computational advances needed to fully realize its full potential.</jats:p>",
+    "DOI": "10.1101/gr.190595.115",
+    "type": "article-journal",
+    "page": "1491-1498",
+    "source": "Crossref",
+    "title": "Defining cell types and states with single-cell genomics",
+    "volume": "25",
+    "author": [
+      {
+        "given": "Cole",
+        "family": "Trapnell"
+      }
+    ],
+    "container-title": "Genome Research",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          10
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f7st9g",
+    "container-title-short": "Genome Res.",
+    "PMCID": "PMC4579334",
+    "PMID": "26430159",
+    "id": "e6vwOccq",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.1101/gr.190595.115"
+  },
+  {
+    "publisher": "American Association for the Advancement of Science (AAAS)",
+    "issue": "6190",
+    "abstract": "<jats:title>Cancer at single-cell resolution</jats:title>\n          <jats:p>\n            Single-cell sequencing can illuminate the genetic properties of brain cancers and reveal heterogeneity within a tumor. Patel\n            <jats:italic>et al.</jats:italic>\n            examined the genome sequence of single cells isolated from brain glioblastomas. The findings revealed shared chromosomal changes but also extensive transcription variation, including genes related to signaling, which represent potential therapeutic targets. The authors suggest that the variation in tumor cells reflects neural development and that such variation among cancer cells may prove to have clinical significance.\n          </jats:p>\n          <jats:p>\n            <jats:italic>Science</jats:italic>\n            , this issue p.\n            <jats:related-article xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"doi\" issue=\"6190\" page=\"1396\" related-article-type=\"in-this-issue\" vol=\"344\" xlink:href=\"10.1126/science.1254257\">1396</jats:related-article>\n          </jats:p>",
+    "DOI": "10.1126/science.1254257",
+    "type": "article-journal",
+    "page": "1396-1401",
+    "source": "Crossref",
+    "title": "Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma",
+    "volume": "344",
+    "author": [
+      {
+        "given": "Anoop P.",
+        "family": "Patel"
+      },
+      {
+        "given": "Itay",
+        "family": "Tirosh"
+      },
+      {
+        "given": "John J.",
+        "family": "Trombetta"
+      },
+      {
+        "given": "Alex K.",
+        "family": "Shalek"
+      },
+      {
+        "given": "Shawn M.",
+        "family": "Gillespie"
+      },
+      {
+        "given": "Hiroaki",
+        "family": "Wakimoto"
+      },
+      {
+        "given": "Daniel P.",
+        "family": "Cahill"
+      },
+      {
+        "given": "Brian V.",
+        "family": "Nahed"
+      },
+      {
+        "given": "William T.",
+        "family": "Curry"
+      },
+      {
+        "given": "Robert L.",
+        "family": "Martuza"
+      },
+      {
+        "given": "David N.",
+        "family": "Louis"
+      },
+      {
+        "given": "Orit",
+        "family": "Rozenblatt-Rosen"
+      },
+      {
+        "given": "Mario L.",
+        "family": "Suvà"
+      },
+      {
+        "given": "Aviv",
+        "family": "Regev"
+      },
+      {
+        "given": "Bradley E.",
+        "family": "Bernstein"
+      }
+    ],
+    "container-title": "Science",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          6,
+          20
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gdm4dv",
+    "container-title-short": "Science",
+    "PMCID": "PMC4123637",
+    "PMID": "24925914",
+    "id": "CK2iL88z",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.1126/science.1254257"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "DOI": "10.1186/s13040-018-0190-8",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Use case driven evaluation of open databases for pediatric cancer research",
+    "volume": "12",
+    "author": [
+      {
+        "given": "Fleur",
+        "family": "Jeanquartier"
+      },
+      {
+        "given": "Claire",
+        "family": "Jean-Quartier"
+      },
+      {
+        "given": "Andreas",
+        "family": "Holzinger"
+      }
+    ],
+    "container-title": "BioData Mining",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          15
+        ]
+      ]
+    },
+    "URL": "https://doi.org/ggjv7q",
+    "container-title-short": "BioData Mining",
+    "PMCID": "PMC6334395",
+    "PMID": "30675185",
+    "id": "yEQ2v42v",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.1186/s13040-018-0190-8"
+  },
+  {
+    "publisher": "eLife Sciences Publications, Ltd",
+    "abstract": "<jats:p>The recent advent of methods for high-throughput single-cell molecular profiling has catalyzed a growing sense in the scientific community that the time is ripe to complete the 150-year-old effort to identify all cell types in the human body. The Human Cell Atlas Project is an international collaborative effort that aims to define all human cell types in terms of distinctive molecular profiles (such as gene expression profiles) and to connect this information with classical cellular descriptions (such as location and morphology). An open comprehensive reference map of the molecular state of cells in healthy human tissues would propel the systematic study of physiological states, developmental trajectories, regulatory circuitry and interactions of cells, and also provide a framework for understanding cellular dysregulation in human disease. Here we describe the idea, its potential utility, early proofs-of-concept, and some design considerations for the Human Cell Atlas, including a commitment to open data, code, and community.</jats:p>",
+    "DOI": "10.7554/elife.27041",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "The Human Cell Atlas",
+    "volume": "6",
+    "author": [
+      {
+        "given": "Aviv",
+        "family": "Regev"
+      },
+      {
+        "given": "Sarah A",
+        "family": "Teichmann"
+      },
+      {
+        "given": "Eric S",
+        "family": "Lander"
+      },
+      {
+        "given": "Ido",
+        "family": "Amit"
+      },
+      {
+        "given": "Christophe",
+        "family": "Benoist"
+      },
+      {
+        "given": "Ewan",
+        "family": "Birney"
+      },
+      {
+        "given": "Bernd",
+        "family": "Bodenmiller"
+      },
+      {
+        "given": "Peter",
+        "family": "Campbell"
+      },
+      {
+        "given": "Piero",
+        "family": "Carninci"
+      },
+      {
+        "given": "Menna",
+        "family": "Clatworthy"
+      },
+      {
+        "given": "Hans",
+        "family": "Clevers"
+      },
+      {
+        "given": "Bart",
+        "family": "Deplancke"
+      },
+      {
+        "given": "Ian",
+        "family": "Dunham"
+      },
+      {
+        "given": "James",
+        "family": "Eberwine"
+      },
+      {
+        "given": "Roland",
+        "family": "Eils"
+      },
+      {
+        "given": "Wolfgang",
+        "family": "Enard"
+      },
+      {
+        "given": "Andrew",
+        "family": "Farmer"
+      },
+      {
+        "given": "Lars",
+        "family": "Fugger"
+      },
+      {
+        "given": "Berthold",
+        "family": "Göttgens"
+      },
+      {
+        "given": "Nir",
+        "family": "Hacohen"
+      },
+      {
+        "given": "Muzlifah",
+        "family": "Haniffa"
+      },
+      {
+        "given": "Martin",
+        "family": "Hemberg"
+      },
+      {
+        "given": "Seung",
+        "family": "Kim"
+      },
+      {
+        "given": "Paul",
+        "family": "Klenerman"
+      },
+      {
+        "given": "Arnold",
+        "family": "Kriegstein"
+      },
+      {
+        "given": "Ed",
+        "family": "Lein"
+      },
+      {
+        "given": "Sten",
+        "family": "Linnarsson"
+      },
+      {
+        "given": "Emma",
+        "family": "Lundberg"
+      },
+      {
+        "given": "Joakim",
+        "family": "Lundeberg"
+      },
+      {
+        "given": "Partha",
+        "family": "Majumder"
+      },
+      {
+        "given": "John C",
+        "family": "Marioni"
+      },
+      {
+        "given": "Miriam",
+        "family": "Merad"
+      },
+      {
+        "given": "Musa",
+        "family": "Mhlanga"
+      },
+      {
+        "given": "Martijn",
+        "family": "Nawijn"
+      },
+      {
+        "given": "Mihai",
+        "family": "Netea"
+      },
+      {
+        "given": "Garry",
+        "family": "Nolan"
+      },
+      {
+        "given": "Dana",
+        "family": "Pe'er"
+      },
+      {
+        "given": "Anthony",
+        "family": "Phillipakis"
+      },
+      {
+        "given": "Chris P",
+        "family": "Ponting"
+      },
+      {
+        "given": "Stephen",
+        "family": "Quake"
+      },
+      {
+        "given": "Wolf",
+        "family": "Reik"
+      },
+      {
+        "given": "Orit",
+        "family": "Rozenblatt-Rosen"
+      },
+      {
+        "given": "Joshua",
+        "family": "Sanes"
+      },
+      {
+        "given": "Rahul",
+        "family": "Satija"
+      },
+      {
+        "given": "Ton N",
+        "family": "Schumacher"
+      },
+      {
+        "given": "Alex",
+        "family": "Shalek"
+      },
+      {
+        "given": "Ehud",
+        "family": "Shapiro"
+      },
+      {
+        "given": "Padmanee",
+        "family": "Sharma"
+      },
+      {
+        "given": "Jay W",
+        "family": "Shin"
+      },
+      {
+        "given": "Oliver",
+        "family": "Stegle"
+      },
+      {
+        "given": "Michael",
+        "family": "Stratton"
+      },
+      {
+        "given": "Michael J T",
+        "family": "Stubbington"
+      },
+      {
+        "given": "Fabian J",
+        "family": "Theis"
+      },
+      {
+        "given": "Matthias",
+        "family": "Uhlen"
+      },
+      {
+        "given": "Alexander",
+        "family": "van Oudenaarden"
+      },
+      {
+        "given": "Allon",
+        "family": "Wagner"
+      },
+      {
+        "given": "Fiona",
+        "family": "Watt"
+      },
+      {
+        "given": "Jonathan",
+        "family": "Weissman"
+      },
+      {
+        "given": "Barbara",
+        "family": "Wold"
+      },
+      {
+        "given": "Ramnik",
+        "family": "Xavier"
+      },
+      {
+        "given": "Nir",
+        "family": "Yosef"
+      },
+      {}
+    ],
+    "container-title": "eLife",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          12,
+          5
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gcnzcv",
+    "PMCID": "PMC5762154",
+    "PMID": "29206104",
+    "id": "vk9ZInF3",
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: doi:10.7554/elife.27041"
+  },
+  {
+    "id": "Hqoq5ZTI",
+    "type": "webpage",
+    "abstract": "A fact sheet that provides statistics about childhood and adolescent cancers in the United States, and discusses the types, causes, and treatment of these cancers.",
+    "genre": "cgvArticle",
+    "language": "en",
+    "title": "Cancer in Children and Adolescents - NCI",
+    "URL": "https://www.cancer.gov/types/childhood-cancers/child-adolescent-cancers-fact-sheet",
+    "accessed": {
+      "date-parts": [
+        [
+          "2024",
+          2,
+          14
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          "2023",
+          9,
+          29
+        ]
+      ]
+    },
+    "note": "This CSL Item was generated by Manubot v0.5.6 from its persistent identifier (standard_id).\nstandard_id: url:https://www.cancer.gov/types/childhood-cancers/child-adolescent-cancers-fact-sheet#how-do-cancers-in-adolescents-and-young-adults-differ-from-those-in-younger-children"
+  }
+]

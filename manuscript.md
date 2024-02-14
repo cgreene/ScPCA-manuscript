@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-01-25'
+date-meta: '2024-02-14'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-01-25" />
-  <meta name="citation_publication_date" content="2024-01-25" />
-  <meta property="article:published_time" content="2024-01-25" />
-  <meta name="dc.modified" content="2024-01-25T19:57:24+00:00" />
-  <meta property="article:modified_time" content="2024-01-25T19:57:24+00:00" />
+  <meta name="dc.date" content="2024-02-14" />
+  <meta name="citation_publication_date" content="2024-02-14" />
+  <meta property="article:published_time" content="2024-02-14" />
+  <meta name="dc.modified" content="2024-02-14T21:33:22+00:00" />
+  <meta property="article:modified_time" content="2024-02-14T21:33:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fa36ed255b53d40e32346d7c8f782314c94e0383/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fa36ed255b53d40e32346d7c8f782314c94e0383/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fa36ed255b53d40e32346d7c8f782314c94e0383/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c24676a99a89baa591eff684b024e56b3ecd1a25/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c24676a99a89baa591eff684b024e56b3ecd1a25/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c24676a99a89baa591eff684b024e56b3ecd1a25/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/fa36ed255b53d40e32346d7c8f782314c94e0383/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/c24676a99a89baa591eff684b024e56b3ecd1a25/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@fa36ed2](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/fa36ed255b53d40e32346d7c8f782314c94e0383)
-on January 25, 2024.
+from [AlexsLemonade/ScPCA-manuscript@c24676a](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/c24676a99a89baa591eff684b024e56b3ecd1a25)
+on February 14, 2024.
 </em></small>
 
 
@@ -125,35 +125,38 @@ Jane Roe \<jane.roe@whatever.edu\>.
 
 ## Introduction
 
-- Intro to single-cell analysis and the need for a central repository with harmonized data
-  - The amount of single-cell RNA-seq data has been rapidly growing
-  - Unlike bulk, which averages the profiles of all cells within a sample, Single-cell RNA-seq allows for analysis and identification of individual cell populations that may play important roles in tumor growth, resistence, and metastasis
-  - Single-cell RNA-seq of tumor samples also allows us to understand how tumor cells may interact with normal cells in the tumor microenvironment
-  - With the growing number of single-cell RNA-seq datasets, efforts have emerged to create central, harmonized sources for datasets such as the Human Cell Atlas, which mainly contains normal tissue with a smaller proportion of samples derived from diseased tissue
-  - Additionally, the Human Tumor Atlas Network hosts a collection of genomics data, including Single-cell RNA-seq, across multiple cancer types
-  - By harmonizing data across multiple studies and diseases, researchers can better perform joint analysis, taking advantage of more samples to complete their analysis and illuminate previously unknown similarities
+Since the introduction of single-cell RNA-seq technology, the number of studies that utilize single-cell RNA-seq has grown rapidly[@doi:10.1038/nprot.2017.149].
+Unlike its predecessor, bulk RNA-seq, which averages the profiles of all cells within a sample, single-cell technology quantifies gene expression in individual cells.
+Tumors are known to be transcriptionally heterogeneous, so many studies have highlighted the importance of using single-cell RNA-seq in studying tumor samples [@doi:10.1101/gr.190595.115].
+Researchers can use tumor single-cell RNA-seq to analyze and identify individual cell populations that may play important roles in tumor growth, resistance, and metastasis [@doi:10.1126/science.1254257].
+Additionally, single-cell RNA-seq data provides insight into how tumor cells may be interacting with normal cells in the tumor microenvironment[@10.1038/s41588-022-01141-9].
 
-- Intro to ScPCA portal and how it fills a gap in the field
-  - However, there previously was no collection of Single-cell RNA seq datasets specific to pediatric cancer
-  - A sentence about why do we care about pediatric. We should mention something about the number of samples available from pediatric tumors being low compared to adult tumors and limited by institution, so it's even more important to make data available to all researchers.
-  - To fill this unmet need, we developed and currently maintain the Single-cell Pediatric Cancer Atlas (ScPCA) Portal, an open-source data resource for single-cell and single-nuclei RNA sequencing data of pediatric tumors
+With the growing number of single-cell RNA-seq datasets, efforts have emerged to create central, harmonized sources for datasets.
+Harmonized data resources allow researchers to leverage more samples from various biological contexts to complete their analysis and elucidate previously unknown similarities across samples and disease types.
+The Human Cell Atlas (HCA) and Human Tumor Atlas Network (HTAN) are two of many such examples.
+The HCA, which aims to use single-cell genomics to provide a comprehensive map of all cell types in the human body [@doi:10.7554/eLife.27041], contains uniformly processed single-cell RNA-seq data obtained from normal tissue with few samples derived from diseased tissue.
+The HTAN also hosts a collection of genomic data collected from tumors across multiple cancer types, including single-cell RNA-seq [@doi:10.1016/j.cell.2020.03.053].
 
+Existing resources have focused on making large quantities of harmonized data from normal tissue or adult tumor samples publicly available, but there are considerably fewer efforts to harmonize and publicize data from pediatric tumors.
+Pediatric cancer is much less common than adult cancer, so the number of available samples from pediatric tumors is smaller compared to the number of adult tumors [@url:https://www.cancer.gov/types/childhood-cancers/child-adolescent-cancers-fact-sheet#how-do-cancers-in-adolescents-and-young-adults-differ-from-those-in-younger-children].
+Additionally, not every institution has access to data from pediatric tumors.
+Thus, it is imperative to provide harmonized data from pediatric tumors to all pediatric cancer researchers [@doi:10.1186/s13040-018-0190-8].
+To address this unmet need, Alex's Lemonade Stand Foundation and the Childhood Cancer Data Lab developed and maintain the Single-cell Pediatric Cancer Atlas (ScPCA) Portal (https://scpca.alexslemonade.org/), an open-source data resource for single-cell and single-nuclei RNA sequencing data of pediatric tumors.
 
-- What is the ScPCA portal
-  - The ScPCA Portal holds uniformly processed summarized gene expression for over 500 samples from a diverse set of over 50 types of cancers
-  - Data comes from 10 projects funded by ALSF and additional community contributed datasets
-  - In addition to gene expression data from single-cell and single-nuclei RNA sequencing, the Portal holds data obtained from bulk RNA sequencing, spatial transcriptomics, and feature barcoding methods, such as CITE-seq and cell hashing
-  - Data provided on the portal is available in formats ready for downstream analysis, such as SingleCellExperiment or AnnData objects.
-  - All samples contain normalized gene expression counts, dimensionality reduction results and cell type annotations (technically most will not all)
+The ScPCA Portal holds uniformly processed summarized gene expression from 10X Genomics' droplet-based single-cell and single-nuclei RNA-seq for over 500 samples from a diverse set of over 50 types of pediatric cancers.
+Originally comprising data from 10 projects funded by Alex's Lemonade Stand Foundation, the Portal has since expanded to include data contributed by pediatric cancer research community members.
+In addition to gene expression data from single-cell and single-nuclei RNA-seq, the Portal includes data obtained from bulk RNA-seq, spatial transcriptomics, and feature barcoding methods, such as ADT/CITE-seq and cell hashing.
+All data provided on the portal are available in formats ready for downstream analysis, such as SingleCellExperiment or AnnData, with objects containing normalized gene expression counts, dimensionality reduction results, and cell type annotations.
 
+To ensure that all current and future data on the Portal are uniformly processed, we created scpca-nf, a Nextflow-based open-source pipeline (https://github.com/AlexsLemonade/scpca-nf).
+Using a consistent pipeline for all data increases transparency and allows users to perform analysis across multiple samples and projects without having to do any re-processing.
+The scpca-nf workflow uses alevin-fry [@doi:10.1038/s41592-022-01408-3] for fast and efficient quantification of gene expression for all samples on the Portal, including single-cell RNA-seq data and any associated ADT/CITE-seq or cell hash data, spatial transcriptomics data, and bulk RNA-seq data.
+The scpca-nf pipeline also serves as a resource for the community, allowing others to process their own samples for comparison to samples available on the Portal and allowing us to accept uniformly processed community contributions.
 
-- Why is the ScPCA portal important
-  - Data on the portal has been uniformly processed using scpca-nf, a Nextflow-based open-source pipeline developed by the Childhood Cancer Data Lab.
-  - The scpca-nf workflow uses alevin-fry for fast and efficient processing of all data currently available on the portal, including single-cell RNA-seq data and any associated CITE-seq or cell hash data, spatial transcriptomics data, and bulk RNA sequencing.
-  - This makes it easy to perform analysis across multiple samples and projects without having to do any re-processing
-  - We also provide scpca-nf as a resource to the community to easily allow others to process their own samples for comparison to those on the Portal.
-  - In addition to uniformly processed data across multiple cancer types, we provide comprehensive documentation about data processing and the contents of files on the portal, including a guide to getting started working with an ScPCA dataset.
-  - The data included on the Portal will serve as a resource for all pediatric cancer researchers by providing uniformly processed data ready for immediate use to help researchers answer their important biological questions, without the need for time consuming data re-processing and data wrangling.
+Here, we present the Single-cell Pediatric Cancer Atlas as a resource for all pediatric cancer researchers.
+The ScPCA Portal provides downloads ready for immediate use, allowing researchers to skip time-consuming data re-processing and wrangling steps.
+We provide comprehensive documentation about data processing and the contents of files on the portal, including a guide to getting started working with an ScPCA dataset (https://scpca.readthedocs.io/).
+The ScPCA Portal helps advance pediatric cancer research by accelerating researchers' ability to answer important biological questions.
 
 
 ## References {.page_break_before}
