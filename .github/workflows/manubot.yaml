@@ -107,5 +107,7 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            **Click the link below to download the manuscript build as a ZIP file:**
+            **Click the link below to download the manuscript build as a ZIP file.**
+            This build is associated with commit ${{ env.TRIGGERING_SHA_7 }}.
+
             [Manuscript build](${{ steps.artifact-upload-step.outputs.artifact-url }})
