@@ -54,8 +54,8 @@
   <meta name="dc.date" content="2024-02-15" />
   <meta name="citation_publication_date" content="2024-02-15" />
   <meta property="article:published_time" content="2024-02-15" />
-  <meta name="dc.modified" content="2024-02-15T15:07:11+00:00" />
-  <meta property="article:modified_time" content="2024-02-15T15:07:11+00:00" />
+  <meta name="dc.modified" content="2024-02-15T22:03:18+00:00" />
+  <meta property="article:modified_time" content="2024-02-15T22:03:18+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,9 +95,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/8d4ed9132970b64411528f528e29ee2c82d75d12">AlexsLemonade/ScPCA-manuscript@8d4ed91</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/c8522f9afd7781576799eeb04d7892086e4b5921">AlexsLemonade/ScPCA-manuscript@c8522f9</a>
 on February 15, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -281,6 +281,69 @@ The ScPCA Portal helps advance pediatric cancer research by accelerating researc
 <li>Bulk RNA FASTQ are first trimmed using <code>fastp</code> and then aligned using <code>salmon</code>. The bulk output is a single tsv file with the sample by gene matrix for all samples in that project.</li>
 <li>For spatial transcriptomics, the spatial RNA FASTQ and slide image are input into <code>scpca-nf</code> and quantified using <code>spaceranger</code>. The output includes the spot by gene matrix along with a summary report, produced by <code>spaceranger</code>.</li>
 </ul>
+<h2 id="materials-and-methods">Materials and Methods</h2>
+<h3 id="data-generation">Data generation</h3>
+<ul>
+<li>how data was generated in different labs using 10X and then sent to the Data Lab</li>
+</ul>
+<h3 id="data-processing-do-we-need-this-section">Data processing (do we need this section?)</h3>
+<ul>
+<li>Mention that all data was processing using <code>scpca-nf</code> either by us or external submitters</li>
+</ul>
+<h3 id="processing-single-cell-and-single-nuclei-rna-seq-data-with-alevin-fry">Processing single-cell and single-nuclei RNA-seq data with alevin-fry</h3>
+<ul>
+<li>Use of salmon alevin and alevin-fry to process all raw FASTQ files</li>
+<li>Information on index used</li>
+<li>Parameter choices for alevin-fry</li>
+</ul>
+<h3 id="post-alevin-fry-processing-of-single-cell-and-single-nuclei-rna-seq-data">Post alevin-fry processing of single-cell and single-nuclei RNA-seq data</h3>
+<ul>
+<li>filtering of empty droplets</li>
+<li>removal of low quality cells</li>
+<li>normalization</li>
+<li>HVG selection</li>
+<li>PCA and UMAP calculation</li>
+</ul>
+<h3 id="quantifying-gene-expression-for-libraries-with-cite-seq-or-cell-hashing">Quantifying gene expression for libraries with CITE-seq or cell hashing</h3>
+<ul>
+<li>How we used alevin-fry to quantify ADT and HTO libraries</li>
+</ul>
+<h3 id="processing-cite-seq-expression-data">Processing CITE-seq expression data</h3>
+<ul>
+<li>Filtering low quality cells based on ADT data</li>
+<li>Normalization of ADT data</li>
+</ul>
+<h3 id="genetic-demultiplexing">Genetic demultiplexing</h3>
+<ul>
+<li>Use of vireo and matching bulk RNA-seq</li>
+</ul>
+<h3 id="hto-demultiplexing">HTO demultiplexing</h3>
+<ul>
+<li>Seurat</li>
+<li>DropletUtils</li>
+</ul>
+<h3 id="quantification-of-spatial-transcriptomics-data">Quantification of spatial transcriptomics data</h3>
+<ul>
+<li>Use of space ranger</li>
+</ul>
+<h3 id="quantification-of-bulk-rna-seq-data">Quantification of bulk RNA-seq data</h3>
+<ul>
+<li>Use of salmon</li>
+</ul>
+<h3 id="cell-type-annotation">Cell type annotation</h3>
+<ul>
+<li>Implementation of SingleR and CellAssign</li>
+<li>Description of metrics used (e.g., what is the delta median and where does the probability come from)</li>
+</ul>
+<h3 id="generating-merged-data">Generating merged data</h3>
+<ul>
+<li>combining counts data and metadata</li>
+</ul>
+<h3 id="converting-singlecellexperiment-objects-to-anndata-objects">Converting SingleCellExperiment objects to AnnData objects</h3>
+<ul>
+<li>use of zellkonverter</li>
+</ul>
+<h3 id="code-and-data-availability">Code and data availability</h3>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
