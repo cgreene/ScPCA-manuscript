@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-02-14'
+date-meta: '2024-02-15'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-02-14" />
-  <meta name="citation_publication_date" content="2024-02-14" />
-  <meta property="article:published_time" content="2024-02-14" />
-  <meta name="dc.modified" content="2024-02-14T22:47:58+00:00" />
-  <meta property="article:modified_time" content="2024-02-14T22:47:58+00:00" />
+  <meta name="dc.date" content="2024-02-15" />
+  <meta name="citation_publication_date" content="2024-02-15" />
+  <meta property="article:published_time" content="2024-02-15" />
+  <meta name="dc.modified" content="2024-02-15T15:07:11+00:00" />
+  <meta property="article:modified_time" content="2024-02-15T15:07:11+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/280cdf9d7ada9a3c7fd9d1ec50d99994e9ec919e/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/280cdf9d7ada9a3c7fd9d1ec50d99994e9ec919e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/280cdf9d7ada9a3c7fd9d1ec50d99994e9ec919e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/280cdf9d7ada9a3c7fd9d1ec50d99994e9ec919e/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@280cdf9](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/280cdf9d7ada9a3c7fd9d1ec50d99994e9ec919e)
-on February 14, 2024.
+from [AlexsLemonade/ScPCA-manuscript@8d4ed91](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/8d4ed9132970b64411528f528e29ee2c82d75d12)
+on February 15, 2024.
 </em></small>
 
 
@@ -218,6 +218,41 @@ The ScPCA Portal helps advance pediatric cancer research by accelerating researc
   - Nextflow handles all dependencies automatically and set up generally requires only organizing input files and configuring Nextflow to run in your environment.
   - Each process in the workflow is run in a docker container, so users only need to install Nextflow and docker to be able to use this workflow.
   - Nextflow also handles parallelizing processing based on your environment and will configure processing so that run time is minimal.
+
+## Making samples with additional modalities available on the Portal
+
+1. Processing samples with additional modalities
+  - In addition to samples that have single-cell and single-nuclei RNA-seq, we also received samples from submitters with additional sequencing modalities, including CITE-seq, cell hashing, spatial transcriptomics, and bulk RNA-seq.
+  - To make all the data that we received available, we included additional modules in `scpca-nf` that would accommodate these additional sequencing modalities.
+  - For a full summary of the libraries and samples available with additional modalities, see supplemental Table 1.
+  - `scpca-nf` is capable of processing samples that are from a mix of sample types. This means that libraries with and without ADT data or any of the modalities discussed here can be processed together in a single run. Nextflow will handle the parallel processing such that each sample type is run through the correct processes for that modality type.
+
+2. CITE-seq (Fig. S2A-B)
+  - For all libraries with associated ADT or CITE-seq data, we provide both the RNA and ADT gene expression data in the files available for download on the portal.
+  - Both FASTQ from single-cell/single-nuclei and from ADT were input into `scpca-nf` and quantified using `salmon alevin` and `alevin-fry`.
+  - We required a barcodes file from each submitter that contained the ADT labels and the associated barcode. This was used to build the index used for quantification of the ADT FASTQ and creation of the cell by ADT matrix.
+  - Unlike with RNA counts, we do not perform any filtering of cells due to low quality ADT expression. However, we do include the results from running `DropletUtils::cleanTagCounts()` in both the filtered and processed objects produced by `scpca-nf`.
+  - Similar to RNA counts, we do normalize ADT data and provide the normalized counts matrix in the processed SCE object, but we do not provide any dimensionality reduction of ADT data, only the RNA data is used for dimensionality reduction.
+  - ADT data can be found in the `altExp` slot of each `SingleCellExperiment` object or as a separate `_adt.hdf5` file for `AnnData` objects.
+  - This section includes a summary of statistics such as how many cells express each ADT.
+  - For libraries with ADT, we also include additional plots.
+  - As mentioned above, we include the results from `DropletUtils::cleanTagCounts()`, but do not filter any ADTs or cells from the object. Instead we include a column in the `colData` of the processed SCE object that indicates if it is recommended to remove ADTs or not. In the QC report, we summarize filtering taking into account removal of cells because of low quality RNA or ADT. The plot shown in the report highlights which cells would be removed if only filtering using RNA, only ADT, or both.
+  - Similar to the UMAPs for the RNA data from single-cell/single-nuclei that highlight the top variable genes, the report includes UMAPs highlighing the 4 most variable ADTs in the data. This is shown with UMAPs and ridge plots.
+
+3. Cell hashing (Fig. S2C)
+  - Similar to ADT data, if any libraries were multiplexed and have an associated cell hashing library, both the RNA and HTO FASTQ are provided as input to the workflow and quantified with `salmon alevin` and `alevin-fry`. We also include a library pools file which indicates which libraries contain which samples and the associated tags used to label each sample.
+  - Although we quantify the HTO data and include the cell by HTO counts matrix in all objects, we do not demultiplex the samples so that there is one sample per library. Instead, we apply multiple demultiplexing methods including genetic demultiplexing, demultiplexing with `DropletUtils::hashedDrops()`, and demultipilexing with `Seurat::HTODemux()`. The results from these three methods are included in the filtered and processed objects.
+  - Add some more details about how we do genetic demultiplexing, using vireo and bulk RNA-seq
+  - If a library has associated HTO data, an additional section is added to the QC report included on the portal and output by `scpca-nf`.
+  - This section includes a summary of statistics such as how many cells express each HTO.
+  - For HTO, we do not include any additional plots, but we do show a table summarizing how many cells belong to each sample included in the multiplexed library using each of the demultiplexing methods mentioned.
+
+4. Bulk and Spatial (Fig S3)
+  - Some samples underwent sequencing using both single-cell/single-nuclei and an additional method like bulk RNA-seq or spatial transcriptomics.
+  - `scpca-nf` is able to quantify both of these additional sequencing methods.
+  - Bulk RNA FASTQ are first trimmed using `fastp` and then aligned using `salmon`. The bulk output is a single tsv file with the sample by gene matrix for all samples in that project.
+  - For spatial transcriptomics, the spatial RNA FASTQ and slide image are input into `scpca-nf` and quantified using `spaceranger`. The output includes the spot by gene matrix along with a summary report, produced by `spaceranger`.
+  
 
 
 ## References {.page_break_before}
