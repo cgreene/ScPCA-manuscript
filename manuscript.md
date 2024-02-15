@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-02-15" />
   <meta name="citation_publication_date" content="2024-02-15" />
   <meta property="article:published_time" content="2024-02-15" />
-  <meta name="dc.modified" content="2024-02-15T15:07:11+00:00" />
-  <meta property="article:modified_time" content="2024-02-15T15:07:11+00:00" />
+  <meta name="dc.modified" content="2024-02-15T22:03:18+00:00" />
+  <meta property="article:modified_time" content="2024-02-15T22:03:18+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/8d4ed9132970b64411528f528e29ee2c82d75d12/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/c8522f9afd7781576799eeb04d7892086e4b5921/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@8d4ed91](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/8d4ed9132970b64411528f528e29ee2c82d75d12)
+from [AlexsLemonade/ScPCA-manuscript@c8522f9](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/c8522f9afd7781576799eeb04d7892086e4b5921)
 on February 15, 2024.
 </em></small>
 
@@ -253,6 +253,59 @@ The ScPCA Portal helps advance pediatric cancer research by accelerating researc
   - Bulk RNA FASTQ are first trimmed using `fastp` and then aligned using `salmon`. The bulk output is a single tsv file with the sample by gene matrix for all samples in that project.
   - For spatial transcriptomics, the spatial RNA FASTQ and slide image are input into `scpca-nf` and quantified using `spaceranger`. The output includes the spot by gene matrix along with a summary report, produced by `spaceranger`.
   
+
+
+## Materials and Methods
+
+### Data generation
+  - how data was generated in different labs using 10X and then sent to the Data Lab
+
+### Data processing (do we need this section?)
+  - Mention that all data was processing using `scpca-nf` either by us or external submitters
+
+### Processing single-cell and single-nuclei RNA-seq data with alevin-fry
+  - Use of salmon alevin and alevin-fry to process all raw FASTQ files
+  - Information on index used
+  - Parameter choices for alevin-fry
+
+### Post alevin-fry processing of single-cell and single-nuclei RNA-seq data
+  - filtering of empty droplets
+  - removal of low quality cells
+  - normalization
+  - HVG selection
+  - PCA and UMAP calculation
+
+### Quantifying gene expression for libraries with CITE-seq or cell hashing
+  - How we used alevin-fry to quantify ADT and HTO libraries
+
+### Processing CITE-seq expression data
+  - Filtering low quality cells based on ADT data
+  - Normalization of ADT data
+
+### Genetic demultiplexing
+  - Use of vireo and matching bulk RNA-seq
+
+### HTO demultiplexing
+  - Seurat
+  - DropletUtils
+
+### Quantification of spatial transcriptomics data
+  - Use of space ranger
+
+### Quantification of bulk RNA-seq data
+  - Use of salmon
+
+### Cell type annotation
+  - Implementation of SingleR and CellAssign
+  - Description of metrics used (e.g., what is the delta median and where does the probability come from)
+
+### Generating merged data
+  - combining counts data and metadata
+
+### Converting SingleCellExperiment objects to AnnData objects
+  - use of zellkonverter
+
+### Code and data availability
 
 
 ## References {.page_break_before}
