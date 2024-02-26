@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-02-26" />
   <meta name="citation_publication_date" content="2024-02-26" />
   <meta property="article:published_time" content="2024-02-26" />
-  <meta name="dc.modified" content="2024-02-26T18:14:27+00:00" />
-  <meta property="article:modified_time" content="2024-02-26T18:14:27+00:00" />
+  <meta name="dc.modified" content="2024-02-26T20:38:46+00:00" />
+  <meta property="article:modified_time" content="2024-02-26T20:38:46+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@e8ea210](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/e8ea21085edad82a2b3afd1f7c555d9fdc84f027)
+from [AlexsLemonade/ScPCA-manuscript@0528587](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/05285873677402a13d9b9e056efe307e3a9d2b16)
 on February 26, 2024.
 </em></small>
 
@@ -332,6 +332,22 @@ The ScPCA Portal helps advance pediatric cancer research by accelerating researc
   - use of zellkonverter
 
 ### Code and data availability
+
+
+## Figure Titles and Legends
+
+![**Figure 1. Overview of ScPCA Portal contents.**](https://github.com/AlexsLemonade/scpca-paper-figures/blob/main/figures/compiled_figures/pngs/figure_1.png){#fig:fig1 width="7in"}
+A. Barplots showing sample counts across four main cancer groupings in the ScPCA Portal, with each bar displaying the number of samples for each cancer type.
+Each bar is shaded based on the number of samples with each disease timing, and total sample counts for each cancer type are shown to the right of each bar.
+B. Barplot showing sample counts across types of modalities present in the ScPCA Portal.
+All samples in the portal are shown under the "All Samples" heading.
+Samples under the "Samples with additional modalities" heading represent a subset of the total samples with the given additional modality.
+Colors shown for each additional modality indicate the suspension type that the single-cell or single-nuclei sample is associated with.
+For example, 75 single-cell samples and 43 single-nuclei samples have accompanying Bulk RNA-seq data.
+C. Example of a project card as displayed on the "Browse" page of the ScPCA Portal.
+This project card is associated with project `SCPCP000009`.
+Project cards include information about the number of samples, technologies and modalities, additional sample metadata information, submitter-provided diagnoses, as well as submitter-provided abstract.
+Where available, submitter-provided citation information as well as other databases where this data has been deposited are also provided.
 
 
 ## References {.page_break_before}

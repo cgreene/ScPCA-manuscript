@@ -214,3 +214,10 @@ content/04.methods.md:42:SingleR
 content/04.methods.md:48:AnnData
 content/04.methods.md:48:SingleCellExperiment
 content/04.methods.md:49:zellkonverter
+content/100.figure-table-legends.md:3:scpca
+content/100.figure-table-legends.md:3:ScPCA
+content/100.figure-table-legends.md:4:Barplots
+content/100.figure-table-legends.md:4:ScPCA
+content/100.figure-table-legends.md:6:Barplot
+content/100.figure-table-legends.md:6:ScPCA
+content/100.figure-table-legends.md:11:ScPCA

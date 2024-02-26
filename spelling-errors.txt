@@ -6,6 +6,8 @@ AnnData
 barcode
 barcodes
 barcoding
+Barplot
+Barplots
 cDNA
 CellAssign
 dataset
@@ -36,7 +38,7 @@ PCA
 reproducibility
 SCE
 SCEs
-ScPCA
+scpca
 SingleCellExperiment
 SingleR
 slurm
