@@ -15,6 +15,7 @@ demultiplex
 demultiplexing
 dimensionality
 DropletUtils
+embeddings
 FASTQ
 genomic
 HCA
@@ -23,8 +24,10 @@ HTAN
 HTO
 HVG
 intronic
+invididual
 janeroe
 johndoe
+librares
 microenvironment
 mortem
 Nextflow
@@ -32,7 +35,8 @@ parallelizing
 PCA
 reproducibility
 SCE
-scpca
+SCEs
+ScPCA
 SingleCellExperiment
 SingleR
 slurm

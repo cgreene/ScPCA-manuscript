@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-02-15'
+date-meta: '2024-02-26'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-02-15" />
-  <meta name="citation_publication_date" content="2024-02-15" />
-  <meta property="article:published_time" content="2024-02-15" />
-  <meta name="dc.modified" content="2024-02-15T22:59:16+00:00" />
-  <meta property="article:modified_time" content="2024-02-15T22:59:16+00:00" />
+  <meta name="dc.date" content="2024-02-26" />
+  <meta name="citation_publication_date" content="2024-02-26" />
+  <meta property="article:published_time" content="2024-02-26" />
+  <meta name="dc.modified" content="2024-02-26T18:14:27+00:00" />
+  <meta property="article:modified_time" content="2024-02-26T18:14:27+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2957bde812460f5fb90d2239e099b14c62d0726e/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2957bde812460f5fb90d2239e099b14c62d0726e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2957bde812460f5fb90d2239e099b14c62d0726e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/2957bde812460f5fb90d2239e099b14c62d0726e/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/e8ea21085edad82a2b3afd1f7c555d9fdc84f027/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@2957bde](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/2957bde812460f5fb90d2239e099b14c62d0726e)
-on February 15, 2024.
+from [AlexsLemonade/ScPCA-manuscript@e8ea210](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/e8ea21085edad82a2b3afd1f7c555d9fdc84f027)
+on February 26, 2024.
 </em></small>
 
 
@@ -252,7 +252,33 @@ The ScPCA Portal helps advance pediatric cancer research by accelerating researc
   - `scpca-nf` is able to quantify both of these additional sequencing methods.
   - Bulk RNA FASTQ are first trimmed using `fastp` and then aligned using `salmon`. The bulk output is a single tsv file with the sample by gene matrix for all samples in that project.
   - For spatial transcriptomics, the spatial RNA FASTQ and slide image are input into `scpca-nf` and quantified using `spaceranger`. The output includes the spot by gene matrix along with a summary report, produced by `spaceranger`.
-  
+
+## Downloading projects from the ScPCA Portal
+
+1. Users can download all samples for a given project together
+  - The portal has two different options to allow users to download data for all samples in a given ScPCA Project, either as invididual files for each sample or as a single merged file.
+  - By default, when downloading a project, the download will include a folder for each sample that is included in the project.
+  - That folder will contain all individual `SingleCellExperiment` objects as `.rds` files or `AnnData` objects as `.hdf5` files, depending on the file format chosen by the user (Fig. 3A).
+  - Each of these objects contains the gene expression data and metadata for a single library.
+  - If a given project has associated bulk RNA-seq, then a sample by gene counts matrix, `bulk_quant.tsv`, including the quantified gene expression data for all samples in a project with associated bulk RNA-seq will be included.
+2. Merged objects
+  - Providing all data from all libraries withing a single file makes it easier for users to perform joint analysis on multiple samples at the same time. 
+  Specifically, these objects can be useful for comparing gene-level metrics across multiple samples, such as differential expression analysis and gene set enrichment analysis.
+  - Therefore, we make a single, merged `SingleCellExperiment` or `AnnData` object (Fig. 3B) available for each project (without batch-correction or integration).
+  - This file contains one object with all raw and normalized gene expression data and metadata for all single-cell and single-nuclei RNA-seq libraries within a given ScPCA project
+  - If downloading a project that contains at least one library with CITE-seq, the quantified CITE-seq expression data will also be merged. In SCEs this is provided as an `altExp` within the main object, but for `AnnData` objects, the quantified CITE-seq data is provided as a separate file.
+
+2. The merged object workflow (Fig. 3C and 3D)
+  - To create the merged objects, we created an additional stand-alone workflow for merging the output from `scpca-nf`, `merge.nf` (Fig. 3C).
+  - Following processing of each `SingleCellExperiment` object with `scpca-nf`, all processed objects from all libraries and samples within a project are input to the merge workflow, which combines all input data into a single merged object.
+  - The merged object contains raw and normalized gene expression counts for all cells in all libraries. The same index was used for processing all individual libraries, so the genes found will be the same as in an invididual object.
+  - After merging, the top 2000 high-variance genes are calculated by modeling variance within each library included in the merged object.
+  - These high-variance genes are used to calculate new PCA coordinates using `batchelor::multiBatchPCA()` and specifying librares as batches.
+  - The top 50 PCs were selected and used as input to calculate new UMAP embeddings on the merged object.
+  - Similar to `scpca-nf`, the merged `SingleCellExperiment` object is converted to a merged `AnnData` object and both formats are provided as download options on the Portal.
+  - Along with the merged objects, for each project, a merged summary report is created and output.
+  - This report includes a brief summary of the samples and libraries included in the merged object, including a summary of the type of libraries (e.g., single-cell, single-nuclei, with CITE-seq) and sample diagnoses included in the object.
+  - The report also contains a UMAP showing all cells from all libraries included in the merged object. For each library, a separate panel is shown, and cells from that library are colored while all other cells are gray (Fig. 3D).
 
 
 ## Materials and Methods
