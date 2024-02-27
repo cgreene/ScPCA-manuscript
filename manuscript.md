@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-02-26'
+date-meta: '2024-02-27'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-02-26" />
-  <meta name="citation_publication_date" content="2024-02-26" />
-  <meta property="article:published_time" content="2024-02-26" />
-  <meta name="dc.modified" content="2024-02-26T20:38:46+00:00" />
-  <meta property="article:modified_time" content="2024-02-26T20:38:46+00:00" />
+  <meta name="dc.date" content="2024-02-27" />
+  <meta name="citation_publication_date" content="2024-02-27" />
+  <meta property="article:published_time" content="2024-02-27" />
+  <meta name="dc.modified" content="2024-02-27T18:00:46+00:00" />
+  <meta property="article:modified_time" content="2024-02-27T18:00:46+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/f801104b02890ae6207eb308119c41f18da38506/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/f801104b02890ae6207eb308119c41f18da38506/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/f801104b02890ae6207eb308119c41f18da38506/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/05285873677402a13d9b9e056efe307e3a9d2b16/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/f801104b02890ae6207eb308119c41f18da38506/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@0528587](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/05285873677402a13d9b9e056efe307e3a9d2b16)
-on February 26, 2024.
+from [AlexsLemonade/ScPCA-manuscript@f801104](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/f801104b02890ae6207eb308119c41f18da38506)
+on February 27, 2024.
 </em></small>
 
 
@@ -336,7 +336,8 @@ The ScPCA Portal helps advance pediatric cancer research by accelerating researc
 
 ## Figure Titles and Legends
 
-![**Figure 1. Overview of ScPCA Portal contents.**](https://github.com/AlexsLemonade/scpca-paper-figures/blob/main/figures/compiled_figures/pngs/figure_1.png){#fig:fig1 width="7in"}
+![**Figure 1. Overview of ScPCA Portal contents.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_1.png?sanitize=true){#fig:fig1 width="7in"}
+
 A. Barplots showing sample counts across four main cancer groupings in the ScPCA Portal, with each bar displaying the number of samples for each cancer type.
 Each bar is shaded based on the number of samples with each disease timing, and total sample counts for each cancer type are shown to the right of each bar.
 B. Barplot showing sample counts across types of modalities present in the ScPCA Portal.
@@ -348,6 +349,30 @@ C. Example of a project card as displayed on the "Browse" page of the ScPCA Port
 This project card is associated with project `SCPCP000009`.
 Project cards include information about the number of samples, technologies and modalities, additional sample metadata information, submitter-provided diagnoses, as well as submitter-provided abstract.
 Where available, submitter-provided citation information as well as other databases where this data has been deposited are also provided.
+
+
+![**Figure 2. Overview of the `scpca-nf` workflow.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_2.png?sanitize=true){#fig:fig2 width="7in"}
+
+A. An overview of `scpca-nf`, the primary workflow for processing single-cell and single-nuclei data for the ScPCA Portal.
+Mapping is first performed with `alevin-fry` to generate a gene-by-cell count matrix, which is read into `R` and converted into a `SingleCellExperiment` (`SCE`) object.
+This `SCE` object is exported as the `Unfiltered SCE Object` before further post-processing.
+Next, empty droplets are filtered out, and the resulting `SCE` is exported as the `Filtered SCE Object`.
+The filtered object undergoes additional post-processing, including removing low-quality cells, normalizing counts, and performing dimension reduction including principal components analysis and UMAP calculation.
+The object undergoes cell type annotation and is exported as the `Processed SCE Object`.
+A summary QC report and a supplemental cell type report are prepared and exported.
+Finally, all `SCE` files are converted to `AnnData` format and exported.
+Panels B-G show example figures that appear in the summary QC report, shown here for `SCPCL000001`, as follows.
+B. The total UMI count for each cell in the `Filtered SCE Object`, ordered by rank.
+Points are colored by the percentage of cells that pass the empty droplets filter.
+C. The number of genes detected in each cell passing the empty droplets filter against the total UMI count.
+Points are colored by the percentage of mitochondrial reads in the cell.
+D. `miQC` model diagnostic plot showing the percent of mitochondrial reads in each cell against the number of genes detected in the `Filtered SCE Object`.
+Points are colored by the probability that the cell is compromised as determined by `miQC`.
+E. The percent of mitochondrial reads in each cell against the number of genes detected in each cell.
+Points are colored by whether the cell was kept or removed, as determined by both `miQC` and a minimum unique gene count cutoff, prior to normalization and dimensionality reduction.
+F. UMAP embeddings of log-normalized RNA expression values where each cell is colored by the number of genes detected.
+G. UMAP embeddings of log-normalized RNA expression values for the top four most variable genes, colored by the given gene's expression.
+In the actual summary QC report, the top 12 most highly variable genes are shown.
 
 
 ## References {.page_break_before}

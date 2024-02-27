@@ -38,7 +38,7 @@ PCA
 reproducibility
 SCE
 SCEs
-scpca
+ScPCA
 SingleCellExperiment
 SingleR
 slurm
@@ -50,6 +50,7 @@ transcriptomics
 tsv
 UMAP
 UMAPs
+UMI
 UMIs
 xenografts
 XXXX
