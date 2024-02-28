@@ -54,8 +54,8 @@
   <meta name="dc.date" content="2024-02-28" />
   <meta name="citation_publication_date" content="2024-02-28" />
   <meta property="article:published_time" content="2024-02-28" />
-  <meta name="dc.modified" content="2024-02-28T15:31:55+00:00" />
-  <meta property="article:modified_time" content="2024-02-28T15:31:55+00:00" />
+  <meta name="dc.modified" content="2024-02-28T17:34:15+00:00" />
+  <meta property="article:modified_time" content="2024-02-28T17:34:15+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,9 +95,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/d09b4b36d9241003fd27cb92d7d09b9076a173d1">AlexsLemonade/ScPCA-manuscript@d09b4b3</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e">AlexsLemonade/ScPCA-manuscript@9eed2cb</a>
 on February 28, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -375,13 +375,13 @@ Specifically, these objects can be useful for comparing gene-level metrics acros
 </figure>
 </div>
 <p>A. Barplots showing sample counts across four main cancer groupings in the ScPCA Portal, with each bar displaying the number of samples for each cancer type.
-Each bar is shaded based on the number of samples with each disease timing, and total sample counts for each cancer type are shown to the right of each bar.
-B. Barplot showing sample counts across types of modalities present in the ScPCA Portal.
+Each bar is shaded based on the number of samples with each disease timing, and total sample counts for each cancer type are shown to the right of each bar.</p>
+<p>B. Barplot showing sample counts across types of modalities present in the ScPCA Portal.
 All samples in the portal are shown under the “All Samples” heading.
 Samples under the “Samples with additional modalities” heading represent a subset of the total samples with the given additional modality.
 Colors shown for each additional modality indicate the suspension type that the single-cell or single-nuclei sample is associated with.
-For example, 75 single-cell samples and 43 single-nuclei samples have accompanying Bulk RNA-seq data.
-C. Example of a project card as displayed on the “Browse” page of the ScPCA Portal.
+For example, 75 single-cell samples and 43 single-nuclei samples have accompanying Bulk RNA-seq data.</p>
+<p>C. Example of a project card as displayed on the “Browse” page of the ScPCA Portal.
 This project card is associated with project <code>SCPCP000009</code>.
 Project cards include information about the number of samples, technologies and modalities, additional sample metadata information, submitter-provided diagnoses, as well as submitter-provided abstract.
 Where available, submitter-provided citation information as well as other databases where this data has been deposited are also provided.</p>
@@ -399,18 +399,57 @@ The filtered object undergoes additional post-processing, including removing low
 The object undergoes cell type annotation and is exported as the <code>Processed SCE Object</code>.
 A summary QC report and a supplemental cell type report are prepared and exported.
 Finally, all <code>SCE</code> files are converted to <code>AnnData</code> format and exported.
-Panels B-G show example figures that appear in the summary QC report, shown here for <code>SCPCL000001</code>, as follows.
-B. The total UMI count for each cell in the <code>Filtered SCE Object</code>, ordered by rank.
-Points are colored by the percentage of cells that pass the empty droplets filter.
-C. The number of genes detected in each cell passing the empty droplets filter against the total UMI count.
-Points are colored by the percentage of mitochondrial reads in the cell.
-D. <code>miQC</code> model diagnostic plot showing the percent of mitochondrial reads in each cell against the number of genes detected in the <code>Filtered SCE Object</code>.
-Points are colored by the probability that the cell is compromised as determined by <code>miQC</code>.
-E. The percent of mitochondrial reads in each cell against the number of genes detected in each cell.
-Points are colored by whether the cell was kept or removed, as determined by both <code>miQC</code> and a minimum unique gene count cutoff, prior to normalization and dimensionality reduction.
-F. UMAP embeddings of log-normalized RNA expression values where each cell is colored by the number of genes detected.
-G. UMAP embeddings of log-normalized RNA expression values for the top four most variable genes, colored by the given gene’s expression.
+Panels B-G show example figures that appear in the summary QC report, shown here for <code>SCPCL000001</code>, as follows.</p>
+<p>B. The total UMI count for each cell in the <code>Filtered SCE Object</code>, ordered by rank.
+Points are colored by the percentage of cells that pass the empty droplets filter.</p>
+<p>C. The number of genes detected in each cell passing the empty droplets filter against the total UMI count.
+Points are colored by the percentage of mitochondrial reads in the cell.</p>
+<p>D. <code>miQC</code> model diagnostic plot showing the percent of mitochondrial reads in each cell against the number of genes detected in the <code>Filtered SCE Object</code>.
+Points are colored by the probability that the cell is compromised as determined by <code>miQC</code>.</p>
+<p>E. The percent of mitochondrial reads in each cell against the number of genes detected in each cell.
+Points are colored by whether the cell was kept or removed, as determined by both <code>miQC</code> and a minimum unique gene count cutoff, prior to normalization and dimensionality reduction.</p>
+<p>F. UMAP embeddings of log-normalized RNA expression values where each cell is colored by the number of genes detected.</p>
+<p>G. UMAP embeddings of log-normalized RNA expression values for the top four most variable genes, colored by the given gene’s expression.
 In the actual summary QC report, the top 12 most highly variable genes are shown.</p>
+<div id="fig:fig3" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_3.png?sanitize=true" style="width:7in" alt="Figure 3: Figure 3. ScPCA Portal project download file structure and merged object workflow." />
+<figcaption aria-hidden="true"><span>Figure 3:</span> <strong>Figure 3. ScPCA Portal project download file structure and merged object workflow.</strong></figcaption>
+</figure>
+</div>
+<p>A. File download structure for an ScPCA Portal project download in <code>SingleCellExperiment</code> (<code>SCE</code>) format.
+The download folder is named according to both the project ID and the date it was downloaded.
+Download folders contain one folder for each sample ID, each containing the three versions (unfiltered, filtered, and processed) of the expression data as well as the summary QC report and cell type report all named according to the ScPCA library ID.
+The <code>single_cell_metadata.tsv</code> file contains sample metadata for all samples included in the download.
+The <code>README.md</code> file provides information about the contents of each download file, additional contact and citation information, and terms of use for data downloaded from the ScPCA Portal.
+The files <code>bulk_quant.tsv</code> and <code>bulk_metadata.tsv</code> are only present for projects that also have bulk RNA-Seq data and contain, respectively, a gene by sample matrix of raw gene expression as quantified by <code>salmon</code>, and associated metadata for all samples with bulk RNA-Seq data.</p>
+<p>B. File download structure for an ScPCA Portal merged project download in <code>SCE</code> format.
+The download folder is named according to both the project ID and the date it was downloaded.
+Download folders contain a single merged object containing all samples in the given project as well as a summary report briefly detailing the contents of the merged object.
+All summary QC and cell type reports for each individual library are also provided in the <code>individual_reports</code> folder arranged by their sample ID.
+As in panel (A), additional files <code>single_cell_metadata.tsv</code>, <code>bulk_quant.tsv</code>, <code>bulk_metadata.tsv</code>, and <code>README.md</code> are also included.</p>
+<p>C. Overview of the merged workflow.
+Processed <code>SCE</code> objects associated with a given project are merged into a single object, including ADT counts from CITE-seq data if present, and a merged summary report is generated.
+Merged objects are available for download either in <code>SCE</code> or <code>AnnData</code> format.</p>
+<p>D. Example of UMAPs as shown in the merged summary report.
+A grid of UMAPs is shown for each library in the merged object, with cells in the library of interest shown in red and all other cells belonging to other libraries shown in gray.
+The UMAP is constructed from the merged object such that all libraries contribute an equal weight, but no batch correction was performed.
+The libraries pictured are a subset of libraries in the ScPCA project <code>SCPCP000003</code>.</p>
+<div id="fig:fig4" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_4.png?sanitize=true" style="width:7in" alt="Figure 4: Figure 4. Cell type annotation in scpca-nf." />
+<figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Figure 4. Cell type annotation in <code>scpca-nf</code>.</strong></figcaption>
+</figure>
+</div>
+<p>A. Expanded view of the process for adding cell type annotations within <code>scpca-nf</code>, as introduced in Figure <a href="#fig:fig2">2</a>A.
+Cell type annotation is performed on the <code>Processed SCE Object</code>.
+A <code>celldex</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span> reference dataset with ontology labels is used as input for annotation with <code>SingleR</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span>, and a list of marker genes compiled from <code>PanglaoDB</code> <span class="citation" data-cites="T3PlZ3Vh">[<a href="#ref-T3PlZ3Vh" role="doc-biblioref">27</a>]</span> is used as input for annotation with <code>CellAssign</code> <span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">25</a>]</span>.
+Results from cell type annotation are then added to the <code>Processed SCE Object</code>, and a cell type summary report with information about reference sources, comparisons among cell type annotation methods, and diagnostic plots is created.
+Although not shown in this panel, cell type annotations are also included in the <code>Processed AnnData Object</code> created from the <code>Processed SCE Object</code> (Figure <a href="#fig:fig2">2</a>A).</p>
+<p>B. Example heatmap as shown in the cell type summary report comparing annotations with <code>SingleR</code> and <code>CellAssign</code>.
+Heatmap cells are colored by the Jaccard similarity index.
+A value of 1 means that there is complete overlap between which cells are annotated with the two labels being compared, and a value of 0 means that there is no overlap between which cells are annotated with the two labels being compared.
+The heatmap shown is from library <code>SCPCL000498</code>.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -491,6 +530,9 @@ In the actual summary QC report, the top 12 most highly variable genes are shown
 </div>
 <div id="ref-KRBW8xeZ" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>anndata: Annotated data</strong> <div class="csl-block">Isaac Virshup, Sergei Rybakov, Fabian J Theis, Philipp Angerer, FAlexander Wolf</div> <em>Cold Spring Harbor Laboratory</em> (2021-12-19) <a href="https://doi.org/gst7w6">https://doi.org/gst7w6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.12.16.473007">10.1101/2021.12.16.473007</a></div></div>
+</div>
+<div id="ref-T3PlZ3Vh" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data</strong> <div class="csl-block">Oscar Franzén, Li-Ming Gan, Johan LM Björkegren</div> <em>Database</em> (2019-01-01) <a href="https://doi.org/ggkzxr">https://doi.org/ggkzxr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/database/baz046">10.1093/database/baz046</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30951143">30951143</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6450036">PMC6450036</a></div></div>
 </div>
 </div>
 <!-- default theme -->
