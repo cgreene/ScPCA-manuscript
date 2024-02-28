@@ -46,7 +46,6 @@ SCEs
 scpca
 SingleCellExperiment
 SingleR
-slurm
 SRA
 subdiagnosis
 submitters
