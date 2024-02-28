@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-02-28" />
   <meta name="citation_publication_date" content="2024-02-28" />
   <meta property="article:published_time" content="2024-02-28" />
-  <meta name="dc.modified" content="2024-02-28T17:34:15+00:00" />
-  <meta property="article:modified_time" content="2024-02-28T17:34:15+00:00" />
+  <meta name="dc.modified" content="2024-02-28T21:12:59+00:00" />
+  <meta property="article:modified_time" content="2024-02-28T21:12:59+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@9eed2cb](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e)
+from [AlexsLemonade/ScPCA-manuscript@de8bf69](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/de8bf69e1524a8b281ef4eb15d84354d7b518cc3)
 on February 28, 2024.
 </em></small>
 
@@ -301,23 +301,45 @@ A UMAP plot with cells colored by the total number of genes detected and a facet
 
 ## Materials and Methods
 
-### Data generation
-  - how data was generated in different labs using 10X and then sent to the Data Lab
+### Data generation and processing
 
-### Data processing (do we need this section?)
-  - Mention that all data was processing using `scpca-nf` either by us or external submitters
+Raw data and metadata were generated and compiled by each lab and institution contributing to the Portal.
+Single-cell or single-nuclei libraries were generated using one of the commercially available kits from 10x Genomics.
+For bulk RNA-seq, RNA was collected and sequenced using either paired-end or single-end sequencing. 
+For spatial transcriptomics, cDNA libraries were generated using the Visium kit from 10x Genomics.
+All libraries were processed using our open-source pipeline, `scpca-nf`, to produce summarized gene expression data. 
 
 ### Processing single-cell and single-nuclei RNA-seq data with alevin-fry
-  - Use of salmon alevin and alevin-fry to process all raw FASTQ files
-  - Information on index used
-  - Parameter choices for alevin-fry
+  
+To quantify RNA-seq gene expression for each cell or nucleus in a library, `scpca-nf` uses `salmon alevin` [@doi:10.1186/s13059-020-02151-8] and `alevin-fry`[@doi:10.1038/s41592-022-01408-3] to generate a gene by cell counts matrix.
+Prior to mapping, we generated an index using transcripts from both spliced cDNA and unspliced cDNA sequences, denoted as the `splici` index [@doi:10.1038/s41592-022-01408-3].
+The index was generated from the human genome, GRCh38, Ensembl version 104. 
+`salmon alevin` was run using selective alignment to the `splici` index with the `--rad` option to generate a reduced alignment data (RAD) file required for input to `alevin-fry`. 
+
+The RAD file was used as input to the recommended `alevin-fry` workflow, with the following customizations.
+At the `generate-permit-list` step, we used the `unfiltered-pl` option to provide a list of expected barcodes specific to the 10x kit used to generate each library.
+The `quant` step was run using the `cr-like-em` resolution strategy for feature quantification and UMI de-duplication. 
 
 ### Post alevin-fry processing of single-cell and single-nuclei RNA-seq data
-  - filtering of empty droplets
-  - removal of low quality cells
-  - normalization
-  - HVG selection
-  - PCA and UMAP calculation
+
+The output from running `alevin-fry` includes a gene by cell counts matrix, with reads from both spliced and unspliced reads for all potential cell barcodes.
+This output is read into R to create a `SingleCellExperiment` using the `fishpond::load_fry()` function. 
+The resulting `SingleCellExperiment` contains a `counts` assay with a gene by cell counts matrix where all spliced and unspliced reads for a given gene are totaled together. 
+We also include a `spliced` assay that contains a gene by cell counts matrix with only spliced reads. 
+These matrices include all potential cells, including empty droplets, and are provided in the "unfiltered" objects included in downloads from the Portal.
+
+Each droplet was tested for deviation from the ambient RNA profile using `DropletUtils::emptyDropsCellRanger()` and those with an FDR ≤ 0.01 were retained as likely cells.
+If a library did not have a sufficient number of droplets and `DropletUtils::emptyDropsCellRanger()` failed, cells with fewer than 100 UMIs were removed.
+Gene expression data for any cells that remain after filtering are provided in the "filtered" objects. 
+
+In addition to removing empty droplets, `scpca-nf` also removes cells from downstream analysis that are likely to be compromised by damage or low-quality sequencing. 
+`miQC` was used to calculate the probability of each cell being compromised [@doi:10.1371/journal.pcbi.1009290]. 
+Any cells with a likelihood of being compromised greater than 0.75 and fewer than 200 genes detected were removed before further processing. 
+The gene expression counts from the remaining cells were log-normalized using the deconvolution method from Lun, Bach, and Marioni [@doi:10.1186/s13059-016-0947-7]. 
+`scran::modelGeneVar()` was used to model gene variance from the log-normalized counts and `scran::getTopHVGs` was used to select the top 2000 high-variance genes. 
+These were used as input to calculate the top 50 principal components using `scater::runPCA()`. 
+Finally, UMAP embeddings were calculated from the principal components with `scater::runUMAP()`. 
+The raw and log-normalized counts, list of 2000 high-variance genes, principal components, and UMAP embeddings are all stored in the "processed" object. 
 
 ### Quantifying gene expression for libraries with CITE-seq or cell hashing
   - How we used alevin-fry to quantify ADT and HTO libraries

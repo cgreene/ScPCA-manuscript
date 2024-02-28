@@ -54,8 +54,8 @@
   <meta name="dc.date" content="2024-02-28" />
   <meta name="citation_publication_date" content="2024-02-28" />
   <meta property="article:published_time" content="2024-02-28" />
-  <meta name="dc.modified" content="2024-02-28T17:34:15+00:00" />
-  <meta property="article:modified_time" content="2024-02-28T17:34:15+00:00" />
+  <meta name="dc.modified" content="2024-02-28T21:12:59+00:00" />
+  <meta property="article:modified_time" content="2024-02-28T21:12:59+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,9 +95,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/9eed2cbf952cec67f4b271d03ab1c7515ac47e2e">AlexsLemonade/ScPCA-manuscript@9eed2cb</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/de8bf69e1524a8b281ef4eb15d84354d7b518cc3">AlexsLemonade/ScPCA-manuscript@de8bf69</a>
 on February 28, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -305,28 +305,37 @@ Specifically, these objects can be useful for comparing gene-level metrics acros
 <li>The report also contains a UMAP showing all cells from all libraries included in the merged object. For each library, a separate panel is shown, and cells from that library are colored while all other cells are gray (Fig. 3D).</li>
 </ul>
 <h2 id="materials-and-methods">Materials and Methods</h2>
-<h3 id="data-generation">Data generation</h3>
-<ul>
-<li>how data was generated in different labs using 10X and then sent to the Data Lab</li>
-</ul>
-<h3 id="data-processing-do-we-need-this-section">Data processing (do we need this section?)</h3>
-<ul>
-<li>Mention that all data was processing using <code>scpca-nf</code> either by us or external submitters</li>
-</ul>
+<h3 id="data-generation-and-processing">Data generation and processing</h3>
+<p>Raw data and metadata were generated and compiled by each lab and institution contributing to the Portal.
+Single-cell or single-nuclei libraries were generated using one of the commercially available kits from 10x Genomics.
+For bulk RNA-seq, RNA was collected and sequenced using either paired-end or single-end sequencing.
+For spatial transcriptomics, cDNA libraries were generated using the Visium kit from 10x Genomics.
+All libraries were processed using our open-source pipeline, <code>scpca-nf</code>, to produce summarized gene expression data.</p>
 <h3 id="processing-single-cell-and-single-nuclei-rna-seq-data-with-alevin-fry">Processing single-cell and single-nuclei RNA-seq data with alevin-fry</h3>
-<ul>
-<li>Use of salmon alevin and alevin-fry to process all raw FASTQ files</li>
-<li>Information on index used</li>
-<li>Parameter choices for alevin-fry</li>
-</ul>
+<p>To quantify RNA-seq gene expression for each cell or nucleus in a library, <code>scpca-nf</code> uses <code>salmon alevin</code> <span class="citation" data-cites="91inc6cK">[<a href="#ref-91inc6cK" role="doc-biblioref">27</a>]</span> and <code>alevin-fry</code><span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span> to generate a gene by cell counts matrix.
+Prior to mapping, we generated an index using transcripts from both spliced cDNA and unspliced cDNA sequences, denoted as the <code>splici</code> index <span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span>.
+The index was generated from the human genome, GRCh38, Ensembl version 104.
+<code>salmon alevin</code> was run using selective alignment to the <code>splici</code> index with the <code>--rad</code> option to generate a reduced alignment data (RAD) file required for input to <code>alevin-fry</code>.</p>
+<p>The RAD file was used as input to the recommended <code>alevin-fry</code> workflow, with the following customizations.
+At the <code>generate-permit-list</code> step, we used the <code>unfiltered-pl</code> option to provide a list of expected barcodes specific to the 10x kit used to generate each library.
+The <code>quant</code> step was run using the <code>cr-like-em</code> resolution strategy for feature quantification and UMI de-duplication.</p>
 <h3 id="post-alevin-fry-processing-of-single-cell-and-single-nuclei-rna-seq-data">Post alevin-fry processing of single-cell and single-nuclei RNA-seq data</h3>
-<ul>
-<li>filtering of empty droplets</li>
-<li>removal of low quality cells</li>
-<li>normalization</li>
-<li>HVG selection</li>
-<li>PCA and UMAP calculation</li>
-</ul>
+<p>The output from running <code>alevin-fry</code> includes a gene by cell counts matrix, with reads from both spliced and unspliced reads for all potential cell barcodes.
+This output is read into R to create a <code>SingleCellExperiment</code> using the <code>fishpond::load_fry()</code> function.
+The resulting <code>SingleCellExperiment</code> contains a <code>counts</code> assay with a gene by cell counts matrix where all spliced and unspliced reads for a given gene are totaled together.
+We also include a <code>spliced</code> assay that contains a gene by cell counts matrix with only spliced reads.
+These matrices include all potential cells, including empty droplets, and are provided in the “unfiltered” objects included in downloads from the Portal.</p>
+<p>Each droplet was tested for deviation from the ambient RNA profile using <code>DropletUtils::emptyDropsCellRanger()</code> and those with an FDR ≤ 0.01 were retained as likely cells.
+If a library did not have a sufficient number of droplets and <code>DropletUtils::emptyDropsCellRanger()</code> failed, cells with fewer than 100 UMIs were removed.
+Gene expression data for any cells that remain after filtering are provided in the “filtered” objects.</p>
+<p>In addition to removing empty droplets, <code>scpca-nf</code> also removes cells from downstream analysis that are likely to be compromised by damage or low-quality sequencing.
+<code>miQC</code> was used to calculate the probability of each cell being compromised <span class="citation" data-cites="17Yhk1HAt">[<a href="#ref-17Yhk1HAt" role="doc-biblioref">28</a>]</span>.
+Any cells with a likelihood of being compromised greater than 0.75 and fewer than 200 genes detected were removed before further processing.
+The gene expression counts from the remaining cells were log-normalized using the deconvolution method from Lun, Bach, and Marioni <span class="citation" data-cites="vpU0FTFY">[<a href="#ref-vpU0FTFY" role="doc-biblioref">23</a>]</span>.
+<code>scran::modelGeneVar()</code> was used to model gene variance from the log-normalized counts and <code>scran::getTopHVGs</code> was used to select the top 2000 high-variance genes.
+These were used as input to calculate the top 50 principal components using <code>scater::runPCA()</code>.
+Finally, UMAP embeddings were calculated from the principal components with <code>scater::runUMAP()</code>.
+The raw and log-normalized counts, list of 2000 high-variance genes, principal components, and UMAP embeddings are all stored in the “processed” object.</p>
 <h3 id="quantifying-gene-expression-for-libraries-with-cite-seq-or-cell-hashing">Quantifying gene expression for libraries with CITE-seq or cell hashing</h3>
 <ul>
 <li>How we used alevin-fry to quantify ADT and HTO libraries</li>
@@ -443,7 +452,7 @@ The libraries pictured are a subset of libraries in the ScPCA project <code>SCPC
 </div>
 <p>A. Expanded view of the process for adding cell type annotations within <code>scpca-nf</code>, as introduced in Figure <a href="#fig:fig2">2</a>A.
 Cell type annotation is performed on the <code>Processed SCE Object</code>.
-A <code>celldex</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span> reference dataset with ontology labels is used as input for annotation with <code>SingleR</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span>, and a list of marker genes compiled from <code>PanglaoDB</code> <span class="citation" data-cites="T3PlZ3Vh">[<a href="#ref-T3PlZ3Vh" role="doc-biblioref">27</a>]</span> is used as input for annotation with <code>CellAssign</code> <span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">25</a>]</span>.
+A <code>celldex</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span> reference dataset with ontology labels is used as input for annotation with <code>SingleR</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span>, and a list of marker genes compiled from <code>PanglaoDB</code> <span class="citation" data-cites="T3PlZ3Vh">[<a href="#ref-T3PlZ3Vh" role="doc-biblioref">29</a>]</span> is used as input for annotation with <code>CellAssign</code> <span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">25</a>]</span>.
 Results from cell type annotation are then added to the <code>Processed SCE Object</code>, and a cell type summary report with information about reference sources, comparisons among cell type annotation methods, and diagnostic plots is created.
 Although not shown in this panel, cell type annotations are also included in the <code>Processed AnnData Object</code> created from the <code>Processed SCE Object</code> (Figure <a href="#fig:fig2">2</a>A).</p>
 <p>B. Example heatmap as shown in the cell type summary report comparing annotations with <code>SingleR</code> and <code>CellAssign</code>.
@@ -531,8 +540,14 @@ The heatmap shown is from library <code>SCPCL000498</code>.</p>
 <div id="ref-KRBW8xeZ" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>anndata: Annotated data</strong> <div class="csl-block">Isaac Virshup, Sergei Rybakov, Fabian J Theis, Philipp Angerer, FAlexander Wolf</div> <em>Cold Spring Harbor Laboratory</em> (2021-12-19) <a href="https://doi.org/gst7w6">https://doi.org/gst7w6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.12.16.473007">10.1101/2021.12.16.473007</a></div></div>
 </div>
+<div id="ref-91inc6cK" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Alignment and mapping methodology influence transcript abundance estimation</strong> <div class="csl-block">Avi Srivastava, Laraib Malik, Hirak Sarkar, Mohsen Zakeri, Fatemeh Almodaresi, Charlotte Soneson, Michael I Love, Carl Kingsford, Rob Patro</div> <em>Genome Biology</em> (2020-09-07) <a href="https://doi.org/gg98sd">https://doi.org/gg98sd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-020-02151-8">10.1186/s13059-020-02151-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32894187">32894187</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7487471">PMC7487471</a></div></div>
+</div>
+<div id="ref-17Yhk1HAt" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>miQC: An adaptive probabilistic framework for quality control of single-cell RNA-sequencing data</strong> <div class="csl-block">Ariel A Hippen, Matias M Falco, Lukas M Weber, Erdogan Pekcan Erkan, Kaiyang Zhang, Jennifer Anne Doherty, Anna Vähärautio, Casey S Greene, Stephanie C Hicks</div> <em>PLOS Computational Biology</em> (2021-08-24) <a href="https://doi.org/gng37g">https://doi.org/gng37g</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1009290">10.1371/journal.pcbi.1009290</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34428202">34428202</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8415599">PMC8415599</a></div></div>
+</div>
 <div id="ref-T3PlZ3Vh" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data</strong> <div class="csl-block">Oscar Franzén, Li-Ming Gan, Johan LM Björkegren</div> <em>Database</em> (2019-01-01) <a href="https://doi.org/ggkzxr">https://doi.org/ggkzxr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/database/baz046">10.1093/database/baz046</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30951143">30951143</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6450036">PMC6450036</a></div></div>
+<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data</strong> <div class="csl-block">Oscar Franzén, Li-Ming Gan, Johan LM Björkegren</div> <em>Database</em> (2019-01-01) <a href="https://doi.org/ggkzxr">https://doi.org/ggkzxr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/database/baz046">10.1093/database/baz046</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30951143">30951143</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6450036">PMC6450036</a></div></div>
 </div>
 </div>
 <!-- default theme -->
