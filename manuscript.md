@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-02-28" />
   <meta name="citation_publication_date" content="2024-02-28" />
   <meta property="article:published_time" content="2024-02-28" />
-  <meta name="dc.modified" content="2024-02-28T21:12:59+00:00" />
-  <meta property="article:modified_time" content="2024-02-28T21:12:59+00:00" />
+  <meta name="dc.modified" content="2024-02-28T21:16:36+00:00" />
+  <meta property="article:modified_time" content="2024-02-28T21:16:36+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/de8bf69e1524a8b281ef4eb15d84354d7b518cc3/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@de8bf69](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/de8bf69e1524a8b281ef4eb15d84354d7b518cc3)
+from [AlexsLemonade/ScPCA-manuscript@1fc5c4f](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/1fc5c4f8b799820a831cb739f32caa74efb59e5d)
 on February 28, 2024.
 </em></small>
 
@@ -342,18 +342,51 @@ Finally, UMAP embeddings were calculated from the principal components with `sca
 The raw and log-normalized counts, list of 2000 high-variance genes, principal components, and UMAP embeddings are all stored in the "processed" object. 
 
 ### Quantifying gene expression for libraries with CITE-seq or cell hashing
-  - How we used alevin-fry to quantify ADT and HTO libraries
 
-### Processing CITE-seq expression data
-  - Filtering low quality cells based on ADT data
-  - Normalization of ADT data
+All libraries with antibody-derived tags (ADTs) or hashtag oligonucleotides (HTOs) were mapped to a reference index using `salmon alevin` and quantified using `alevin-fry`.
+The reference indices were constructed using the `salmon index` command with the `--feature` option. 
+References were custom-built for each ScPCA project and constructed using the submitter-provided list of ADTs or HTOs and their barcode sequences. 
 
-### Genetic demultiplexing
-  - Use of vireo and matching bulk RNA-seq
+The ADT by cell or HTO by cell counts matrix produced by `alevin-fry` were read into R as a `SingleCellExperiment` object and saved as an alternative experiment (`altExp`) in the same `SingleCellExperiment` object with the unfiltered gene expression counts data. 
+The `altExp` within the unfiltered object contains all identified ADTs or HTOs and all barcodes identified in the RNA-seq gene expression data.
+Any barcodes that only appeared in either ADT or HTO data were discarded, and cell barcodes that were only found in the gene expression data (i.e., did not appear in the ADT or HTO data) were assigned zero counts for all ADTs and HTOs.
+Any cells removed after filtering empty droplets were also removed from the ADT and HTO counts matrices and before creating the filtered `SingleCellExperiment` object.
 
-### HTO demultiplexing
-  - Seurat
-  - DropletUtils
+### Processing ADT expression data from CITE-seq
+
+
+The ADT count matrix stored in the unfiltered object was used to calculate an ambient profile with `DropletUtils::ambientProfileEmpty()`. 
+This ambient profile was used to calculate quality-control statistics with `DropletUtils::cleanTagCounts()` for all cells remaining after removing empty droplets. 
+Any negative or isotype controls were taken into account when calculating QC statistics.
+Cells with a high level of ambient contamination or negative/isotype controls were flagged as having low-quality ADT expression, but we did not remove any cells based on ADT quality from the object.
+The filtered and processed objects contain the results from running `DropletUtils::cleanTagCounts()`. 
+
+ADT data was then normalized by calculating median size factors using the ambient profile with `scuttle::computeMedianFactors()`. 
+If median-based normalization failed for any reason, ADT counts were log-transformed after adding a pseudocount of 1. 
+Normalized counts are only available for any cells that would be retained after ADT filtering, and any cells that would be filtered out based on `DropletUtils::cleanTagCounts()` are assigned `NA`. 
+The normalized ADT data is available in the `altExp` of the processed object. 
+
+
+### Processing HTO data from multiplexed libraries
+
+Although we did not perform any demultiplexing of samples within a multiplexed library, we did apply three different demultiplexing methods. 
+Results from all three methods are included in the filtered and processed `SingleCellExperiment` objects along with the HTO counts data. 
+
+#### Genetic demultiplexing
+
+If all samples in a multiplexed library were also sequenced using bulk RNA-seq, we performed genetic demultiplexing using genotype data from both bulk RNA-seq and single-cell or single-nuclei RNA-seq [@doi:10.1093/gigascience/giab062]. 
+If bulk RNA-seq was not available, no genetic demultiplexing was performed. 
+
+Bulk RNA-seq reads for each sample were mapped to a reference genome using `STAR` [@doi10.1093/bioinformatics/bts635] and multiplexed single-cell or single-nuclei RNA-seq reads were mapped to the same reference genome using `STARsolo`[@doi:10.1101/2021.05.05.442755].
+The mapped bulk reads were used to call variants and assign genotypes with `bcftools mpileup` [@doi:10.1093/gigascience/giab008].
+`cellsnp-lite` was then used to genotype single-cell data at the identified sites found in the bulk RNA-seq data [@doi:10.1093/bioinformatics/btab358]. 
+Finally, `vireo` was used to identify the sample of origin [@doi:10.1093/bioinformatics/btab358]. 
+
+#### HTO demultiplexing
+
+For all multiplexed libraries, we performed demultiplexing using `DropletUtils::hashedDrops()` and `Seurat::HTODemux()`. 
+For both methods, we used the default parameters and only performed demultiplexing on the filtered cells present in the filtered object. 
+The results from both these methods are available in the filtered and processed objects. 
 
 ### Quantification of spatial transcriptomics data
   - Use of space ranger
