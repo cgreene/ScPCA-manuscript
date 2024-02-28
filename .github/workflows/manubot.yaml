@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - jashapiro/workflow-updates
   pull_request:
     branches:
       - main
