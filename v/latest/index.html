@@ -54,8 +54,8 @@
   <meta name="dc.date" content="2024-02-28" />
   <meta name="citation_publication_date" content="2024-02-28" />
   <meta property="article:published_time" content="2024-02-28" />
-  <meta name="dc.modified" content="2024-02-28T15:16:15+00:00" />
-  <meta property="article:modified_time" content="2024-02-28T15:16:15+00:00" />
+  <meta name="dc.modified" content="2024-02-28T15:25:48+00:00" />
+  <meta property="article:modified_time" content="2024-02-28T15:25:48+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/629de310440734ae1aa3f5c4e656c00ea448d174/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/629de310440734ae1aa3f5c4e656c00ea448d174/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/629de310440734ae1aa3f5c4e656c00ea448d174/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,9 +95,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/629de310440734ae1aa3f5c4e656c00ea448d174/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/629de310440734ae1aa3f5c4e656c00ea448d174">AlexsLemonade/ScPCA-manuscript@629de31</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/3fc669d61f2b49b80e4b20c63a0158cc75de602a">AlexsLemonade/ScPCA-manuscript@3fc669d</a>
 on February 28, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -191,52 +191,38 @@ Users can filter projects based on diagnosis, included modalities (e.g., CITE-se
 The project card displays an abstract, the total number of samples included, a list of diagnoses for all samples included in the Project, and links to any external information associated with the project, such as publications and links to external data, such as SRA or GEO (Figure 1C).
 The project card will also indicate the type(s) of sequencing performed, including the 10X Genomics kit version, the suspension type (cell or nucleus), and if additional sequencing is present, like bulk RNA-seq or multiplexing.</p>
 <h2 id="uniform-processing-of-data-available-on-the-scpca-portal">Uniform processing of data available on the ScPCA Portal</h2>
-<ol type="1">
-<li>Processing data with scpca-nf and alevin-fry</li>
-</ol>
-<ul>
-<li>All data available on the portal was uniformly processed using scpca-nf, an open-source and efficient Nextflow workflow for quantifying single-cell and single-nuclei RNA-seq data.</li>
-<li>The workflow uses <code>salmon alevin</code> and <code>alevin-fry</code> to quantify gene expression data and outputs both raw and normalized counts stored as <code>SingleCellExperiment</code> and <code>AnnData</code> objects.</li>
-<li>In building the workflow we sought to look for a tool that was fast and memory efficient with comparable results to other popular tools, like <code>Cell Ranger</code>.</li>
-<li>Reads are aligned using the selective alignment option of <code>salmon alevin</code> to an index with transcripts corresponding to spliced cDNA and intronic regions, denoted by <code>alevin-fry</code> as a <code>splici</code> index.</li>
-<li>We compared quantification of single-cell and single-nuclei samples with <code>alevin-fry</code> and <code>Cell Ranger</code> and observed a decrease in both run time and memory usage in <code>alevin-fry</code> compared to <code>Cell Ranger</code> (FigS1A).</li>
-<li>When comparing the total UMIs per cell, total genes detected per cell, and mean gene expression, there was no observable difference between <code>alevin-fry</code> and <code>Cell Ranger</code> (FigS1B-D).</li>
-<li>By utilizing <code>alevin-fry</code> in the <code>scpca-nf</code> workflow we can process multiple samples at a fraction of the time and cost.</li>
-</ul>
-<ol start="2" type="1">
-<li>Post-processing of quantified gene expression data (Fig 2A)</li>
-</ol>
-<ul>
-<li>In addition to quantification of gene expression, <code>scpca-nf</code> also performs filtering, normalization, dimensionality reduction, and cell type annotation.</li>
-<li>The output from <code>alevin-fry</code> includes a gene by cell count matrix for all barcodes identified, even those that may not contain true cells. This matrix is stored in a <code>SingleCellExperiment</code> and output from the workflow as an <code>_unfiltered.rds</code> file.</li>
-<li>The unfiltered gene by cell counts matrices are then filtered using <code>DropletUtils::emptyDropsCellRanger()</code> to remove any barcodes that are not likely to contain cells. All cells that pass this filtering are saved to a filtered <code>SingleCellExperiment</code> object and <code>_filtered.rds</code> file.</li>
-<li>This filtered object is used as input to the post-processing part of the workflow. This includes removal of low-quality cells using <code>miQC</code>, normalization, and dimensionality reduction. The final step of the post-processing performed in <code>scpca-nf</code> is classification of cell types using automated methods, <code>SingleR</code> and <code>CellAssign</code>. The results from this analysis are stored in a processed object saved to a <code>processed.rds</code>.</li>
-<li>By providing all three files, unfiltered, filtered, and processed this allows users to perform their own filtering and normalization or to skip those steps and use the already processed objects.</li>
-<li>Finally, all <code>SingleCellExperiment</code> objects saved as <code>.rds</code> files are converted to <code>AnnData</code> objects and saved as <code>.hdf5</code> files to allow for downstream processing in either R or Python.</li>
-<li>On the Portal, users can choose to download data as either <code>SingleCellExperiment</code> or <code>AnnData</code> objects and all downloads will contain all three objects output from <code>scpca-nf</code>, the unfiltered, filtered, and processed objects (do we include the download illustrations in the figure to display this?)</li>
-</ul>
-<ol start="3" type="1">
-<li>QC report (Fig 2B)</li>
-</ol>
-<ul>
-<li>Along with outputting the uniformly processed data files, <code>scpca-nf</code> also includes a step to create a quality control report for each library.</li>
-<li>This report includes a summary of processing information and library statistics, e.g., the total number of mapped reads, total number of cells, and relevant versions of tools used within the workflow like <code>salmon</code> and <code>alevin-fry</code>.</li>
-<li>Each report also includes summarized plots showing the quality of each library.</li>
-<li>The knee plot shown in the report ranks the total number of UMIs in each droplet and indicates cells that remained after filtering out empty droplets.</li>
-<li>For each cell that passes filtering out empty droplets, the number of total UMIs, genes detected, and mitochondrial reads is calculated. These cell metrics are summarized in a single plot.</li>
-<li>To remove low-quality cells from the counts matrices, <code>scpca-nf</code> applies <code>miQC</code>, a data driven approach to filtering cells. The <code>miQC</code> model and a plot showing which cells are kept and removed when filtering with <code>miQC</code> are shown in the QC report.</li>
-<li>Finally, remaining cells are normalized and undergo dimensionality reduction. The QC report includes a single UMAP where cells are colored by the total number of genes detected and a faceted UMAP where cells are colored by the expression of a top highly variable gene.</li>
-</ul>
-<ol start="4" type="1">
-<li>Benefits of scpca-nf/ Nextflow allows for reproducibility and portability (Does this fit here or should it be earlier before describing the workflow?)</li>
-</ol>
-<ul>
-<li>Using Nextflow as the backbone for the <code>scpca-nf</code> workflow ensures reproducibility and portability for users on other systems.</li>
-<li>The scpca-nf workflow can be run in almost any environment including slurm, torque, AWS batch, etc (https://www.nextflow.io/docs/latest/executor.html). This allows users to run this workflow in the environment that they are comfortable in with minimal set-up of dependencies.</li>
-<li>Nextflow handles all dependencies automatically and set up generally requires only organizing input files and configuring Nextflow to run in your environment.</li>
-<li>Each process in the workflow is run in a docker container, so users only need to install Nextflow and docker to be able to use this workflow.</li>
-<li>Nextflow also handles parallelizing processing based on your environment and will configure processing so that run time is minimal.</li>
-</ul>
+<p>All data available on the Portal was uniformly processed using <a href="https://github.com/AlexsLemonade/scpca-nf"><code>scpca-nf</code></a>, an open-source and efficient Nextflow<span class="citation" data-cites="2w3W0oqG">[<a href="#ref-2w3W0oqG" role="doc-biblioref">18</a>]</span> workflow for quantifying single-cell and single-nuclei RNA-seq data.
+Using Nextflow as the backbone for the <code>scpca-nf</code> workflow ensures both reproducibility and portability.
+All dependencies for the workflow are handled automatically, as each process in the workflow is run in a Docker container.
+Nextflow is compatible with various computing environments, including high-performance computing and cloud-based computing, allowing users to run the workflow in their preferred environment.
+Setup requires organizing input files and updating a single configuration file for your computing environment after installing Nextflow and either Docker or Singularity.
+Nextflow will also handle parallelizing sample processing as allowed by your environment, minimizing run time.
+The combination of being able to execute a Nextflow workflow in any environment and run individual processes in Docker containers makes this workflow easily portable for external use.</p>
+<p>When building <code>scpca-nf</code>, we sought a fast and memory-efficient tool for gene expression quantification to minimize processing costs.
+We expected many users of the Portal to have their own single-cell or single-nuclei data processed with Cell Ranger<span class="citation" data-cites="87PPOPmp">[<a href="#ref-87PPOPmp" role="doc-biblioref">19</a>]</span>, due to its popularity.
+Thus, selecting a tool with comparable results to Cell Ranger was also desirable.
+In comparing <code>alevin-fry</code> <span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span> to Cell Ranger, we found <code>alevin-fry</code> had a lower run time and memory usage (Supplemental Figure 1A), while retaining comparable mean gene expression for all genes (Supplemental Figure 1B), total UMIs per cell (Supplemental Figure 1C), or total genes detected per cell (Supplemental Figure 1D).
+<!--TODO: Do we like including this here or is it not worth mentioning? -->
+(All analyses comparing gene expression quantification tools are available in a public analysis repository<span class="citation" data-cites="159Z7ABXf">[<a href="#ref-159Z7ABXf" role="doc-biblioref">20</a>]</span>.)
+Based on these results, we elected to use <code>salmon alevin</code> and <code>alevin-fry</code> <span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span> in <code>scpca-nf</code> to quantify gene expression data.</p>
+<p><code>scpca-nf</code> takes FASTQ files as input (Figure 2A).
+Reads are aligned using the selective alignment option of <code>salmon alevin</code> to an index with transcripts corresponding to spliced cDNA and intronic regions, denoted by <code>alevin-fry</code> as a <code>splici</code> index.
+The output from <code>alevin-fry</code> includes a gene-by-cell count matrix for all barcodes identified, even those that may not contain true cells.
+This unfiltered counts matrix is stored in a <code>SingleCellExperiment</code> object<span class="citation" data-cites="z8JnDHpr">[<a href="#ref-z8JnDHpr" role="doc-biblioref">21</a>]</span> and output from the workflow to a <code>.rds</code> file with the suffix <code>_unfiltered.rds</code>.</p>
+<p><code>scpca-nf</code> performs filtering of empty droplets, removal of low-quality cells, normalization, dimensionality reduction, and cell type annotation (Figure 2A).
+The unfiltered gene by cell counts matrices are filtered to remove any barcodes that are not likely to contain cells using <code>DropletUtils::emptyDropsCellRanger()</code><span class="citation" data-cites="U2Fa25dp">[<a href="#ref-U2Fa25dp" role="doc-biblioref">22</a>]</span>, with all cells that pass being saved to a <code>SingleCellExperiment</code> object and <code>.rds</code> file with the suffix <code>_filtered.rds</code>.
+Then, low-quality cells are identified and removed with <code>miQC</code> <span class="citation" data-cites="doi">[<a href="#ref-doi" role="doc-biblioref"><strong>doi?</strong></a> 10.1371/journal.pcbi.1009290]</span>, which jointly models the proportion of mitochondrial reads and detected genes per cell and calculates a probability that each cell is compromised.
+The remaining cells are normalized <span class="citation" data-cites="vpU0FTFY">[<a href="#ref-vpU0FTFY" role="doc-biblioref">23</a>]</span> and undergo dimensionality reduction using both principal component analysis (PCA) and UMAP.
+Finally, cell types are classified using two automated methods, <code>SingleR</code><span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span> and <code>CellAssign</code><span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">25</a>]</span>.
+The results from this analysis are stored in a processed <code>SingleCellExperiment</code> object saved to a <code>.rds</code> file with the suffix <code>_processed.rds</code>.</p>
+<p>To make downloading from the Portal convenient for R and Python users, downloads are available as either <code>SingleCellExperiment</code> or <code>AnnData</code><span class="citation" data-cites="KRBW8xeZ">[<a href="#ref-KRBW8xeZ" role="doc-biblioref">26</a>]</span> objects.
+All <code>SingleCellExperiment</code> objects saved as <code>.rds</code> files are converted to <code>AnnData</code> objects and saved as <code>.hdf5</code> files in <code>scpca-nf</code> (Figure 2A).
+Downloads contain the unfiltered, filtered, and processed objects from <code>scpca-nf</code> to allow users to choose to perform their own filtering and normalization or to start their analysis from a processed object.</p>
+<p>All downloads from the Portal include a quality control (QC) report with a summary of processing information (e.g., <code>alevin-fry</code> version), library statistics (e.g., the total number of cells), and a collection of diagnostic plots for each library (Figure 2B-G).
+The knee plot includes all droplets (i.e., before removing empty droplets) sorted based on the total number of UMIs, and those retained after filtering empty droplets are indicated in the plot (Figure 2B).
+For each cell that remains after filtering empty droplets, the number of total UMIs, genes detected, and mitochondrial reads are calculated and summarized in a scatter plot (Figure 2C).
+We include plots showing the <code>miQC</code> model and which cells are kept and removed after filtering with <code>miQC</code> (Figure 2D-E).
+A UMAP plot with cells colored by the total number of genes detected and a faceted UMAP plot where cells are colored by the expression of a top highly variable gene are also available (Figure 2F-G).</p>
 <h2 id="making-samples-with-additional-modalities-available-on-the-portal">Making samples with additional modalities available on the Portal</h2>
 <ol type="1">
 <li>Processing samples with additional modalities</li>
@@ -478,6 +464,33 @@ In the actual summary QC report, the top 12 most highly variable genes are shown
 </div>
 <div id="ref-FZrs73Vp" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Cell Hashing with barcoded antibodies enables multiplexing and doublet detection for single cell genomics</strong> <div class="csl-block">Marlon Stoeckius, Shiwei Zheng, Brian Houck-Loomis, Stephanie Hao, Bertrand Z Yeung, William M Mauck III, Peter Smibert, Rahul Satija</div> <em>Genome Biology</em> (2018-12) <a href="https://doi.org/ggbm6p">https://doi.org/ggbm6p</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-018-1603-1">10.1186/s13059-018-1603-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30567574">30567574</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6300015">PMC6300015</a></div></div>
+</div>
+<div id="ref-2w3W0oqG" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Nextflow’s documentation! — Nextflow 23.10.0 documentation</strong> <a href="https://www.nextflow.io/docs/latest/index.html">https://www.nextflow.io/docs/latest/index.html</a></div>
+</div>
+<div id="ref-87PPOPmp" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>Cell Ranger - Official 10x Genomics Support</strong> <div class="csl-block">10x Genomics</div> <a href="https://www.10xgenomics.com/support/software/cell-ranger/latest">https://www.10xgenomics.com/support/software/cell-ranger/latest</a></div>
+</div>
+<div id="ref-159Z7ABXf" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>AlexsLemonade/alsf-scpca</strong> <div class="csl-block">Alex's Lemonade Stand Foundation</div> (2021-12-21) <a href="https://github.com/AlexsLemonade/alsf-scpca">https://github.com/AlexsLemonade/alsf-scpca</a></div>
+</div>
+<div id="ref-z8JnDHpr" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>Orchestrating single-cell analysis with Bioconductor</strong> <div class="csl-block">Robert A Amezquita, Aaron TL Lun, Etienne Becht, Vince J Carey, Lindsay N Carpp, Ludwig Geistlinger, Federico Marini, Kevin Rue-Albrecht, Davide Risso, Charlotte Soneson, … Stephanie C Hicks</div> <em>Nature Methods</em> (2019-12-02) <a href="https://doi.org/ggdxgx">https://doi.org/ggdxgx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-019-0654-x">10.1038/s41592-019-0654-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31792435">31792435</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7358058">PMC7358058</a></div></div>
+</div>
+<div id="ref-U2Fa25dp" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>EmptyDrops: distinguishing cells from empty droplets in droplet-based single-cell RNA sequencing data</strong> <div class="csl-block">Aaron TL Lun, Samantha Riesenfeld, Tallulah Andrews, The Phuong Dao, Tomas Gomes, John C Marioni</div> <em>Genome Biology</em> (2019-03-22) <a href="https://doi.org/gfxdhf">https://doi.org/gfxdhf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1662-y">10.1186/s13059-019-1662-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30902100">30902100</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6431044">PMC6431044</a></div></div>
+</div>
+<div id="ref-vpU0FTFY" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Pooling across cells to normalize single-cell RNA sequencing data with many zero counts</strong> <div class="csl-block">Aaron T L. Lun, Karsten Bach, John C Marioni</div> <em>Genome Biology</em> (2016-04-27) <a href="https://doi.org/gfgntn">https://doi.org/gfgntn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-016-0947-7">10.1186/s13059-016-0947-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27122128">27122128</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4848819">PMC4848819</a></div></div>
+</div>
+<div id="ref-13P6oSrS0" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage</strong> <div class="csl-block">Dvir Aran, Agnieszka P Looney, Leqian Liu, Esther Wu, Valerie Fong, Austin Hsu, Suzanna Chak, Ram P Naikawadi, Paul J Wolters, Adam R Abate, … Mallar Bhattacharya</div> <em>Nature Immunology</em> (2019-01-14) <a href="https://doi.org/gfv3p2">https://doi.org/gfv3p2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41590-018-0276-y">10.1038/s41590-018-0276-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30643263">30643263</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6340744">PMC6340744</a></div></div>
+</div>
+<div id="ref-HES0WO6k" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Probabilistic cell-type assignment of single-cell RNA-seq for tumor microenvironment profiling</strong> <div class="csl-block">Allen W Zhang, Ciara O’Flanagan, Elizabeth A Chavez, Jamie LP Lim, Nicholas Ceglia, Andrew McPherson, Matt Wiens, Pascale Walters, Tim Chan, Brittany Hewitson, … Sohrab P Shah</div> <em>Nature Methods</em> (2019-09-09) <a href="https://doi.org/ggr7ps">https://doi.org/ggr7ps</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-019-0529-1">10.1038/s41592-019-0529-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31501550">31501550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7485597">PMC7485597</a></div></div>
+</div>
+<div id="ref-KRBW8xeZ" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>anndata: Annotated data</strong> <div class="csl-block">Isaac Virshup, Sergei Rybakov, Fabian J Theis, Philipp Angerer, FAlexander Wolf</div> <em>Cold Spring Harbor Laboratory</em> (2021-12-19) <a href="https://doi.org/gst7w6">https://doi.org/gst7w6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.12.16.473007">10.1101/2021.12.16.473007</a></div></div>
 </div>
 </div>
 <!-- default theme -->
