@@ -20,8 +20,10 @@ DropletUtils
 embeddings
 FASTQ
 genomic
+Hancestro
 HCA
 highlighing
+HsapDV
 HTAN
 HTO
 HVG
@@ -31,14 +33,17 @@ janeroe
 johndoe
 librares
 microenvironment
+MONDO
 mortem
+NCBI
 Nextflow
 parallelizing
+PATO
 PCA
 reproducibility
 SCE
 SCEs
-ScPCA
+scpca
 SingleCellExperiment
 SingleR
 slurm
@@ -48,6 +53,7 @@ submitters
 transcriptionally
 transcriptomics
 tsv
+UBERON
 UMAP
 UMAPs
 UMI
