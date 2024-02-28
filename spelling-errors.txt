@@ -22,6 +22,7 @@ FASTQ
 genomic
 Hancestro
 HCA
+heatmap
 highlighing
 HsapDV
 HTAN
@@ -29,6 +30,7 @@ HTO
 HVG
 intronic
 invididual
+Jaccard
 janeroe
 johndoe
 librares
@@ -43,7 +45,7 @@ PCA
 reproducibility
 SCE
 SCEs
-ScPCA
+scpca
 SingleCellExperiment
 SingleR
 SRA
