@@ -43,7 +43,7 @@ PCA
 reproducibility
 SCE
 SCEs
-scpca
+ScPCA
 SingleCellExperiment
 SingleR
 SRA

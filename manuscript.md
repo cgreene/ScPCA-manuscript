@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-02-28" />
   <meta name="citation_publication_date" content="2024-02-28" />
   <meta property="article:published_time" content="2024-02-28" />
-  <meta name="dc.modified" content="2024-02-28T15:25:48+00:00" />
-  <meta property="article:modified_time" content="2024-02-28T15:25:48+00:00" />
+  <meta name="dc.modified" content="2024-02-28T15:31:55+00:00" />
+  <meta property="article:modified_time" content="2024-02-28T15:31:55+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/3fc669d61f2b49b80e4b20c63a0158cc75de602a/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/d09b4b36d9241003fd27cb92d7d09b9076a173d1/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@3fc669d](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/3fc669d61f2b49b80e4b20c63a0158cc75de602a)
+from [AlexsLemonade/ScPCA-manuscript@d09b4b3](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/d09b4b36d9241003fd27cb92d7d09b9076a173d1)
 on February 28, 2024.
 </em></small>
 
