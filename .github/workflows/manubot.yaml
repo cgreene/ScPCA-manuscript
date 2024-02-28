@@ -22,17 +22,19 @@ on:
         description: generate LaTeX output
         default: false
       SPELLCHECK:
-        type: boolean
+       type: boolean
         description: Check spelling
         default: true
       MANUBOT_USE_DOCKER:
         type: boolean
         description: Use Docker to generate PDF
         default: true
+
 concurrency:
   # only one run per branch at a time
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   manubot:
     name: Manubot
