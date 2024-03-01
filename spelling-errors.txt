@@ -26,18 +26,16 @@ genotypes
 GRCh
 Hancestro
 HCA
-Heatmap
+heatmap
 HsapDV
 HTAN
 HTO
 HTOs
 intronic
-invididual
 isotype
 Jaccard
 janeroe
 johndoe
-librares
 Lun
 Marioni
 microenvironment
@@ -50,7 +48,6 @@ PATO
 PCA
 pseudocount
 reproducibility
-SCEs
 scpca
 SingleCellExperiment
 SingleR
