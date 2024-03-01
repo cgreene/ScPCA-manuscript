@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2024-02-28" />
+  <meta name="dcterms.date" content="2024-03-01" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -51,11 +51,11 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-02-28" />
-  <meta name="citation_publication_date" content="2024-02-28" />
-  <meta property="article:published_time" content="2024-02-28" />
-  <meta name="dc.modified" content="2024-02-28T21:16:36+00:00" />
-  <meta property="article:modified_time" content="2024-02-28T21:16:36+00:00" />
+  <meta name="dc.date" content="2024-03-01" />
+  <meta name="citation_publication_date" content="2024-03-01" />
+  <meta property="article:published_time" content="2024-03-01" />
+  <meta name="dc.modified" content="2024-03-01T15:53:24+00:00" />
+  <meta property="article:modified_time" content="2024-03-01T15:53:24+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/713551a71ec21c3c53eca9f7a97421ee6ecfbea5/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/713551a71ec21c3c53eca9f7a97421ee6ecfbea5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/713551a71ec21c3c53eca9f7a97421ee6ecfbea5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,10 +95,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1fc5c4f8b799820a831cb739f32caa74efb59e5d/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/713551a71ec21c3c53eca9f7a97421ee6ecfbea5/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/1fc5c4f8b799820a831cb739f32caa74efb59e5d">AlexsLemonade/ScPCA-manuscript@1fc5c4f</a>
-on February 28, 2024.
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/713551a71ec21c3c53eca9f7a97421ee6ecfbea5">AlexsLemonade/ScPCA-manuscript@713551a</a>
+on March 1, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -202,20 +202,19 @@ The combination of being able to execute a Nextflow workflow in any environment 
 We expected many users of the Portal to have their own single-cell or single-nuclei data processed with Cell Ranger<span class="citation" data-cites="87PPOPmp">[<a href="#ref-87PPOPmp" role="doc-biblioref">19</a>]</span>, due to its popularity.
 Thus, selecting a tool with comparable results to Cell Ranger was also desirable.
 In comparing <code>alevin-fry</code> <span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span> to Cell Ranger, we found <code>alevin-fry</code> had a lower run time and memory usage (Supplemental Figure 1A), while retaining comparable mean gene expression for all genes (Supplemental Figure 1B), total UMIs per cell (Supplemental Figure 1C), or total genes detected per cell (Supplemental Figure 1D).
-<!--TODO: Do we like including this here or is it not worth mentioning? -->
 (All analyses comparing gene expression quantification tools are available in a public analysis repository<span class="citation" data-cites="159Z7ABXf">[<a href="#ref-159Z7ABXf" role="doc-biblioref">20</a>]</span>.)
 Based on these results, we elected to use <code>salmon alevin</code> and <code>alevin-fry</code> <span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span> in <code>scpca-nf</code> to quantify gene expression data.</p>
 <p><code>scpca-nf</code> takes FASTQ files as input (Figure 2A).
 Reads are aligned using the selective alignment option of <code>salmon alevin</code> to an index with transcripts corresponding to spliced cDNA and intronic regions, denoted by <code>alevin-fry</code> as a <code>splici</code> index.
-The output from <code>alevin-fry</code> includes a gene-by-cell count matrix for all barcodes identified, even those that may not contain true cells.
+The output from <code>alevin-fry</code> includes a gene by cell count matrix for all barcodes identified, even those that may not contain true cells.
 This unfiltered counts matrix is stored in a <code>SingleCellExperiment</code> object<span class="citation" data-cites="z8JnDHpr">[<a href="#ref-z8JnDHpr" role="doc-biblioref">21</a>]</span> and output from the workflow to a <code>.rds</code> file with the suffix <code>_unfiltered.rds</code>.</p>
 <p><code>scpca-nf</code> performs filtering of empty droplets, removal of low-quality cells, normalization, dimensionality reduction, and cell type annotation (Figure 2A).
 The unfiltered gene by cell counts matrices are filtered to remove any barcodes that are not likely to contain cells using <code>DropletUtils::emptyDropsCellRanger()</code><span class="citation" data-cites="U2Fa25dp">[<a href="#ref-U2Fa25dp" role="doc-biblioref">22</a>]</span>, with all cells that pass being saved to a <code>SingleCellExperiment</code> object and <code>.rds</code> file with the suffix <code>_filtered.rds</code>.
-Then, low-quality cells are identified and removed with <code>miQC</code> <span class="citation" data-cites="doi">[<a href="#ref-doi" role="doc-biblioref"><strong>doi?</strong></a> 10.1371/journal.pcbi.1009290]</span>, which jointly models the proportion of mitochondrial reads and detected genes per cell and calculates a probability that each cell is compromised.
-The remaining cells are normalized <span class="citation" data-cites="vpU0FTFY">[<a href="#ref-vpU0FTFY" role="doc-biblioref">23</a>]</span> and undergo dimensionality reduction using both principal component analysis (PCA) and UMAP.
-Finally, cell types are classified using two automated methods, <code>SingleR</code><span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span> and <code>CellAssign</code><span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">25</a>]</span>.
+Then, low-quality cells are identified and removed with <code>miQC</code> <span class="citation" data-cites="17Yhk1HAt">[<a href="#ref-17Yhk1HAt" role="doc-biblioref">23</a>]</span>, which jointly models the proportion of mitochondrial reads and detected genes per cell and calculates a probability that each cell is compromised.
+The remaining cells are normalized <span class="citation" data-cites="vpU0FTFY">[<a href="#ref-vpU0FTFY" role="doc-biblioref">24</a>]</span> and undergo dimensionality reduction using both principal component analysis (PCA) and UMAP.
+Finally, cell types are classified using two automated methods, <code>SingleR</code><span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">25</a>]</span> and <code>CellAssign</code><span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">26</a>]</span>.
 The results from this analysis are stored in a processed <code>SingleCellExperiment</code> object saved to a <code>.rds</code> file with the suffix <code>_processed.rds</code>.</p>
-<p>To make downloading from the Portal convenient for R and Python users, downloads are available as either <code>SingleCellExperiment</code> or <code>AnnData</code><span class="citation" data-cites="KRBW8xeZ">[<a href="#ref-KRBW8xeZ" role="doc-biblioref">26</a>]</span> objects.
+<p>To make downloading from the Portal convenient for R and Python users, downloads are available as either <code>SingleCellExperiment</code> or <code>AnnData</code><span class="citation" data-cites="KRBW8xeZ">[<a href="#ref-KRBW8xeZ" role="doc-biblioref">27</a>]</span> objects.
 All <code>SingleCellExperiment</code> objects saved as <code>.rds</code> files are converted to <code>AnnData</code> objects and saved as <code>.hdf5</code> files in <code>scpca-nf</code> (Figure 2A).
 Downloads contain the unfiltered, filtered, and processed objects from <code>scpca-nf</code> to allow users to choose to perform their own filtering and normalization or to start their analysis from a processed object.</p>
 <p>All downloads from the Portal include a quality control (QC) report with a summary of processing information (e.g., <code>alevin-fry</code> version), library statistics (e.g., the total number of cells), and a collection of diagnostic plots for each library (Figure 2B-G).
@@ -223,51 +222,52 @@ The knee plot includes all droplets (i.e., before removing empty droplets) sorte
 For each cell that remains after filtering empty droplets, the number of total UMIs, genes detected, and mitochondrial reads are calculated and summarized in a scatter plot (Figure 2C).
 We include plots showing the <code>miQC</code> model and which cells are kept and removed after filtering with <code>miQC</code> (Figure 2D-E).
 A UMAP plot with cells colored by the total number of genes detected and a faceted UMAP plot where cells are colored by the expression of a top highly variable gene are also available (Figure 2F-G).</p>
-<h2 id="making-samples-with-additional-modalities-available-on-the-portal">Making samples with additional modalities available on the Portal</h2>
-<ol type="1">
-<li>Processing samples with additional modalities</li>
-</ol>
-<ul>
-<li>In addition to samples that have single-cell and single-nuclei RNA-seq, we also received samples from submitters with additional sequencing modalities, including CITE-seq, cell hashing, spatial transcriptomics, and bulk RNA-seq.</li>
-<li>To make all the data that we received available, we included additional modules in <code>scpca-nf</code> that would accommodate these additional sequencing modalities.</li>
-<li>For a full summary of the libraries and samples available with additional modalities, see supplemental Table 1.</li>
-<li><code>scpca-nf</code> is capable of processing samples that are from a mix of sample types. This means that libraries with and without ADT data or any of the modalities discussed here can be processed together in a single run. Nextflow will handle the parallel processing such that each sample type is run through the correct processes for that modality type.</li>
-</ul>
-<ol start="2" type="1">
-<li>CITE-seq (Fig. S2A-B)</li>
-</ol>
-<ul>
-<li>For all libraries with associated ADT or CITE-seq data, we provide both the RNA and ADT gene expression data in the files available for download on the portal.</li>
-<li>Both FASTQ from single-cell/single-nuclei and from ADT were input into <code>scpca-nf</code> and quantified using <code>salmon alevin</code> and <code>alevin-fry</code>.</li>
-<li>We required a barcodes file from each submitter that contained the ADT labels and the associated barcode. This was used to build the index used for quantification of the ADT FASTQ and creation of the cell by ADT matrix.</li>
-<li>Unlike with RNA counts, we do not perform any filtering of cells due to low quality ADT expression. However, we do include the results from running <code>DropletUtils::cleanTagCounts()</code> in both the filtered and processed objects produced by <code>scpca-nf</code>.</li>
-<li>Similar to RNA counts, we do normalize ADT data and provide the normalized counts matrix in the processed SCE object, but we do not provide any dimensionality reduction of ADT data, only the RNA data is used for dimensionality reduction.</li>
-<li>ADT data can be found in the <code>altExp</code> slot of each <code>SingleCellExperiment</code> object or as a separate <code>_adt.hdf5</code> file for <code>AnnData</code> objects.</li>
-<li>This section includes a summary of statistics such as how many cells express each ADT.</li>
-<li>For libraries with ADT, we also include additional plots.</li>
-<li>As mentioned above, we include the results from <code>DropletUtils::cleanTagCounts()</code>, but do not filter any ADTs or cells from the object. Instead we include a column in the <code>colData</code> of the processed SCE object that indicates if it is recommended to remove ADTs or not. In the QC report, we summarize filtering taking into account removal of cells because of low quality RNA or ADT. The plot shown in the report highlights which cells would be removed if only filtering using RNA, only ADT, or both.</li>
-<li>Similar to the UMAPs for the RNA data from single-cell/single-nuclei that highlight the top variable genes, the report includes UMAPs highlighing the 4 most variable ADTs in the data. This is shown with UMAPs and ridge plots.</li>
-</ul>
-<ol start="3" type="1">
-<li>Cell hashing (Fig. S2C)</li>
-</ol>
-<ul>
-<li>Similar to ADT data, if any libraries were multiplexed and have an associated cell hashing library, both the RNA and HTO FASTQ are provided as input to the workflow and quantified with <code>salmon alevin</code> and <code>alevin-fry</code>. We also include a library pools file which indicates which libraries contain which samples and the associated tags used to label each sample.</li>
-<li>Although we quantify the HTO data and include the cell by HTO counts matrix in all objects, we do not demultiplex the samples so that there is one sample per library. Instead, we apply multiple demultiplexing methods including genetic demultiplexing, demultiplexing with <code>DropletUtils::hashedDrops()</code>, and demultipilexing with <code>Seurat::HTODemux()</code>. The results from these three methods are included in the filtered and processed objects.</li>
-<li>Add some more details about how we do genetic demultiplexing, using vireo and bulk RNA-seq</li>
-<li>If a library has associated HTO data, an additional section is added to the QC report included on the portal and output by <code>scpca-nf</code>.</li>
-<li>This section includes a summary of statistics such as how many cells express each HTO.</li>
-<li>For HTO, we do not include any additional plots, but we do show a table summarizing how many cells belong to each sample included in the multiplexed library using each of the demultiplexing methods mentioned.</li>
-</ul>
-<ol start="4" type="1">
-<li>Bulk and Spatial (Fig S3)</li>
-</ol>
-<ul>
-<li>Some samples underwent sequencing using both single-cell/single-nuclei and an additional method like bulk RNA-seq or spatial transcriptomics.</li>
-<li><code>scpca-nf</code> is able to quantify both of these additional sequencing methods.</li>
-<li>Bulk RNA FASTQ are first trimmed using <code>fastp</code> and then aligned using <code>salmon</code>. The bulk output is a single tsv file with the sample by gene matrix for all samples in that project.</li>
-<li>For spatial transcriptomics, the spatial RNA FASTQ and slide image are input into <code>scpca-nf</code> and quantified using <code>spaceranger</code>. The output includes the spot by gene matrix along with a summary report, produced by <code>spaceranger</code>.</li>
-</ul>
+<h2 id="processing-samples-with-additional-modalities">Processing samples with additional modalities</h2>
+<p><code>scpca-nf</code> includes modules for processing samples with sequencing modalities beyond single-cell or single-nuclei RNA-seq data: corresponding ADT or CITE-seq data <span class="citation" data-cites="abp5rbw2">[<a href="#ref-abp5rbw2" role="doc-biblioref">16</a>]</span>, multiplexed data via cell hashing <span class="citation" data-cites="FZrs73Vp">[<a href="#ref-FZrs73Vp" role="doc-biblioref">17</a>]</span>, spatial transcriptomics, or bulk RNA-seq.</p>
+<h3 id="antibody-derived-tags">Antibody-derived tags</h3>
+<p>To process ADT libraries, the ADT FASTQ files were provided as input into <code>scpca-nf</code> and quantified using <code>salmon alevin</code> and <code>alevin-fry</code> (Supplemental Figure 2A).
+Along with the FASTQ files, <code>scpca-nf</code> takes a tab-separated values (TSV) file with one row for each ADT – containing the name used for the ADT and associated barcode – required to build an ADT-specific index for quantifying ADT expression with <code>alevin-fry</code>.
+The output from <code>alevin-fry</code> is the unfiltered ADT by cell counts matrix.
+The ADT by cell counts matrix is read into R alongside the gene by cell counts matrix and saved as an alternative experiment (<code>altExp</code>) within the main <code>SingleCellExperiment</code> object containing the unfiltered RNA counts.
+This <code>SingleCellExperiment</code> object containing both RNA and ADT counts is output from the workflow to a <code>.rds</code> file with the suffix <code>_unfiltered.rds</code>.</p>
+<p><code>scpca-nf</code> does not filter any cells based on ADT expression or remove cells with low-quality ADT expression.
+Any cells removed after filtering empty droplets based on the unfiltered RNA counts matrix are also removed from the ADT counts matrix.
+The workflow calculates QC statistics for ADT counts using <code>DropletUtils::cleanTagCounts()</code> that are stored alongside the ADT by cell counts matrix in the filtered <code>SingleCellExperiment</code> object.
+The <code>SingleCellExperiment</code> object containing the filtered RNA and ADT counts matrix and associated ADT QC statistics is saved to an <code>.rds</code> file with the suffix <code>_filtered.rds</code>.</p>
+<p>The ADT by cell counts matrix is normalized by first determining the ambient profile and then using that profile to calculate median size factors with <code>scuttle::computeMedianFactors()</code> <span class="citation" data-cites="mX3LKFI8 4kYmrOnP">[<a href="#ref-mX3LKFI8" role="doc-biblioref">28</a>,<a href="#ref-4kYmrOnP" role="doc-biblioref">29</a>]</span>.
+We skip normalization for cells with low-quality ADT expression, as indicated by <code>DropletUtils::cleanTagCounts()</code>.
+Although <code>scpca-nf</code> normalizes ADT counts, the workflow does not perform any dimensionality reduction of ADT data; only the RNA counts data is used as input for dimensionality reduction.
+The normalized ADT data is saved as an <code>altExp</code> within the processed <code>SingleCellExperiment</code> containing the normalized RNA data and is output to a <code>.rds</code> file with the suffix <code>_processed.rds</code>.
+All <code>.rds</code> files containing <code>SingleCellExperiment</code> objects and associated <code>altExp</code> objects, are converted to <code>AnnData</code> objects and exported as separate RNA (<code>_rna.hdf5</code>) and ADT (<code>_adt.hdf5</code>) AnnData objects.</p>
+<p>If a library contains associated ADT data, the QC report output by <code>scpca-nf</code> will include an additional section with a summary of ADT-related statistics, such as how many cells express each ADT, and ADT-specific diagnostic plots (Supplemental Figure 2B-D).<br />
+As mentioned above, <code>scpca-nf</code> uses <code>DropletUtils::cleanTagCounts()</code> to calculate QC statistics for each cell using ADT expression but does not filter any cells from the object.
+We include plots summarizing the removal of low-quality cells based on RNA and ADT counts in the QC report (Supplemental Figure 2B).
+The first quadrant indicates which cells would be kept if the object was filtered on both RNA and ADT.
+The other facets highlight which cells would be removed if filtering was done using only RNA counts, only ADT counts, or both.
+The top 4 ADTs with the most variable expression are also identified and visualized using density plots to show the normalized ADT expression across all cells (Supplemental Figure 2C) and UMAPs – calculated from RNA data – with cells colored by ADT expression (Supplemental Figure 2D).</p>
+<h3 id="multiplexed-libraries">Multiplexed libraries</h3>
+<p>To process multiplexed libraries, the HTO FASTQ files are input to <code>scpca-nf</code> and quantified using <code>salmon alevin</code> and <code>alevin-fry</code> (Supplemental Figure 2C).
+Along with the FASTQ files, <code>scpca-nf</code> requires two TSV files to process multiplexed data: one to build an HTO-specific index for quantifying HTO expression with <code>alevin-fry</code> and a second indicating which HTO was used for which sample when multiplexing the library.
+The unfiltered HTO by cell counts matrix output from <code>alevin-fry</code> is saved as an alternative experiment (<code>altExp</code>) within the main <code>SingleCellExperiment</code> containing the unfiltered RNA counts.
+This <code>SingleCellExperiment</code> object containing both RNA and HTO counts is output from the workflow to a <code>.rds</code> file with the suffix <code>_unfiltered.rds</code>.</p>
+<p>As with ADT data, <code>scpca-nf</code> does not filter any cells based on HTO expression, and any cells removed after filtering empty droplets based on the unfiltered RNA counts matrix are also removed from the HTO counts matrix and saved to an <code>.rds</code> file with the <code>_filtered.rds</code> suffix.
+<code>scpca-nf</code> does not perform any additional filtering or processing of the HTO by cell counts matrix, so the same filtered matrix is saved to the processed <code>.rds</code> file with the <code>_processed.rds</code> suffix.</p>
+<p>Although <code>scpca-nf</code> quantifies the HTO data and includes an HTO by cell counts matrix in all objects, <code>scpca-nf</code> does not demultiplex the samples into one sample per library.
+Instead, <code>scpca-nf</code> applies multiple demultiplexing methods, including demultiplexing with <code>DropletUtils::hashedDrops()</code> <span class="citation" data-cites="NqZ0Pm2u">[<a href="#ref-NqZ0Pm2u" role="doc-biblioref">30</a>]</span>, demultiplexing with <code>Seurat::HTODemux()</code> <span class="citation" data-cites="FZrs73Vp">[<a href="#ref-FZrs73Vp" role="doc-biblioref">17</a>]</span>, and genetic demultiplexing when bulk RNA-seq data is available.
+<code>scpca-nf</code> uses the genetic demultiplexing method described in Weber et al. <span class="citation" data-cites="zLp25QYu">[<a href="#ref-zLp25QYu" role="doc-biblioref">31</a>]</span>, which uses bulk RNA-seq as a reference for the expected genotypes found in each single-cell RNA-seq sample.
+The results from all available demultiplexing methods are saved in the filtered and processed <code>SingleCellExperiment</code> objects.</p>
+<p>If a library has associated HTO data, an additional section is included in the QC report output by <code>scpca-nf</code>.
+This section summarizes HTO-specific library statistics, such as how many cells express each HTO.
+No additional plots are produced, but a table summarizing the results from all three demultiplexing methods is included.</p>
+<h3 id="bulk-and-spatial-transcriptomics">Bulk and spatial transcriptomics</h3>
+<p>Multiple libraries were collected for some samples, with the additional libraries being used for bulk RNA-seq and/or spatial transcriptomics.
+Both of these additional sequencing methods are supported by <code>scpca-nf</code>.
+<code>scpca-nf</code> takes FASTQ from bulk RNA-seq as input, trims reads using <code>fastp</code> <span class="citation" data-cites="pt9vlq4w">[<a href="#ref-pt9vlq4w" role="doc-biblioref">32</a>]</span>, and then aligns reads with <code>salmon</code> (Supplemental Figure 3A) <span class="citation" data-cites="vrqQcFyx">[<a href="#ref-vrqQcFyx" role="doc-biblioref">33</a>]</span>.
+The output is a single TSV file with the gene by sample counts matrix for all samples in a given ScPCA project.
+This gene by sample matrix is only included with project downloads on the Portal.</p>
+<p>To quantify spatial transcriptomics data, <code>scpca-nf</code> takes the RNA FASTQ and slide image as input (Supplemental Figure 3B).
+As there is not yet support for spatial transcriptomics with <code>alevin-fry</code>, <code>scpca-nf</code> uses Space Ranger to quantify all spatial transcriptomics data <span class="citation" data-cites="xo912CsO">[<a href="#ref-xo912CsO" role="doc-biblioref">34</a>]</span>.
+The output includes the spot by gene matrix along with a summary report produced by Space Ranger.</p>
 <h2 id="downloading-projects-from-the-scpca-portal">Downloading projects from the ScPCA Portal</h2>
 <ol type="1">
 <li>Users can download all samples for a given project together</li>
@@ -312,7 +312,7 @@ For bulk RNA-seq, RNA was collected and sequenced using either paired-end or sin
 For spatial transcriptomics, cDNA libraries were generated using the Visium kit from 10x Genomics.
 All libraries were processed using our open-source pipeline, <code>scpca-nf</code>, to produce summarized gene expression data.</p>
 <h3 id="processing-single-cell-and-single-nuclei-rna-seq-data-with-alevin-fry">Processing single-cell and single-nuclei RNA-seq data with alevin-fry</h3>
-<p>To quantify RNA-seq gene expression for each cell or nucleus in a library, <code>scpca-nf</code> uses <code>salmon alevin</code> <span class="citation" data-cites="91inc6cK">[<a href="#ref-91inc6cK" role="doc-biblioref">27</a>]</span> and <code>alevin-fry</code><span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span> to generate a gene by cell counts matrix.
+<p>To quantify RNA-seq gene expression for each cell or nucleus in a library, <code>scpca-nf</code> uses <code>salmon alevin</code> <span class="citation" data-cites="91inc6cK">[<a href="#ref-91inc6cK" role="doc-biblioref">35</a>]</span> and <code>alevin-fry</code><span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span> to generate a gene by cell counts matrix.
 Prior to mapping, we generated an index using transcripts from both spliced cDNA and unspliced cDNA sequences, denoted as the <code>splici</code> index <span class="citation" data-cites="hYvj5GBC">[<a href="#ref-hYvj5GBC" role="doc-biblioref">9</a>]</span>.
 The index was generated from the human genome, GRCh38, Ensembl version 104.
 <code>salmon alevin</code> was run using selective alignment to the <code>splici</code> index with the <code>--rad</code> option to generate a reduced alignment data (RAD) file required for input to <code>alevin-fry</code>.</p>
@@ -329,9 +329,9 @@ These matrices include all potential cells, including empty droplets, and are pr
 If a library did not have a sufficient number of droplets and <code>DropletUtils::emptyDropsCellRanger()</code> failed, cells with fewer than 100 UMIs were removed.
 Gene expression data for any cells that remain after filtering are provided in the “filtered” objects.</p>
 <p>In addition to removing empty droplets, <code>scpca-nf</code> also removes cells from downstream analysis that are likely to be compromised by damage or low-quality sequencing.
-<code>miQC</code> was used to calculate the probability of each cell being compromised <span class="citation" data-cites="17Yhk1HAt">[<a href="#ref-17Yhk1HAt" role="doc-biblioref">28</a>]</span>.
+<code>miQC</code> was used to calculate the probability of each cell being compromised <span class="citation" data-cites="17Yhk1HAt">[<a href="#ref-17Yhk1HAt" role="doc-biblioref">23</a>]</span>.
 Any cells with a likelihood of being compromised greater than 0.75 and fewer than 200 genes detected were removed before further processing.
-The gene expression counts from the remaining cells were log-normalized using the deconvolution method from Lun, Bach, and Marioni <span class="citation" data-cites="vpU0FTFY">[<a href="#ref-vpU0FTFY" role="doc-biblioref">23</a>]</span>.
+The gene expression counts from the remaining cells were log-normalized using the deconvolution method from Lun, Bach, and Marioni <span class="citation" data-cites="vpU0FTFY">[<a href="#ref-vpU0FTFY" role="doc-biblioref">24</a>]</span>.
 <code>scran::modelGeneVar()</code> was used to model gene variance from the log-normalized counts and <code>scran::getTopHVGs</code> was used to select the top 2000 high-variance genes.
 These were used as input to calculate the top 50 principal components using <code>scater::runPCA()</code>.
 Finally, UMAP embeddings were calculated from the principal components with <code>scater::runUMAP()</code>.
@@ -358,12 +358,12 @@ The normalized ADT data is available in the <code>altExp</code> of the processed
 <p>Although we did not perform any demultiplexing of samples within a multiplexed library, we did apply three different demultiplexing methods.
 Results from all three methods are included in the filtered and processed <code>SingleCellExperiment</code> objects along with the HTO counts data.</p>
 <h4 id="genetic-demultiplexing">Genetic demultiplexing</h4>
-<p>If all samples in a multiplexed library were also sequenced using bulk RNA-seq, we performed genetic demultiplexing using genotype data from both bulk RNA-seq and single-cell or single-nuclei RNA-seq <span class="citation" data-cites="zLp25QYu">[<a href="#ref-zLp25QYu" role="doc-biblioref">29</a>]</span>.
+<p>If all samples in a multiplexed library were also sequenced using bulk RNA-seq, we performed genetic demultiplexing using genotype data from both bulk RNA-seq and single-cell or single-nuclei RNA-seq <span class="citation" data-cites="zLp25QYu">[<a href="#ref-zLp25QYu" role="doc-biblioref">31</a>]</span>.
 If bulk RNA-seq was not available, no genetic demultiplexing was performed.</p>
-<p>Bulk RNA-seq reads for each sample were mapped to a reference genome using <code>STAR</code> <span class="citation" data-cites="doi10.1093/bioinformatics/bts635">[<a href="#ref-doi10.1093/bioinformatics/bts635" role="doc-biblioref"><strong>doi10.1093/bioinformatics/bts635?</strong></a>]</span> and multiplexed single-cell or single-nuclei RNA-seq reads were mapped to the same reference genome using <code>STARsolo</code><span class="citation" data-cites="rxoRG1BR">[<a href="#ref-rxoRG1BR" role="doc-biblioref">30</a>]</span>.
-The mapped bulk reads were used to call variants and assign genotypes with <code>bcftools mpileup</code> <span class="citation" data-cites="eyOvxHVn">[<a href="#ref-eyOvxHVn" role="doc-biblioref">31</a>]</span>.
-<code>cellsnp-lite</code> was then used to genotype single-cell data at the identified sites found in the bulk RNA-seq data <span class="citation" data-cites="wd1cI6xh">[<a href="#ref-wd1cI6xh" role="doc-biblioref">32</a>]</span>.
-Finally, <code>vireo</code> was used to identify the sample of origin <span class="citation" data-cites="wd1cI6xh">[<a href="#ref-wd1cI6xh" role="doc-biblioref">32</a>]</span>.</p>
+<p>Bulk RNA-seq reads for each sample were mapped to a reference genome using <code>STAR</code> <span class="citation" data-cites="doi10.1093/bioinformatics/bts635">[<a href="#ref-doi10.1093/bioinformatics/bts635" role="doc-biblioref"><strong>doi10.1093/bioinformatics/bts635?</strong></a>]</span> and multiplexed single-cell or single-nuclei RNA-seq reads were mapped to the same reference genome using <code>STARsolo</code><span class="citation" data-cites="rxoRG1BR">[<a href="#ref-rxoRG1BR" role="doc-biblioref">36</a>]</span>.
+The mapped bulk reads were used to call variants and assign genotypes with <code>bcftools mpileup</code> <span class="citation" data-cites="eyOvxHVn">[<a href="#ref-eyOvxHVn" role="doc-biblioref">37</a>]</span>.
+<code>cellsnp-lite</code> was then used to genotype single-cell data at the identified sites found in the bulk RNA-seq data <span class="citation" data-cites="wd1cI6xh">[<a href="#ref-wd1cI6xh" role="doc-biblioref">38</a>]</span>.
+Finally, <code>vireo</code> was used to identify the sample of origin <span class="citation" data-cites="wd1cI6xh">[<a href="#ref-wd1cI6xh" role="doc-biblioref">38</a>]</span>.</p>
 <h4 id="hto-demultiplexing">HTO demultiplexing</h4>
 <p>For all multiplexed libraries, we performed demultiplexing using <code>DropletUtils::hashedDrops()</code> and <code>Seurat::HTODemux()</code>.
 For both methods, we used the default parameters and only performed demultiplexing on the filtered cells present in the filtered object.
@@ -466,7 +466,7 @@ The libraries pictured are a subset of libraries in the ScPCA project <code>SCPC
 </div>
 <p>A. Expanded view of the process for adding cell type annotations within <code>scpca-nf</code>, as introduced in Figure <a href="#fig:fig2">2</a>A.
 Cell type annotation is performed on the <code>Processed SCE Object</code>.
-A <code>celldex</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span> reference dataset with ontology labels is used as input for annotation with <code>SingleR</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">24</a>]</span>, and a list of marker genes compiled from <code>PanglaoDB</code> <span class="citation" data-cites="T3PlZ3Vh">[<a href="#ref-T3PlZ3Vh" role="doc-biblioref">33</a>]</span> is used as input for annotation with <code>CellAssign</code> <span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">25</a>]</span>.
+A <code>celldex</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">25</a>]</span> reference dataset with ontology labels is used as input for annotation with <code>SingleR</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">25</a>]</span>, and a list of marker genes compiled from <code>PanglaoDB</code> <span class="citation" data-cites="T3PlZ3Vh">[<a href="#ref-T3PlZ3Vh" role="doc-biblioref">39</a>]</span> is used as input for annotation with <code>CellAssign</code> <span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">26</a>]</span>.
 Results from cell type annotation are then added to the <code>Processed SCE Object</code>, and a cell type summary report with information about reference sources, comparisons among cell type annotation methods, and diagnostic plots is created.
 Although not shown in this panel, cell type annotations are also included in the <code>Processed AnnData Object</code> created from the <code>Processed SCE Object</code> (Figure <a href="#fig:fig2">2</a>A).</p>
 <p>B. Example heatmap as shown in the cell type summary report comparing annotations with <code>SingleR</code> and <code>CellAssign</code>.
@@ -542,38 +542,56 @@ The heatmap shown is from library <code>SCPCL000498</code>.</p>
 <div id="ref-U2Fa25dp" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>EmptyDrops: distinguishing cells from empty droplets in droplet-based single-cell RNA sequencing data</strong> <div class="csl-block">Aaron TL Lun, Samantha Riesenfeld, Tallulah Andrews, The Phuong Dao, Tomas Gomes, John C Marioni</div> <em>Genome Biology</em> (2019-03-22) <a href="https://doi.org/gfxdhf">https://doi.org/gfxdhf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1662-y">10.1186/s13059-019-1662-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30902100">30902100</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6431044">PMC6431044</a></div></div>
 </div>
+<div id="ref-17Yhk1HAt" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>miQC: An adaptive probabilistic framework for quality control of single-cell RNA-sequencing data</strong> <div class="csl-block">Ariel A Hippen, Matias M Falco, Lukas M Weber, Erdogan Pekcan Erkan, Kaiyang Zhang, Jennifer Anne Doherty, Anna Vähärautio, Casey S Greene, Stephanie C Hicks</div> <em>PLOS Computational Biology</em> (2021-08-24) <a href="https://doi.org/gng37g">https://doi.org/gng37g</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1009290">10.1371/journal.pcbi.1009290</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34428202">34428202</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8415599">PMC8415599</a></div></div>
+</div>
 <div id="ref-vpU0FTFY" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Pooling across cells to normalize single-cell RNA sequencing data with many zero counts</strong> <div class="csl-block">Aaron T L. Lun, Karsten Bach, John C Marioni</div> <em>Genome Biology</em> (2016-04-27) <a href="https://doi.org/gfgntn">https://doi.org/gfgntn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-016-0947-7">10.1186/s13059-016-0947-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27122128">27122128</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4848819">PMC4848819</a></div></div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Pooling across cells to normalize single-cell RNA sequencing data with many zero counts</strong> <div class="csl-block">Aaron T L. Lun, Karsten Bach, John C Marioni</div> <em>Genome Biology</em> (2016-04-27) <a href="https://doi.org/gfgntn">https://doi.org/gfgntn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-016-0947-7">10.1186/s13059-016-0947-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27122128">27122128</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4848819">PMC4848819</a></div></div>
 </div>
 <div id="ref-13P6oSrS0" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage</strong> <div class="csl-block">Dvir Aran, Agnieszka P Looney, Leqian Liu, Esther Wu, Valerie Fong, Austin Hsu, Suzanna Chak, Ram P Naikawadi, Paul J Wolters, Adam R Abate, … Mallar Bhattacharya</div> <em>Nature Immunology</em> (2019-01-14) <a href="https://doi.org/gfv3p2">https://doi.org/gfv3p2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41590-018-0276-y">10.1038/s41590-018-0276-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30643263">30643263</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6340744">PMC6340744</a></div></div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage</strong> <div class="csl-block">Dvir Aran, Agnieszka P Looney, Leqian Liu, Esther Wu, Valerie Fong, Austin Hsu, Suzanna Chak, Ram P Naikawadi, Paul J Wolters, Adam R Abate, … Mallar Bhattacharya</div> <em>Nature Immunology</em> (2019-01-14) <a href="https://doi.org/gfv3p2">https://doi.org/gfv3p2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41590-018-0276-y">10.1038/s41590-018-0276-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30643263">30643263</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6340744">PMC6340744</a></div></div>
 </div>
 <div id="ref-HES0WO6k" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Probabilistic cell-type assignment of single-cell RNA-seq for tumor microenvironment profiling</strong> <div class="csl-block">Allen W Zhang, Ciara O’Flanagan, Elizabeth A Chavez, Jamie LP Lim, Nicholas Ceglia, Andrew McPherson, Matt Wiens, Pascale Walters, Tim Chan, Brittany Hewitson, … Sohrab P Shah</div> <em>Nature Methods</em> (2019-09-09) <a href="https://doi.org/ggr7ps">https://doi.org/ggr7ps</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-019-0529-1">10.1038/s41592-019-0529-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31501550">31501550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7485597">PMC7485597</a></div></div>
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>Probabilistic cell-type assignment of single-cell RNA-seq for tumor microenvironment profiling</strong> <div class="csl-block">Allen W Zhang, Ciara O’Flanagan, Elizabeth A Chavez, Jamie LP Lim, Nicholas Ceglia, Andrew McPherson, Matt Wiens, Pascale Walters, Tim Chan, Brittany Hewitson, … Sohrab P Shah</div> <em>Nature Methods</em> (2019-09-09) <a href="https://doi.org/ggr7ps">https://doi.org/ggr7ps</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-019-0529-1">10.1038/s41592-019-0529-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31501550">31501550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7485597">PMC7485597</a></div></div>
 </div>
 <div id="ref-KRBW8xeZ" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>anndata: Annotated data</strong> <div class="csl-block">Isaac Virshup, Sergei Rybakov, Fabian J Theis, Philipp Angerer, FAlexander Wolf</div> <em>Cold Spring Harbor Laboratory</em> (2021-12-19) <a href="https://doi.org/gst7w6">https://doi.org/gst7w6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.12.16.473007">10.1101/2021.12.16.473007</a></div></div>
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>anndata: Annotated data</strong> <div class="csl-block">Isaac Virshup, Sergei Rybakov, Fabian J Theis, Philipp Angerer, FAlexander Wolf</div> <em>Cold Spring Harbor Laboratory</em> (2021-12-19) <a href="https://doi.org/gst7w6">https://doi.org/gst7w6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.12.16.473007">10.1101/2021.12.16.473007</a></div></div>
 </div>
-<div id="ref-91inc6cK" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Alignment and mapping methodology influence transcript abundance estimation</strong> <div class="csl-block">Avi Srivastava, Laraib Malik, Hirak Sarkar, Mohsen Zakeri, Fatemeh Almodaresi, Charlotte Soneson, Michael I Love, Carl Kingsford, Rob Patro</div> <em>Genome Biology</em> (2020-09-07) <a href="https://doi.org/gg98sd">https://doi.org/gg98sd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-020-02151-8">10.1186/s13059-020-02151-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32894187">32894187</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7487471">PMC7487471</a></div></div>
+<div id="ref-mX3LKFI8" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>scuttle</strong> <div class="csl-block">Bioconductor</div> <a href="https://doi.org/gtkc7k">https://doi.org/gtkc7k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18129/b9.bioc.scuttle">10.18129/b9.bioc.scuttle</a></div></div>
 </div>
-<div id="ref-17Yhk1HAt" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>miQC: An adaptive probabilistic framework for quality control of single-cell RNA-sequencing data</strong> <div class="csl-block">Ariel A Hippen, Matias M Falco, Lukas M Weber, Erdogan Pekcan Erkan, Kaiyang Zhang, Jennifer Anne Doherty, Anna Vähärautio, Casey S Greene, Stephanie C Hicks</div> <em>PLOS Computational Biology</em> (2021-08-24) <a href="https://doi.org/gng37g">https://doi.org/gng37g</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1009290">10.1371/journal.pcbi.1009290</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34428202">34428202</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8415599">PMC8415599</a></div></div>
+<div id="ref-4kYmrOnP" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Chapter 12 Integrating with protein abundance | Advanced Single-Cell Analysis with Bioconductor</strong> <a href="https://bioconductor.org/books/3.16/OSCA.advanced/integrating-with-protein-abundance.html#cite-seq-median-norm">https://bioconductor.org/books/3.16/OSCA.advanced/integrating-with-protein-abundance.html#cite-seq-median-norm</a></div>
+</div>
+<div id="ref-NqZ0Pm2u" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>DropletUtils</strong> <div class="csl-block">Bioconductor</div> <a href="https://doi.org/gtkc7d">https://doi.org/gtkc7d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.18129/b9.bioc.dropletutils">10.18129/b9.bioc.dropletutils</a></div></div>
 </div>
 <div id="ref-zLp25QYu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Genetic demultiplexing of pooled single-cell RNA-sequencing samples in cancer facilitates effective experimental design</strong> <div class="csl-block">Lukas M Weber, Ariel A Hippen, Peter F Hickey, Kristofer C Berrett, Jason Gertz, Jennifer Anne Doherty, Casey S Greene, Stephanie C Hicks</div> <em>GigaScience</em> (2021-09) <a href="https://doi.org/gmwhsc">https://doi.org/gmwhsc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/gigascience/giab062">10.1093/gigascience/giab062</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34553212">34553212</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8458035">PMC8458035</a></div></div>
+<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Genetic demultiplexing of pooled single-cell RNA-sequencing samples in cancer facilitates effective experimental design</strong> <div class="csl-block">Lukas M Weber, Ariel A Hippen, Peter F Hickey, Kristofer C Berrett, Jason Gertz, Jennifer Anne Doherty, Casey S Greene, Stephanie C Hicks</div> <em>GigaScience</em> (2021-09) <a href="https://doi.org/gmwhsc">https://doi.org/gmwhsc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/gigascience/giab062">10.1093/gigascience/giab062</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34553212">34553212</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8458035">PMC8458035</a></div></div>
+</div>
+<div id="ref-pt9vlq4w" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>fastp: an ultra-fast all-in-one FASTQ preprocessor</strong> <div class="csl-block">Shifu Chen, Yanqing Zhou, Yaru Chen, Jia Gu</div> <em>Bioinformatics</em> (2018-09-01) <a href="https://doi.org/gd9mrb">https://doi.org/gd9mrb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bty560">10.1093/bioinformatics/bty560</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30423086">30423086</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129281">PMC6129281</a></div></div>
+</div>
+<div id="ref-vrqQcFyx" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>Salmon provides fast and bias-aware quantification of transcript expression</strong> <div class="csl-block">Rob Patro, Geet Duggal, Michael I Love, Rafael A Irizarry, Carl Kingsford</div> <em>Nature Methods</em> (2017-03-06) <a href="https://doi.org/gcw9f5">https://doi.org/gcw9f5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4197">10.1038/nmeth.4197</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28263959">28263959</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5600148">PMC5600148</a></div></div>
+</div>
+<div id="ref-xo912CsO" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>Space Ranger - Official 10x Genomics Support</strong> <div class="csl-block">10x Genomics</div> <a href="https://www.10xgenomics.com/support/software/space-ranger/latest">https://www.10xgenomics.com/support/software/space-ranger/latest</a></div>
+</div>
+<div id="ref-91inc6cK" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Alignment and mapping methodology influence transcript abundance estimation</strong> <div class="csl-block">Avi Srivastava, Laraib Malik, Hirak Sarkar, Mohsen Zakeri, Fatemeh Almodaresi, Charlotte Soneson, Michael I Love, Carl Kingsford, Rob Patro</div> <em>Genome Biology</em> (2020-09-07) <a href="https://doi.org/gg98sd">https://doi.org/gg98sd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-020-02151-8">10.1186/s13059-020-02151-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32894187">32894187</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7487471">PMC7487471</a></div></div>
 </div>
 <div id="ref-rxoRG1BR" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>STARsolo: accurate, fast and versatile mapping/quantification of single-cell and single-nucleus RNA-seq data</strong> <div class="csl-block">Benjamin Kaminow, Dinar Yunusov, Alexander Dobin</div> <em>Cold Spring Harbor Laboratory</em> (2021-05-05) <a href="https://doi.org/gqj7ft">https://doi.org/gqj7ft</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.05.05.442755">10.1101/2021.05.05.442755</a></div></div>
+<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>STARsolo: accurate, fast and versatile mapping/quantification of single-cell and single-nucleus RNA-seq data</strong> <div class="csl-block">Benjamin Kaminow, Dinar Yunusov, Alexander Dobin</div> <em>Cold Spring Harbor Laboratory</em> (2021-05-05) <a href="https://doi.org/gqj7ft">https://doi.org/gqj7ft</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.05.05.442755">10.1101/2021.05.05.442755</a></div></div>
 </div>
 <div id="ref-eyOvxHVn" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Twelve years of SAMtools and BCFtools</strong> <div class="csl-block">Petr Danecek, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, Thomas Keane, Shane A McCarthy, Robert M Davies, Heng Li</div> <em>GigaScience</em> (2021-01-29) <a href="https://doi.org/gjxzc9">https://doi.org/gjxzc9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/gigascience/giab008">10.1093/gigascience/giab008</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33590861">33590861</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7931819">PMC7931819</a></div></div>
+<div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Twelve years of SAMtools and BCFtools</strong> <div class="csl-block">Petr Danecek, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, Thomas Keane, Shane A McCarthy, Robert M Davies, Heng Li</div> <em>GigaScience</em> (2021-01-29) <a href="https://doi.org/gjxzc9">https://doi.org/gjxzc9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/gigascience/giab008">10.1093/gigascience/giab008</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33590861">33590861</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7931819">PMC7931819</a></div></div>
 </div>
 <div id="ref-wd1cI6xh" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Cellsnp-lite: an efficient tool for genotyping single cells</strong> <div class="csl-block">Xianjie Huang, Yuanhua Huang</div> <em>Bioinformatics</em> (2021-05-08) <a href="https://doi.org/gqcggs">https://doi.org/gqcggs</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btab358">10.1093/bioinformatics/btab358</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33963851">33963851</a></div></div>
+<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Cellsnp-lite: an efficient tool for genotyping single cells</strong> <div class="csl-block">Xianjie Huang, Yuanhua Huang</div> <em>Bioinformatics</em> (2021-05-08) <a href="https://doi.org/gqcggs">https://doi.org/gqcggs</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btab358">10.1093/bioinformatics/btab358</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33963851">33963851</a></div></div>
 </div>
 <div id="ref-T3PlZ3Vh" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data</strong> <div class="csl-block">Oscar Franzén, Li-Ming Gan, Johan LM Björkegren</div> <em>Database</em> (2019-01-01) <a href="https://doi.org/ggkzxr">https://doi.org/ggkzxr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/database/baz046">10.1093/database/baz046</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30951143">30951143</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6450036">PMC6450036</a></div></div>
+<div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data</strong> <div class="csl-block">Oscar Franzén, Li-Ming Gan, Johan LM Björkegren</div> <em>Database</em> (2019-01-01) <a href="https://doi.org/ggkzxr">https://doi.org/ggkzxr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/database/baz046">10.1093/database/baz046</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30951143">30951143</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6450036">PMC6450036</a></div></div>
 </div>
 </div>
 <!-- default theme -->

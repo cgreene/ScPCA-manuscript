@@ -14,7 +14,6 @@ customizations
 dataset
 datasets
 deconvolution
-demultipilexing
 demultiplex
 demultiplexing
 dimensionality
@@ -28,7 +27,6 @@ GRCh
 Hancestro
 HCA
 Heatmap
-highlighing
 HsapDV
 HTAN
 HTO
@@ -52,17 +50,15 @@ PATO
 PCA
 pseudocount
 reproducibility
-SCE
 SCEs
 scpca
 SingleCellExperiment
 SingleR
 SRA
 subdiagnosis
-submitters
 transcriptionally
 transcriptomics
-tsv
+TSV
 UBERON
 UMAP
 UMAPs
