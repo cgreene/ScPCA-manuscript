@@ -21,13 +21,15 @@ dimensionality
 embeddings
 Ensembl
 FASTQ
+GC
 genomic
 genotype
 genotypes
 GRCh
 Hancestro
 HCA
-Heatmap
+heatmap
+hexamer
 HsapDV
 HTAN
 HTO
@@ -50,7 +52,7 @@ PCA
 pseudocount
 reproducibility
 Runtime
-ScPCA
+scpca
 SingleCellExperiment
 SingleR
 SRA
