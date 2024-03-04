@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-03-01'
+date-meta: '2024-03-04'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-03-01" />
-  <meta name="citation_publication_date" content="2024-03-01" />
-  <meta property="article:published_time" content="2024-03-01" />
-  <meta name="dc.modified" content="2024-03-01T16:44:31+00:00" />
-  <meta property="article:modified_time" content="2024-03-01T16:44:31+00:00" />
+  <meta name="dc.date" content="2024-03-04" />
+  <meta name="citation_publication_date" content="2024-03-04" />
+  <meta property="article:published_time" content="2024-03-04" />
+  <meta name="dc.modified" content="2024-03-04T17:21:13+00:00" />
+  <meta property="article:modified_time" content="2024-03-04T17:21:13+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/231954c8b52090c9c9be78014fda6bf2ff0c3403/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/231954c8b52090c9c9be78014fda6bf2ff0c3403/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/231954c8b52090c9c9be78014fda6bf2ff0c3403/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c72242eeaae1f1074c30aa04b1afd93b5ba7b76b/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c72242eeaae1f1074c30aa04b1afd93b5ba7b76b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c72242eeaae1f1074c30aa04b1afd93b5ba7b76b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/231954c8b52090c9c9be78014fda6bf2ff0c3403/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/c72242eeaae1f1074c30aa04b1afd93b5ba7b76b/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@231954c](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/231954c8b52090c9c9be78014fda6bf2ff0c3403)
-on March 1, 2024.
+from [AlexsLemonade/ScPCA-manuscript@c72242e](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/c72242eeaae1f1074c30aa04b1afd93b5ba7b76b)
+on March 4, 2024.
 </em></small>
 
 
@@ -452,7 +452,10 @@ The results from both these methods are available in the filtered and processed 
 
 ## Figure Titles and Legends
 
-![**Figure 1. Overview of ScPCA Portal contents.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_1.png?sanitize=true){#fig:fig1 width="7in"}
+<br><br>
+
+<!-- Figure 1 -->
+![**Overview of ScPCA Portal contents.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_1.png?sanitize=true){#fig:fig1 width="7in"}
 
 A. Barplots showing sample counts across four main cancer groupings in the ScPCA Portal, with each bar displaying the number of samples for each cancer type.
 Each bar is shaded based on the number of samples with each disease timing, and total sample counts for each cancer type are shown to the right of each bar.
@@ -468,8 +471,10 @@ This project card is associated with project `SCPCP000009`.
 Project cards include information about the number of samples, technologies and modalities, additional sample metadata information, submitter-provided diagnoses, as well as submitter-provided abstract.
 Where available, submitter-provided citation information as well as other databases where this data has been deposited are also provided.
 
+<br><br>
 
-![**Figure 2. Overview of the `scpca-nf` workflow.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_2.png?sanitize=true){#fig:fig2 width="7in"}
+<!-- Figure 2 -->
+![**Overview of the `scpca-nf` workflow.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_2.png?sanitize=true){#fig:fig2 width="7in"}
 
 A. An overview of `scpca-nf`, the primary workflow for processing single-cell and single-nuclei data for the ScPCA Portal.
 Mapping is first performed with `alevin-fry` to generate a gene-by-cell count matrix, which is read into `R` and converted into a `SingleCellExperiment` (`SCE`) object.
@@ -498,8 +503,10 @@ F. UMAP embeddings of log-normalized RNA expression values where each cell is co
 G. UMAP embeddings of log-normalized RNA expression values for the top four most variable genes, colored by the given gene's expression.
 In the actual summary QC report, the top 12 most highly variable genes are shown.
 
+<br><br>
 
-![**Figure 3. ScPCA Portal project download file structure and merged object workflow.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_3.png?sanitize=true){#fig:fig3 width="7in"}
+<!-- Figure 3 -->
+![**ScPCA Portal project download file structure and merged object workflow.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_3.png?sanitize=true){#fig:fig3 width="7in"}
 
 A. File download structure for an ScPCA Portal project download in `SingleCellExperiment` (`SCE`) format.
 The download folder is named according to both the project ID and the date it was downloaded.
@@ -523,8 +530,10 @@ A grid of UMAPs is shown for each library in the merged object, with cells in th
 The UMAP is constructed from the merged object such that all libraries contribute an equal weight, but no batch correction was performed.
 The libraries pictured are a subset of libraries in the ScPCA project `SCPCP000003`.
 
+<br><br>
 
-![**Figure 4. Cell type annotation in `scpca-nf`.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_4.png?sanitize=true){#fig:fig4 width="7in"}
+<!-- Figure 4 -->
+![**Cell type annotation in `scpca-nf`.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_4.png?sanitize=true){#fig:fig4 width="7in"}
 
 A. Expanded view of the process for adding cell type annotations within `scpca-nf`, as introduced in Figure {@fig:fig2}A.
 Cell type annotation is performed on the `Processed SCE Object`.
@@ -536,6 +545,45 @@ B. Example heatmap as shown in the cell type summary report comparing annotation
 Heatmap cells are colored by the Jaccard similarity index.
 A value of 1 means that there is complete overlap between which cells are annotated with the two labels being compared, and a value of 0 means that there is no overlap between which cells are annotated with the two labels being compared.
 The heatmap shown is from library `SCPCL000498`.
+
+
+## Supplementary Figures and Tables
+
+<br><br>
+
+<!-- Table S1 -->
+**Table S1. Overview of ScPCA Portal Datasets.**
+This table provides descriptions and sample and library counts for each project in the ScPCA Portal.
+
+`scpca_project_id`: ScPCA project unique identifier.
+`Diagnosis group`: Diagnosis group as shown in Figure {@fig:fig1}.
+`Diagnoses`: Full set of diagnoses for all samples associated with the project.
+`Total number of samples (S)`: Number of samples associated with the project.
+`Total number of libraries (L)`: Number of libraries associated with the project.
+Due to additional sequencing modalities and/or multiplexing, projects may have more libraries than samples.
+All remaining columns give the number of libraries (as designated with `(L)`) with the given suspension type or additional modality.
+
+<br><br>
+
+<!-- Figure S1 -->
+![**Results from benchmarking `alevin-fry` and `CellRanger` performance.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s1.png?sanitize=true){#fig:figs1 tag="S1" width="7in"}
+
+Each panel compares metrics for six representative ScPCA libraries, including three single-cell and three single-nuclei suspensions, obtained from processing libraries with both `alevin-fry` and `CellRanger`.
+
+A. Runtime in minutes (top row) and peak memory in GB (bottom row) for six ScPCA libraries processed with `alevin-fry` and `CellRanger`.
+Processing with `alevin-fry` was consistently faster and more memory-efficient compared to processing with `CellRanger`.
+
+Panels B-D show only cells present in both the `alevin-fry` and `CellRanger` output.
+
+B. Comparison of mean gene expression values for six ScPCA libraries processed with `alevin-fry` and `CellRanger`, shown on a log-scale.
+Each point is a gene, and only genes detected in at least 5 cells are shown.
+$R^2$ values shown in the top left corner of each panel reflect broad agreement in mean gene expression values between platforms.
+
+C. Comparison of log total UMI counts for six ScPCA libraries processed with `alevin-fry` and `CellRanger`.
+Distributions reflect broad agreement in the total UMI count per cell between platforms, although `alevin-fry` returned slightly higher values for certain single-cell libraries.
+
+D. Comparison of log total genes per cell for six ScPCA libraries processed with `alevin-fry` and `CellRanger`.
+Distributions reflect broad agreement between platforms in the total number of genes per cell between platforms, although `alevin-fry` returned slightly higher values for certain single-cell libraries.
 
 
 ## References {.page_break_before}

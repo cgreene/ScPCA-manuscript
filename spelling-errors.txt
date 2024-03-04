@@ -8,6 +8,7 @@ barcodes
 barcoding
 Barplot
 Barplots
+benchmarking
 cDNA
 CellAssign
 customizations
@@ -48,6 +49,7 @@ PATO
 PCA
 pseudocount
 reproducibility
+Runtime
 scpca
 SingleCellExperiment
 SingleR
