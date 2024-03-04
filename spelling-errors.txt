@@ -34,7 +34,7 @@ HTO
 HTOs
 intronic
 isotype
-jaccard
+Jaccard
 janeroe
 johndoe
 Lun
