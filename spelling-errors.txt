@@ -3,6 +3,7 @@ ADTs
 alevin
 ALSF
 AnnData
+ATAC
 barcode
 barcodes
 barcoding
@@ -11,13 +12,15 @@ Barplots
 benchmarking
 cDNA
 CellAssign
+CELLxGENE
 customizations
+CZI
 dataset
 datasets
 deconvolution
 demultiplex
 demultiplexed
-Demultiplexing
+demultiplexing
 dimensionality
 embeddings
 Ensembl
@@ -27,6 +30,7 @@ genomic
 genotype
 genotypes
 GRCh
+GSEA
 Hancestro
 HCA
 Heatmap
@@ -41,6 +45,7 @@ isotype
 Jaccard
 janeroe
 johndoe
+Kanaverse
 Lun
 Marioni
 microenvironment
@@ -66,6 +71,7 @@ transcriptionally
 transcriptomics
 TSV
 UBERON
+UCSC
 UMAP
 UMAPs
 UMI
