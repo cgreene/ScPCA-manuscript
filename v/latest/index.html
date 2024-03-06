@@ -54,8 +54,8 @@
   <meta name="dc.date" content="2024-03-06" />
   <meta name="citation_publication_date" content="2024-03-06" />
   <meta property="article:published_time" content="2024-03-06" />
-  <meta name="dc.modified" content="2024-03-06T15:02:07+00:00" />
-  <meta property="article:modified_time" content="2024-03-06T15:02:07+00:00" />
+  <meta name="dc.modified" content="2024-03-06T15:46:47+00:00" />
+  <meta property="article:modified_time" content="2024-03-06T15:46:47+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/51b1cdc8f97e738e358ed689e0b863b9faa357b4/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/51b1cdc8f97e738e358ed689e0b863b9faa357b4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/51b1cdc8f97e738e358ed689e0b863b9faa357b4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,9 +95,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/51b1cdc8f97e738e358ed689e0b863b9faa357b4/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/51b1cdc8f97e738e358ed689e0b863b9faa357b4">AlexsLemonade/ScPCA-manuscript@51b1cdc</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/c731a01650031b2832e896f77675111805741533">AlexsLemonade/ScPCA-manuscript@c731a01</a>
 on March 6, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -442,6 +442,62 @@ By contrast, if any libraries included in the ScPCA project are multiplexed and 
 <li>use of zellkonverter</li>
 </ul>
 <h3 id="code-and-data-availability">Code and data availability</h3>
+<h2 id="discussion">Discussion</h2>
+<ol type="1">
+<li>Recap and benefits of the Portal</li>
+</ol>
+<ul>
+<li><p>Here we introduced the ScPCA Portal, a collection of uniformly processed, summarized single-cell and single-nuclei RNA-seq data and de-identified metadata from pediatric tumor samples available for download.</p></li>
+<li><p>The Portal was created to make the data widely available and free up researchers’ time, allowing them to skip processing and begin using the data immediately for analysis.</p></li>
+<li><p>The Portal includes 500 samples from over 50 tumor types, making this the most comprehensive collection of publicly available single-cell RNA-seq datasets from pediatric tumor samples to our knowledge.</p></li>
+<li><p>The summarized data is available in three different formats, as unfiltered, filtered, or processed objects.</p></li>
+<li><p>Inclusion of all three file types allows users to choose to start from a processed object or perform their own processing, such as filtering and normalization.</p></li>
+<li><p>The processed objects contain additional filtered and normalized gene expression data along with reduced dimensionality results from PCA and UMAP and cell type annotations so users can skip straight to analysis like identifying marker genes or exploring genes of interest.</p></li>
+<li><p>A quality control report is included with every library allowing users to asses the quality of data and identify any low-quality libraries that they may wish to exclude from further downstream analyses.</p></li>
+<li><p>Data is provided as either <code>SingleCellExperiment</code> or <code>AnnData</code> objects, allowing users to work in R or Python with the downloaded data, depending on their preference.</p></li>
+<li><p>Providing data as <code>AnnData</code> objects along with <code>SingleCellExperiment</code> objects allows users to more easily work with our data on other platforms, like the UCSC cell browser, CZI CELLxGENE, and Kanaverse.</p></li>
+<li><p>Additionally, users can choose to download a merged object containing all data from all samples in a project. This is helpful for users who are looking to perform analysis on multiple samples simultaneously, like differential gene expression or GSEA.</p></li>
+<li><p>Along with data files, standardized metadata is included as a separate metadata file and in the data objects for all samples.</p></li>
+<li><p>Human-readable values are available for all samples, with ontology term identifiers available for a subset of metadata fields.</p></li>
+<li><p>Providing metadata for all samples gives users any relevant clinical information they may need when performing downstream analyses.</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Inclusion of additional modalities allowing for multi-modal analysis of samples</li>
+</ol>
+<ul>
+<li>Not only do we include summarized data from single-cell and single-nuclei RNA-seq, but many samples have additional sequencing data, including corresponding ADT data from CITE-seq, bulk RNA-seq, or spatial transcriptomics.</li>
+<li>Inclusion of additional sequencing allows users to gather more information about a single sample then they could from single-cell alone</li>
+<li>CITE-seq provides additional information about cell-surface protein expression in individual cells, which can help determine cell types and correlate RNA to protein expression for a given sample</li>
+<li>Additional information that can be obtained from bulk RNA-seq - help identify cell composition of bulk RNA-seq from the single-cell samples</li>
+<li>Benefits of having matching single-cell and spatial - deconvolution of cell types within a single spot</li>
+<li>We include multiple methods as demultiplexing results can vary across methods, allowing users to choose the most appropriate method for their needs</li>
+<li>If a sample has associated bulk RNA-seq, results from genetic demultiplexing are included.</li>
+<li>Genetic demultiplexing uses genotypes to identify which cells come from which samples, which can make it more reliable then methods that use HTO expression only if a lot of background noise is present</li>
+</ul>
+<ol start="3" type="1">
+<li>Benefits of scpca-nf</li>
+</ol>
+<ul>
+<li>To ensure uniform processing, we built an open-source and efficient workflow for processing datasets of all types available on the Portal, scpca-nf, that is available to the entire research community</li>
+<li>By using alevin-fry for quantification, the workflow is faster and more memory-efficient than other comparable workflows</li>
+<li>In one command, FASTQ files are turned into processed <code>SingleCellExperiment</code> or <code>AnnData</code> objects ready for downstream analyses</li>
+<li>The workflow works with all sequencing types found on the Portal, allowing us and users to process multiple sample types at the same time</li>
+<li>The modular workflow means we can support more modalities in the future, such as ATAC-seq, all with the same <code>scpca-nf</code> workflow</li>
+<li>The workflow portability allows others to run it on their own samples and submit for inclusion into the Portal, enabling us to continue to grow the number of available samples without having access to raw data</li>
+<li>Output of the workflow is mostly consistent with the expected format for CZI CELLxGENE</li>
+</ul>
+<ol start="4" type="1">
+<li>Inclusion of cell types</li>
+</ol>
+<ul>
+<li>To provide users with cell type annotations, we annotated cell types with two automated cell type annotation methods, <code>SingleR</code> and <code>CellAssign</code>, that use public references.</li>
+<li>As the publicly available references we used do not contain tumor cells and only contain normal cells, we recognize that there are limitations to the annotations we provide.</li>
+<li>The most optimal way to assign cell types would be to have a well-annotated reference dataset from a sample obtained from the same patient with the same diagnosis and tissue of origin, but unfortunately this does not exist for samples available on the Portal.</li>
+<li>Although the annotations provided are not without limitations, these methods can provide a good starting point for users, particularly in helping to annotate populations of normal cells that may be present, as normal cells are represented in the reference.</li>
+<li>For <code>SingleR</code>, we compared available human-specific <code>celldex</code> references across multiple samples and identified <code>BlueprintEncodeData</code> as the most appropriate due to the high delta median</li>
+<li>For <code>CellAssign</code>, we searched for publicly available marker gene lists covering cell types across a variety of tissues.</li>
+<li><code>PanglaoDB</code> contains a list of marker genes across a variety of cell types and groups these cell types by organ, allowing us to create organ-specific references (e.g., all brain cells) for each ScPCA project based on the disease and tissue type represented.</li>
+</ul>
 <h2 id="figure-titles-and-legends">Figure Titles and Legends</h2>
 <p><br><br></p>
 <!-- Figure 1 -->
