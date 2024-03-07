@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-03-07" />
   <meta name="citation_publication_date" content="2024-03-07" />
   <meta property="article:published_time" content="2024-03-07" />
-  <meta name="dc.modified" content="2024-03-07T01:15:59+00:00" />
-  <meta property="article:modified_time" content="2024-03-07T01:15:59+00:00" />
+  <meta name="dc.modified" content="2024-03-07T15:01:44+00:00" />
+  <meta property="article:modified_time" content="2024-03-07T15:01:44+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1f262a0640b6fb839d1f40406aa79ecf1c63681b/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1f262a0640b6fb839d1f40406aa79ecf1c63681b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1f262a0640b6fb839d1f40406aa79ecf1c63681b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/1f262a0640b6fb839d1f40406aa79ecf1c63681b/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@69858cc](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/69858cc4d34f11966c710ac227482f905406e43d)
+from [AlexsLemonade/ScPCA-manuscript@1f262a0](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/1f262a0640b6fb839d1f40406aa79ecf1c63681b)
 on March 7, 2024.
 </em></small>
 
@@ -497,10 +497,24 @@ We created a decoy-aware reference created from spliced cDNA sequences with the 
 The trimmed reads were then provided as input to `salmon quant` for selective alignment.
 In addition to using the default parameters for `salmon quant`, we applied the `--seqBias` and `--gcBias` flags to correct for sequence-specific biases due to random hexamer priming and fragment-level GC biases, respectively. 
 
-### Cell type annotation
+### Cell type annotation 
 
-  - Implementation of SingleR and CellAssign
-  - Description of metrics used (e.g., what is the delta median and where does the probability come from)
+If cell types were obtained from the submitter of the dataset, the submitter-provided annotations were incorporated into all `SingleCellExperiment` objects (unfiltered, filtered, and processed). 
+Cell type labels determined by both `SingleR`[@doi:10.1038/s41590-018-0276-y] and `CellAssign`[@doi:10.1038/s41592-019-0529-1] were added to processed `SingleCellExperiment` objects.
+
+To build the references used for assigning cell types, a separate workflow within `scpca-nf` was run, `build-celltype-index.nf`. 
+For `SingleR` we used the `BlueprintEncodeData` from the `celldex` package [@doi:10.3324/haematol.2013.094243;@doi: 10.1038/nature11247;@doi:10.18129/B9.bioc.celldex]  to train the `SingleR` classification model with `SingleR::trainSingleR()`.
+The model and the processed `SingleCellExperiment` object were input to `SingleR::classifySingleR()`. 
+The `SingleR` output of cell type annotations and a score matrix for each cell and all possible cell types were added to the processed `SingleCellExperiment` object output. 
+To evaluate confidence in `SingleR` cell type assignments, we also calculated a delta median statistic for each cell by subtracting the median cell type score from the maximum score for that cell [@url:https://bioconductor.org/books/release/SingleRBook/annotation-diagnostics.html#based-on-the-deltas-across-cells]. 
+
+For `CellAssign`, marker gene references were created using the marker gene lists available on `PanglaoDB` [@doi:10.1093/database/baz046]. 
+Organ-specific references were built using all cell types in a specified organ listed in `PanglaoDB` to accommodate all ScPCA projects encompassing a variety of disease and tissue type. 
+If a set of disease types in a given project encompassed cells that may be present in multiple organ groups, multiple organs were combined - e.g., for sarcomas that appear in bone or soft tissue, we created a reference containing bone, connective tissue, smooth muscle, and immune cells.
+
+Given the processed `SingleCellExperiment` object and organ-specific reference, `scvi.external.CellAssign` was used to train the model and predict the assigned cell type. 
+For each cell, `CellAssign` calculates a probability of assignment to each cell type in the reference.
+The probability matrix and a prediction based on the most probable cell type were added as cell type annotations to the processed `SingleCellExperiment` object output.
 
 ### Generating merged data
 
@@ -520,7 +534,14 @@ If any libraries included in the ScPCA project contain additional ADT data, the 
 By contrast, if any libraries included in the ScPCA project are multiplexed and contain HTO data, the HTO data is not merged and will not be present in the merged `SingleCellExperiment` object. 
 
 ### Converting SingleCellExperiment objects to AnnData objects
-  - use of zellkonverter
+
+`zellkonverter::writeH5AD()` was used to convert `SingleCellExperiment` objects to `AnnData` format and export the objects as `.hdf5` files. 
+For any `SingleCellExperiment` objects containing an `altExp` (e.g., ADT data), the RNA and ADT data were exported and saved separately as RNA (`_rna.hdf5`) and ADT (`_adt.hdf5`) files. 
+Multiplexed libraries were not converted to `AnnData` objects, due to the potential for ambiguity in sample origin assignments.
+
+All merged `SingleCellExperiment` objects were converted to `AnnData` objects and saved as `.hdf5` files.
+If a merged `SingleCellExperiment` object contained any ADT data, the RNA and ADT data were exported and saved separately as RNA (`_rna.hdf5`) and ADT (`_adt.hdf5`). 
+In contrast, if a merged `SingleCellExperiment` object contained HTO data due to the presence of any multiplexed libraries in the merged object, the HTO data was removed from the `SingleCellExperiment` object and not included in the exported `AnnData` object. 
 
 ### Code and data availability
 

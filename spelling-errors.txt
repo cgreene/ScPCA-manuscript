@@ -11,12 +11,11 @@ Barplot
 Barplots
 benchmarking
 cDNA
-CellAssign
 CELLxGENE
 customizations
 CZI
 dataset
-Datasets
+datasets
 deconvolution
 demultiplex
 demultiplexed
@@ -60,9 +59,8 @@ pseudocount
 reproducibility
 Runtime
 SCE
-ScPCA
+scpca
 SingleCellExperiment
-SingleR
 SRA
 subdiagnosis
 submitters
@@ -81,4 +79,3 @@ Visium
 xenografts
 XXXX
 XXXXXXXX
-zellkonverter
