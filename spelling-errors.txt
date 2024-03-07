@@ -14,8 +14,9 @@ cDNA
 CELLxGENE
 customizations
 CZI
+CZI’s
 dataset
-datasets
+Datasets
 deconvolution
 demultiplex
 demultiplexed
@@ -32,9 +33,9 @@ GRCh
 GSEA
 Hancestro
 HCA
-heatmap
+Heatmap
 hexamer
-HsapDV
+HsapDv
 HTAN
 HTO
 HTOs
@@ -51,6 +52,7 @@ microenvironment
 MONDO
 mortem
 NCBI
+NCBITaxon
 Nextflow
 parallelizing
 PATO
@@ -59,11 +61,11 @@ pseudocount
 reproducibility
 Runtime
 SCE
-scpca
+ScPCA
 SingleCellExperiment
 SRA
 subdiagnosis
-submitters
+Submitters
 subprocess
 transcriptionally
 transcriptomics
