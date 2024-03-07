@@ -17,6 +17,7 @@ CZI
 CZI’s
 dataset
 Datasets
+deconvolute
 deconvolution
 demultiplex
 demultiplexed
@@ -30,12 +31,11 @@ genomic
 genotype
 genotypes
 GRCh
-GSEA
 Hancestro
 HCA
 Heatmap
 hexamer
-HsapDv
+HsapDV
 HTAN
 HTO
 HTOs
@@ -45,7 +45,6 @@ isotype
 Jaccard
 janeroe
 johndoe
-Kanaverse
 Lun
 Marioni
 microenvironment
@@ -61,7 +60,7 @@ pseudocount
 reproducibility
 Runtime
 SCE
-ScPCA
+scpca
 SingleCellExperiment
 SRA
 subdiagnosis
