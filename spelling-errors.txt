@@ -16,11 +16,11 @@ CELLxGENE
 customizations
 CZI
 dataset
-datasets
+Datasets
 deconvolution
 demultiplex
 demultiplexed
-demultiplexing
+Demultiplexing
 dimensionality
 embeddings
 Ensembl
@@ -33,7 +33,7 @@ GRCh
 GSEA
 Hancestro
 HCA
-Heatmap
+heatmap
 hexamer
 HsapDV
 HTAN

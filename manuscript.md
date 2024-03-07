@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-03-06'
+date-meta: '2024-03-07'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-03-06" />
-  <meta name="citation_publication_date" content="2024-03-06" />
-  <meta property="article:published_time" content="2024-03-06" />
-  <meta name="dc.modified" content="2024-03-06T15:46:47+00:00" />
-  <meta property="article:modified_time" content="2024-03-06T15:46:47+00:00" />
+  <meta name="dc.date" content="2024-03-07" />
+  <meta name="citation_publication_date" content="2024-03-07" />
+  <meta property="article:published_time" content="2024-03-07" />
+  <meta name="dc.modified" content="2024-03-07T01:15:59+00:00" />
+  <meta property="article:modified_time" content="2024-03-07T01:15:59+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/c731a01650031b2832e896f77675111805741533/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/69858cc4d34f11966c710ac227482f905406e43d/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@c731a01](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/c731a01650031b2832e896f77675111805741533)
-on March 6, 2024.
+from [AlexsLemonade/ScPCA-manuscript@69858cc](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/69858cc4d34f11966c710ac227482f905406e43d)
+on March 7, 2024.
 </em></small>
 
 
@@ -715,7 +715,6 @@ Distributions reflect broad agreement between platforms in the total number of g
 <!-- Figure S2 -->
 ![**Processing additional single-cell modalities in `scpca-nf`.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s2.png?sanitize=true){#fig:figs2 tag="S2" width="7in"}
 
-<!-- TODO: DO WE WANT TO ADD AN ADT-BY-CELL FILE TO THIS FIGURE?-->
 A. Overview of the `scpca-nf` workflow for processing libraries with CITE-seq or antibody-derived tag (ADT) derived data.
 The workflow mirrors that shown in Figure {@fig:fig2}A with several differences accounting for the presence of ADT data.
 First, both an RNA and ADT FASTQ file are required as input to `alevin-fry`, along with a TSV file containing infomation about ADT barcodes.
