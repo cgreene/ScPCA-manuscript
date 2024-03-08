@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-03-07'
+date-meta: '2024-03-08'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-03-07" />
-  <meta name="citation_publication_date" content="2024-03-07" />
-  <meta property="article:published_time" content="2024-03-07" />
-  <meta name="dc.modified" content="2024-03-07T23:37:25+00:00" />
-  <meta property="article:modified_time" content="2024-03-07T23:37:25+00:00" />
+  <meta name="dc.date" content="2024-03-08" />
+  <meta name="citation_publication_date" content="2024-03-08" />
+  <meta property="article:published_time" content="2024-03-08" />
+  <meta name="dc.modified" content="2024-03-08T18:57:10+00:00" />
+  <meta property="article:modified_time" content="2024-03-08T18:57:10+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/740f047cc57434286eaec26ed5c2d8fbc4d72adc/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/740f047cc57434286eaec26ed5c2d8fbc4d72adc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/740f047cc57434286eaec26ed5c2d8fbc4d72adc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/740f047cc57434286eaec26ed5c2d8fbc4d72adc/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@740f047](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/740f047cc57434286eaec26ed5c2d8fbc4d72adc)
-on March 7, 2024.
+from [AlexsLemonade/ScPCA-manuscript@01b58ae](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/01b58ae5c0195d4a327417624b3dcd4484949a9a)
+on March 8, 2024.
 </em></small>
 
 
@@ -120,8 +120,19 @@ Jane Roe \<jane.roe@whatever.edu\>.
 
 ## Abstract {.page_break_before}
 
+The Single-cell Pediatric Cancer Atlas (ScPCA) Portal (https://scpca.alexslemonade.org/) is a data resource for uniformly processed single-cell and single-nuclei RNA sequencing data and de-identified metadata from pediatric tumor samples. 
+Originally comprised of data from 10 projects funded by Alex’s Lemonade Stand Foundation, the Portal currently contains summarized gene expression data for over 500 samples from over 50 types of cancers from ALSF-funded and community-contributed datasets.
+In addition to gene expression data from single-cell and single-nuclei RNA sequencing, the Portal holds data obtained from bulk RNA sequencing, spatial transcriptomics, and feature barcoding methods, such as CITE-seq and cell hashing. 
 
+ScPCA data are available for download as `SingleCellExperiment` or `AnnData` objects and are ready for downstream analyses.
+Objects include raw counts and normalized gene expression data, PCA and UMAP coordinates, and cell type annotations. 
+Additionally, all downloads include two summary reports for each library: a quality control report summarizing sample statistics and displaying visualizations of cell metrics and a cell type annotation report with comparisons among cell type annotation methods and diagnostic plots to assess annotation quality. 
+Merged `SingleCellExperiment` and `AnnData` objects containing all gene expression data and metadata for all samples in a ScPCA project are also available for download. 
+These objects are useful when performing analysis on multiple samples simultaneously. 
+Comprehensive documentation about data processing and the contents of files on the Portal, including a guide to getting started working with a ScPCA dataset, can be found at <http://scpca.readthedocs.io>. 
 
+All data on the Portal were uniformly processed using `scpca-nf`, an open-source and efficient Nextflow workflow that uses `alevin-fry` to quantify all single-cell and single-nuclei RNA-seq data, any associated CITE-seq or cell hash data, spatial transcriptomics data, and bulk RNA-seq. 
+Any pediatric cancer-relevant data sets processed with `scpca-nf` are eligible for inclusion on the ScPCA Portal, enabling continuous growth of the ScPCA Portal to help pediatric cancer researchers spend less time finding and processing data and more time answering their pressing research questions.
 
 ## Introduction
 

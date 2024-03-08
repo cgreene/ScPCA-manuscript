@@ -16,7 +16,7 @@ customizations
 CZI
 CZI’s
 dataset
-Datasets
+datasets
 deconvolute
 deconvolution
 demultiplex
@@ -33,7 +33,7 @@ genotypes
 GRCh
 Hancestro
 HCA
-Heatmap
+heatmap
 hexamer
 HsapDV
 HTAN
