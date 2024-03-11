@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-03-08'
+date-meta: '2024-03-11'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-03-08" />
-  <meta name="citation_publication_date" content="2024-03-08" />
-  <meta property="article:published_time" content="2024-03-08" />
-  <meta name="dc.modified" content="2024-03-08T18:57:10+00:00" />
-  <meta property="article:modified_time" content="2024-03-08T18:57:10+00:00" />
+  <meta name="dc.date" content="2024-03-11" />
+  <meta name="citation_publication_date" content="2024-03-11" />
+  <meta property="article:published_time" content="2024-03-11" />
+  <meta name="dc.modified" content="2024-03-11T16:32:46+00:00" />
+  <meta property="article:modified_time" content="2024-03-11T16:32:46+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/01b58ae5c0195d4a327417624b3dcd4484949a9a/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@01b58ae](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/01b58ae5c0195d4a327417624b3dcd4484949a9a)
-on March 8, 2024.
+from [AlexsLemonade/ScPCA-manuscript@de6981c](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/de6981c74556c9cc4077e39a4f532f74e1313277)
+on March 11, 2024.
 </em></small>
 
 
@@ -724,6 +724,19 @@ Due to additional sequencing modalities and/or multiplexing, projects may have m
 All remaining columns give the number of libraries (as designated with `(L)`) with the given suspension type or additional modality.
 
 <br><br>
+<!-- Table S2 -->
+**Table S2. Summary of references used for cell type annotation with `CellAssign`.**
+This table provides a summary of the references used for assigning cell types for ScPCA projects using `CellAssign`. 
+All references were built using all cell types from a specified set of organs present in `PanglaoDB`'s marker gene list.
+
+`scpca_project_id`: ScPCA project unique identifier.
+`Diagnoses`: Full set of diagnoses for all samples associated with the project.
+`ScPCA reference name`: Name used to describe the custom reference.
+`PanglaoDB organs included in reference`: A list of all organs included in the reference with names of organs corresponding to organs listed in `PanglaoDB`. 
+The reference includes marker genes for all cell types present in each organ. 
+
+<br><br>
+
 
 <!-- Figure S1 -->
 ![**Results from benchmarking `alevin-fry` and `CellRanger` performance.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s1.png?sanitize=true){#fig:figs1 tag="S1" width="7in"}
@@ -797,6 +810,8 @@ The FASTQ file and tissue image for a given library are provided as input to `sp
 The workflow directly returns the results from running `spaceranger` without any further processing.
 
 <br><br>
+
+
 
 <!-- Figure S4 -->
 ![**Assessment of cell type annotation quality.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s4.png?sanitize=true){#fig:figs4 tag="S4" width="7in"}
