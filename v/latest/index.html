@@ -54,8 +54,8 @@
   <meta name="dc.date" content="2024-03-12" />
   <meta name="citation_publication_date" content="2024-03-12" />
   <meta property="article:published_time" content="2024-03-12" />
-  <meta name="dc.modified" content="2024-03-12T20:55:25+00:00" />
-  <meta property="article:modified_time" content="2024-03-12T20:55:25+00:00" />
+  <meta name="dc.modified" content="2024-03-12T21:21:25+00:00" />
+  <meta property="article:modified_time" content="2024-03-12T21:21:25+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,9 +95,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/fb33c51d63b935f329c21220f4438503270d5d9a">AlexsLemonade/ScPCA-manuscript@fb33c51</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/b9309213124f887a391c474b87a0311dc9461fd7">AlexsLemonade/ScPCA-manuscript@b930921</a>
 on March 12, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -306,7 +306,7 @@ The merged normalized counts matrix is then used to select high-variance genes i
 <code>merge.nf</code> outputs the merged and processed object as a <code>SingleCellExperiment</code> object.</p>
 <p>We also account for additional modalities in <code>merge.nf</code>.
 If at least one library in a project contains ADT data, the raw and normalized ADT data are also merged and saved as an <code>altExp</code> in the merged <code>SingleCellExperiment</code> object.
-If any libraries in a project are multiplexed, the HTO data is not merged and is not included in the merged object.
+If any libraries in a project are multiplexed, no merged object is created, as there is no guarantee that a unique HTO was used for each sample in a given project, making it difficult to identify which HTO corresponds to which sample in a merged object.
 All merged <code>SingleCellExperiment</code> objects are converted to <code>AnnData</code> objects and exported as <code>.hdf5</code> files.
 If the merged object contains an <code>altExp</code> with merged ADT data, two <code>AnnData</code> objects are exported to create separate RNA (<code>_rna.hdf5</code>) and ADT (<code>_adt.hdf5</code>) objects.</p>
 <p><code>merge.nf</code> outputs a summary report for each merged object, which includes a set of tables summarizing the types of samples and libraries included in the project, such as types of diagnosis, and a faceted UMAP showing all cells from all libraries.
@@ -509,7 +509,7 @@ The counts in the merged object are therefore not batch-corrected.</p>
 These genes are used to calculate library-aware principal components with <code>batchelor::multiBatchPCA()</code>.
 The top 50 principal components were selected and used to calculate UMAP embeddings for the merged object.</p>
 <p>If any libraries included in the ScPCA project contain additional ADT data, the ADT data is also merged and stored in the <code>altExp</code> slot of the merged <code>SingleCellExperiment</code> object.
-By contrast, if any libraries included in the ScPCA project are multiplexed and contain HTO data, the HTO data is not merged and will not be present in the merged <code>SingleCellExperiment</code> object.</p>
+By contrast, if any libraries included in the ScPCA project are multiplexed and contain HTO data, no merged object is created.</p>
 <h3 id="converting-singlecellexperiment-objects-to-anndata-objects">Converting SingleCellExperiment objects to AnnData objects</h3>
 <p><code>zellkonverter::writeH5AD()</code> was used to convert <code>SingleCellExperiment</code> objects to <code>AnnData</code> format and export the objects as <code>.hdf5</code> files.
 For any <code>SingleCellExperiment</code> objects containing an <code>altExp</code> (e.g., ADT data), the RNA and ADT data were exported and saved separately as RNA (<code>_rna.hdf5</code>) and ADT (<code>_adt.hdf5</code>) files.
@@ -517,7 +517,17 @@ Multiplexed libraries were not converted to <code>AnnData</code> objects, due to
 <p>All merged <code>SingleCellExperiment</code> objects were converted to <code>AnnData</code> objects and saved as <code>.hdf5</code> files.
 If a merged <code>SingleCellExperiment</code> object contained any ADT data, the RNA and ADT data were exported and saved separately as RNA (<code>_rna.hdf5</code>) and ADT (<code>_adt.hdf5</code>).
 In contrast, if a merged <code>SingleCellExperiment</code> object contained HTO data due to the presence of any multiplexed libraries in the merged object, the HTO data was removed from the <code>SingleCellExperiment</code> object and not included in the exported <code>AnnData</code> object.</p>
-<h3 id="code-and-data-availability">Code and data availability</h3>
+<h2 id="code-and-data-availability">Code and data availability</h2>
+<p>All summarized gene expression data and de-identified metadata are available for download on the ScPCA Portal, https://scpca.alexslemonade.org/.</p>
+<p>All documentation for the Portal can be found at https://scpca.readthedocs.io.</p>
+<p>All original code was developed within the following repositories and is publicly available as follows:</p>
+<ul>
+<li>The <code>scpca-nf</code> workflow used to process all samples available on the Portal can be found at https://github.com/AlexsLemonade/scpca-nf.</li>
+<li>The Single-cell Pediatric Cancer Atlas Portal code can be found at https://github.com/AlexsLemonade/scpca-portal.</li>
+<li>Benchmarking of tools used to build <code>scpca-nf</code> can be found at https://github.com/AlexsLemonade/alsf-scpca/tree/main/analysis and https://github.com/AlexsLemonade/sc-data-integration/tree/main/celltype_annotation.</li>
+<li>All code for the underlying figures can be found at https://github.com/AlexsLemonade/scpca-paper-figures.</li>
+<li>The manuscript can be found at https://github.com/AlexsLemonade/ScPCA-manuscript.</li>
+</ul>
 <h2 id="discussion">Discussion</h2>
 <p>Here, we introduced the ScPCA Portal, a downloadable collection of uniformly processed, summarized single-cell and single-nuclei RNA-seq data and de-identified metadata from pediatric tumor samples.
 The Portal includes 500 samples from over 50 tumor types, making this the most comprehensive collection of publicly available single-cell RNA-seq datasets from pediatric tumor samples to our knowledge.
