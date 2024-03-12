@@ -16,7 +16,7 @@ customizations
 CZI
 CZI’s
 dataset
-datasets
+Datasets
 deconvolute
 deconvolution
 demultiplex
@@ -35,7 +35,7 @@ Hancestro
 HCA
 heatmap
 hexamer
-HsapDv
+HsapDV
 HTAN
 HTO
 HTOs
@@ -60,7 +60,7 @@ pseudocount
 reproducibility
 Runtime
 SCE
-scpca
+ScPCA
 SingleCellExperiment
 SRA
 subdiagnosis

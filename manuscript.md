@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-03-12" />
   <meta name="citation_publication_date" content="2024-03-12" />
   <meta property="article:published_time" content="2024-03-12" />
-  <meta name="dc.modified" content="2024-03-12T20:55:25+00:00" />
-  <meta property="article:modified_time" content="2024-03-12T20:55:25+00:00" />
+  <meta name="dc.modified" content="2024-03-12T21:21:25+00:00" />
+  <meta property="article:modified_time" content="2024-03-12T21:21:25+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@fb33c51](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/fb33c51d63b935f329c21220f4438503270d5d9a)
+from [AlexsLemonade/ScPCA-manuscript@b930921](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/b9309213124f887a391c474b87a0311dc9461fd7)
 on March 12, 2024.
 </em></small>
 
@@ -341,7 +341,7 @@ The merged normalized counts matrix is then used to select high-variance genes i
 
 We also account for additional modalities in `merge.nf`.
 If at least one library in a project contains ADT data, the raw and normalized ADT data are also merged and saved as an `altExp` in the merged `SingleCellExperiment` object. 
-If any libraries in a project are multiplexed, the HTO data is not merged and is not included in the merged object. 
+If any libraries in a project are multiplexed, no merged object is created, as there is no guarantee that a unique HTO was used for each sample in a given project, making it difficult to identify which HTO corresponds to which sample in a merged object.
 All merged `SingleCellExperiment` objects are converted to `AnnData` objects and exported as `.hdf5` files. 
 If the merged object contains an `altExp` with merged ADT data, two `AnnData` objects are exported to create separate RNA (`_rna.hdf5`) and ADT (`_adt.hdf5`) objects.
 
@@ -573,7 +573,7 @@ These genes are used to calculate library-aware principal components with `batch
 The top 50 principal components were selected and used to calculate UMAP embeddings for the merged object.
 
 If any libraries included in the ScPCA project contain additional ADT data, the ADT data is also merged and stored in the `altExp` slot of the merged `SingleCellExperiment` object.
-By contrast, if any libraries included in the ScPCA project are multiplexed and contain HTO data, the HTO data is not merged and will not be present in the merged `SingleCellExperiment` object.
+By contrast, if any libraries included in the ScPCA project are multiplexed and contain HTO data, no merged object is created.
 
 ### Converting SingleCellExperiment objects to AnnData objects
 
@@ -585,7 +585,20 @@ All merged `SingleCellExperiment` objects were converted to `AnnData` objects an
 If a merged `SingleCellExperiment` object contained any ADT data, the RNA and ADT data were exported and saved separately as RNA (`_rna.hdf5`) and ADT (`_adt.hdf5`).
 In contrast, if a merged `SingleCellExperiment` object contained HTO data due to the presence of any multiplexed libraries in the merged object, the HTO data was removed from the `SingleCellExperiment` object and not included in the exported `AnnData` object.
 
-### Code and data availability
+
+## Code and data availability
+
+All summarized gene expression data and de-identified metadata are available for download on the ScPCA Portal, https://scpca.alexslemonade.org/. 
+
+All documentation for the Portal can be found at https://scpca.readthedocs.io. 
+
+All original code was developed within the following repositories and is publicly available as follows: 
+
+- The `scpca-nf` workflow used to process all samples available on the Portal can be found at https://github.com/AlexsLemonade/scpca-nf. 
+- The Single-cell Pediatric Cancer Atlas Portal code can be found at https://github.com/AlexsLemonade/scpca-portal. 
+- Benchmarking of tools used to build `scpca-nf` can be found at https://github.com/AlexsLemonade/alsf-scpca/tree/main/analysis and https://github.com/AlexsLemonade/sc-data-integration/tree/main/celltype_annotation. 
+- All code for the underlying figures can be found at https://github.com/AlexsLemonade/scpca-paper-figures.
+- The manuscript can be found at https://github.com/AlexsLemonade/ScPCA-manuscript.
 
 
 
