@@ -33,7 +33,7 @@ genotypes
 GRCh
 Hancestro
 HCA
-Heatmap
+heatmap
 hexamer
 HsapDv
 HTAN
@@ -60,11 +60,11 @@ pseudocount
 reproducibility
 Runtime
 SCE
-ScPCA
+scpca
 SingleCellExperiment
 SRA
 subdiagnosis
-submitters
+Submitters
 subprocess
 transcriptionally
 transcriptomics

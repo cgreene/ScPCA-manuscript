@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2024-03-11'
+date-meta: '2024-03-12'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-03-11" />
-  <meta name="citation_publication_date" content="2024-03-11" />
-  <meta property="article:published_time" content="2024-03-11" />
-  <meta name="dc.modified" content="2024-03-11T16:32:46+00:00" />
-  <meta property="article:modified_time" content="2024-03-11T16:32:46+00:00" />
+  <meta name="dc.date" content="2024-03-12" />
+  <meta name="citation_publication_date" content="2024-03-12" />
+  <meta property="article:published_time" content="2024-03-12" />
+  <meta name="dc.modified" content="2024-03-12T20:55:25+00:00" />
+  <meta property="article:modified_time" content="2024-03-12T20:55:25+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/de6981c74556c9cc4077e39a4f532f74e1313277/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/fb33c51d63b935f329c21220f4438503270d5d9a/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@de6981c](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/de6981c74556c9cc4077e39a4f532f74e1313277)
-on March 11, 2024.
+from [AlexsLemonade/ScPCA-manuscript@fb33c51](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/fb33c51d63b935f329c21220f4438503270d5d9a)
+on March 12, 2024.
 </em></small>
 
 
@@ -362,14 +362,28 @@ Because there are limitations to the annotations provided on the Portal, compari
 For some ScPCA projects, submitters provided their own curated cell type annotations, including annotation of tumor cells and disease-specific cell states. 
 These submitter-provided annotations can be found in all `SingleCellExperiment` and `AnnData` objects (unfiltered, filtered, and processed). 
 
-Two different methods were used for annotating cell types: `SingleR` and `CellAssign`. 
+### Choosing cell typing methods and references
+
 `SingleR` is a reference-based annotation method that requires an existing bulk or single-cell RNA-seq dataset with annotations. 
-For all libraries on the Portal, we used the `BlueprintEncodeData` [@doi:10.3324/haematol.2013.094243; @doi:10.1038/nature11247] dataset from the `celldex` package [@doi:10.18129/B9.bioc.celldex; @doi:10.1038/s41590-018-0276-y], which includes a variety of normal cell types and provides both the human-readable cell name and cell ontology identifier [@url:https://www.ebi.ac.uk/ols4/ontologies/cl]. 
+To identify the most appropriate reference to use with `SingleR`, we annotated a small number of samples across multiple disease types with all human-specific references available in the `celldex` package [@doi:10.18129/B9.bioc.celldex; @doi:10.1038/s41590-018-0276-y].
+The output from `SingleR` includes a score matrix containing a score for each cell and all possible cell types found in the reference, where higher scores are associated with assigned cell types. 
+We calculated the delta median statistic for each cell in the dataset, subtracting the median score from the highest score. 
+The delta median statistic helps evaluate how confident `SingleR` is in assigning each cell to a specific cell type, where low delta median values indicate ambiguous assignments and high delta median values indicate confident assignments [@url:https://bioconductor.org/books/release/SingleRBook/annotation-diagnostics.html#based-on-the-deltas-across-cells].
+<!-- TODO: ⚠️ For review - What do you think of the next sentence? -->
+We found that the `BlueprintEncodeData` reference [@doi:10.3324/haematol.2013.094243; @doi:10.1038/nature11247], which includes a variety of normal cell types and provides both the human-readable cell name and cell ontology identifier [@url:https://www.ebi.ac.uk/ols4/ontologies/cl], tended to perform best or at least similarly to other references across samples from different disease types using this measure (Supplemental Figure 4).
+Based on these findings, we used the `BlueprintEncodeData` reference to annotate cells from all libraries on the Portal, as using a single reference is potentially valuable for cross-project analyses.
+
 In contrast, `CellAssign` is a marker-gene-based annotation method that requires a binary matrix with all cell types and all associated marker genes as the reference. 
 We utilized the list of marker genes available as part of `PanglaoDB` [@doi:10.1093/database/baz046] to construct organ-specific marker gene matrices with marker genes from all cells for the specified organ. 
 Since many cancers may have infiltrating immune cells, all immune cells were included in each organ-specific reference. 
 For each ScPCA project, we provided the organ-specific marker gene matrix relevant to the disease and tissue type from which the sample was obtained (e.g., for brain tumors, we used a brain-specific marker gene matrix with all brain and immune cell types). 
-The references used with both `SingleR` and `CellAssign` only include normal cell types and do not include any tumor cells. 
+If `CellAssign` cannot find a likely cell type from the marker gene matrix, it does not assign a cell type. 
+Because we annotate cells from tumor samples using references containing only normal cells, we anticipate that many cells, particularly the tumor cells, may not have an exact match; reporting this to the end user is valuable.
+Applying `CellAssign` to a few samples, we observed that many of the cells were unassigned. 
+We included an example in Supplemental Figure 5A where unassigned cell types are labeled with `Unknown`. 
+When comparing annotations obtained from `CellAssign` to submitter-provided annotations, we noticed the labels for non-tumor cells are similar between `CellAssign` and submitter annotations, while the tumor cells were not assigned using `CellAssign` (Supplemental Figure 5B). 
+
+### Adding cell type annotations to the ScPCA Portal
 
 `scpca-nf` adds cell type annotations from `SingleR` and `CellAssign` to all processed `SingleCellExperiment` objects (Figure 4A). 
 This requires two additional reference files as input to the workflow: a classification model built from a reference dataset for `SingleR` and a marker gene by cell type matrix for `CellAssign`. 
@@ -388,18 +402,17 @@ This index is calculated between pairs of labels from each method and ranges fro
 The Jaccard similarity index is displayed in a heatmap, an example of which is shown in Figure 4B. 
 
 The report also includes a diagnostic plot evaluating the confidence of cell type annotations determined by each method. 
-The output from `SingleR` includes a score matrix containing a score for each cell and all possible cell types found in the reference, where higher scores are associated with assigned cell types. 
 To evaluate confidence in `SingleR` cell type annotations, the delta median statistic is calculated by subtracting the median score from the top score for each cell [@url:https://bioconductor.org/books/release/SingleRBook/annotation-diagnostics.html#based-on-the-deltas-across-cells]. 
-The distribution of delta median values for each cell type is shown in the cell type report, where a higher delta median statistic for a cell indicates higher confidence in the final cell type annotation (Supplemental Figure 4A). 
+The distribution of delta median values for each cell type is shown in the cell type report, where a higher delta median statistic for a cell indicates higher confidence in the final cell type annotation (Supplemental Figure 6A). 
 `CellAssign` calculates the probability that each cell belongs to each possible cell type provided in the reference, and the cell type label with the highest probability is assigned as the cell type for that cell.
 <!-- TODO: What exactly do we mean by reliable labels? Labels that are appropriate for the dataset -->
 These values range from 0 to 1, with larger values indicating greater confidence in a given cell type label, so we expect more confident labels to have most values close to 1. 
-An example of the plot included in the report displaying the distribution of all probabilities for each cell type is shown in Supplemental Figure 4B. 
+An example of the plot included in the report displaying the distribution of all probabilities for each cell type is shown in Supplemental Figure 6B. 
 
 If the submitter provided cell types, the submitter annotations are compared to the annotations from both `SingleR` and `CellAssign`. 
 A summary of this comparison is included in the cell type report along with a table summarizing the submitter cell type annotations and a UMAP plot where each cell is colored by the submitter annotation. 
 The Jaccard similarity index is calculated for all pairs of cell type labels in submitter annotations and `SingleR` annotations and in submitter annotations and `CellAssign` annotations. 
-The results from both comparisons are displayed in a stacked heatmap available in the report, an example of which is shown in Supplemental Figure 5. 
+The results from both comparisons are displayed in a stacked heatmap available in the report, an example of which is shown in Supplemental Figure 7. 
 
 
   
