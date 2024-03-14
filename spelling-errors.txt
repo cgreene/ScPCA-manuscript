@@ -9,8 +9,9 @@ barcodes
 barcoding
 Barplot
 Barplots
-benchmarking
+Benchmarking
 cDNA
+celldex
 CELLxGENE
 customizations
 CZI
@@ -21,7 +22,7 @@ deconvolute
 deconvolution
 demultiplex
 demultiplexed
-Demultiplexing
+demultiplexing
 dimensionality
 embeddings
 Ensembl
@@ -60,11 +61,12 @@ pseudocount
 reproducibility
 Runtime
 SCE
-ScPCA
+scpca
 SingleCellExperiment
+SingleR
 SRA
 subdiagnosis
-Submitters
+submitters
 subprocess
 transcriptionally
 transcriptomics

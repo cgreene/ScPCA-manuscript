@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2024-03-12" />
+  <meta name="dcterms.date" content="2024-03-14" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -51,11 +51,11 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2024-03-12" />
-  <meta name="citation_publication_date" content="2024-03-12" />
-  <meta property="article:published_time" content="2024-03-12" />
-  <meta name="dc.modified" content="2024-03-12T21:21:25+00:00" />
-  <meta property="article:modified_time" content="2024-03-12T21:21:25+00:00" />
+  <meta name="dc.date" content="2024-03-14" />
+  <meta name="citation_publication_date" content="2024-03-14" />
+  <meta property="article:published_time" content="2024-03-14" />
+  <meta name="dc.modified" content="2024-03-14T20:33:31+00:00" />
+  <meta property="article:modified_time" content="2024-03-14T20:33:31+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fd93ad881e6502eb385e4f65b90304f30f7640d5/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fd93ad881e6502eb385e4f65b90304f30f7640d5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fd93ad881e6502eb385e4f65b90304f30f7640d5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,10 +95,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/b9309213124f887a391c474b87a0311dc9461fd7/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/fd93ad881e6502eb385e4f65b90304f30f7640d5/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/b9309213124f887a391c474b87a0311dc9461fd7">AlexsLemonade/ScPCA-manuscript@b930921</a>
-on March 12, 2024.
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/fd93ad881e6502eb385e4f65b90304f30f7640d5">AlexsLemonade/ScPCA-manuscript@fd93ad8</a>
+on March 14, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -324,7 +324,7 @@ For some ScPCA projects, submitters provided their own curated cell type annotat
 These submitter-provided annotations can be found in all <code>SingleCellExperiment</code> and <code>AnnData</code> objects (unfiltered, filtered, and processed).</p>
 <h3 id="choosing-cell-typing-methods-and-references">Choosing cell typing methods and references</h3>
 <p><code>SingleR</code> is a reference-based annotation method that requires an existing bulk or single-cell RNA-seq dataset with annotations.
-To identify the most appropriate reference to use with <code>SingleR</code>, we annotated a small number of samples across multiple disease types with all human-specific references available in the <code>celldex</code> package <span class="citation" data-cites="doi:10.18129/B9.bioc.celldex 13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">25</a>,<a href="#ref-doi:10.18129/B9.bioc.celldex" role="doc-biblioref"><strong>doi:10.18129/B9.bioc.celldex?</strong></a>]</span>.
+To identify the most appropriate reference to use with <code>SingleR</code>, we annotated a small number of samples across multiple disease types with all human-specific references available in the <code>celldex</code> package <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">25</a>]</span>.
 The output from <code>SingleR</code> includes a score matrix containing a score for each cell and all possible cell types found in the reference, where higher scores are associated with assigned cell types.
 We calculated the delta median statistic for each cell in the dataset, subtracting the median score from the highest score.
 The delta median statistic helps evaluate how confident <code>SingleR</code> is in assigning each cell to a specific cell type, where low delta median values indicate ambiguous assignments and high delta median values indicate confident assignments <span class="citation" data-cites="xpZq9dBF">[<a href="#ref-xpZq9dBF" role="doc-biblioref">35</a>]</span>.
@@ -487,7 +487,7 @@ In addition to using the default parameters for <code>salmon quant</code>, we ap
 <p>If cell types were obtained from the submitter of the dataset, the submitter-provided annotations were incorporated into all <code>SingleCellExperiment</code> objects (unfiltered, filtered, and processed).
 Cell type labels determined by both <code>SingleR</code><span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">25</a>]</span> and <code>CellAssign</code><span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">26</a>]</span> were added to processed <code>SingleCellExperiment</code> objects.</p>
 <p>To build the references used for assigning cell types, a separate workflow within <code>scpca-nf</code> was run, <code>build-celltype-index.nf</code>.
-For <code>SingleR</code> we used the <code>BlueprintEncodeData</code> from the <code>celldex</code> package <span class="citation" data-cites="MzCvXTgB 15J98V2qM doi:10.18129/B9.bioc.celldex">[<a href="#ref-MzCvXTgB" role="doc-biblioref">36</a>,<a href="#ref-15J98V2qM" role="doc-biblioref">37</a>,<a href="#ref-doi:10.18129/B9.bioc.celldex" role="doc-biblioref"><strong>doi:10.18129/B9.bioc.celldex?</strong></a>]</span> to train the <code>SingleR</code> classification model with <code>SingleR::trainSingleR()</code>.
+For <code>SingleR</code> we used the <code>BlueprintEncodeData</code> from the <code>celldex</code> package <span class="citation" data-cites="MzCvXTgB 15J98V2qM">[<a href="#ref-MzCvXTgB" role="doc-biblioref">36</a>,<a href="#ref-15J98V2qM" role="doc-biblioref">37</a>]</span> to train the <code>SingleR</code> classification model with <code>SingleR::trainSingleR()</code>.
 The model and the processed <code>SingleCellExperiment</code> object were input to <code>SingleR::classifySingleR()</code>.
 The <code>SingleR</code> output of cell type annotations and a score matrix for each cell and all possible cell types were added to the processed <code>SingleCellExperiment</code> object output.
 To evaluate confidence in <code>SingleR</code> cell type assignments, we also calculated a delta median statistic for each cell by subtracting the median cell type score from the maximum score for that cell <span class="citation" data-cites="xpZq9dBF">[<a href="#ref-xpZq9dBF" role="doc-biblioref">35</a>]</span>.</p>
@@ -732,34 +732,52 @@ The quantified gene expression files output from <code>salmon</code> are then gr
 <p>B. Overview of the spatial transcriptomics workflow.
 The FASTQ file and tissue image for a given library are provided as input to <code>spaceranger</code>.
 The workflow directly returns the results from running <code>spaceranger</code> without any further processing.</p>
+<p><br><br>
+<!--Figure S4-->
+<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s4.png?sanitize=true" id="fig:figs4" style="width:7in" data-tag="S4" alt="Evaluation of references available in the celldex package for use with SingleR." /></p>
+<p><code>SingleR</code> was used to annotate ScPCA libraries using four different human-specific references from the <code>celldex</code> package.
+Libraries represent three different diagnosis groups in the ScPCA Portal - Brain and CNS, Leukemia, and Sarcoma - as indicated in the labels for the individual panels.
+The distribution of the delta median statistic, calculated for each cell by subtracting the median delta score from the score of the annotated cell type label, is shown on the y-axis, while the <code>celldex</code> reference used is shown on the x-axis.
+Higher values indicate a higher quality cell type annotation, although there is no absolute scale for these values.
+Each black point represents a cell, where closed circles denote cells with high-quality annotations and open circles denote cells with low-quality annotations, as assessed by <code>SingleR</code>.
+Red diamonds represent the median delta median score for all cells with high-quality annotations in that library.
+<br><br></p>
+<p><!--Figure S5-->
+<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s5.png?sanitize=true" id="fig:figs5" style="width:7in" data-tag="S5" alt="Cell type annotation with CellAssign." /></p>
+<p>Both plots in this figure are examples of plots that display results from annotating cells with <code>CellAssign</code> that can be found in the cell type summary report, shown here for library <code>SCPCL000490</code>.</p>
+<p>A. A grid of UMAPs is shown for each cell type annotated using <code>CellAssign</code>, with the cell type of interest shown in color and all other cells belonging to other cell types shown in gray.
+The top 4 cell types with the greatest number of assigned cells are shown, while all other cells are grouped together and labeled with <code>All remaining cell types</code>.
+Any cells that are unable to be assigned by <code>CellAssign</code> are labeled with <code>Unknown cell type</code>.</p>
+<p>B. This example heatmap displays a comparison between submitter-provided annotations and annotations with <code>CellAssign</code>, where heatmap cells are colored by the Jaccard similarity index.
+A value of 1 means that there is complete overlap between which cells are annotated with the two labels being compared, and a value of 0 means that there is no overlap between which cells are annotated with the two labels being compared.</p>
 <p><br><br></p>
-<!-- Figure S4 -->
-<div id="fig:figs4" class="fignos">
+<!-- Figure S6 -->
+<div id="fig:figs6" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s4.png?sanitize=true" style="width:7in" data-tag="S4" alt="Figure S4: Assessment of cell type annotation quality." />
-<figcaption aria-hidden="true"><span>Figure S4:</span> <strong>Assessment of cell type annotation quality.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s6.png?sanitize=true" style="width:7in" data-tag="S6" alt="Figure S6: Assessment of cell type annotation quality." />
+<figcaption aria-hidden="true"><span>Figure S6:</span> <strong>Assessment of cell type annotation quality.</strong></figcaption>
 </figure>
 </div>
 <p>Both plots in this figure are examples of diagnostic plots in the cell type summary report, shown for library <code>SCPCL000001</code>.</p>
 <p>A. Diagnostic plot showing <code>SingleR</code> cell type annotation quality.
 Cell type annotations are shown on the y-axis, the <em>delta median</em> statistic is shown on the x-axis.
-The <em>delta median</em> statistic is calculated for each cell as the difference between the <code>SingleR</code> score of the annotated cell type label and the median score of all other cell type labels in the reference dataset.
+The delta median statistic is calculated for each cell as the difference between the <code>SingleR</code> score of the annotated cell type label and the median score of all other cell type labels in the reference dataset.
 Higher values indicate a higher quality cell type annotation, although there is no absolute scale for these values.
 Each black point represents a cell, where closed circles denote cells with high-quality annotations and open circles denote cells with low-quality annotations, as assessed by <code>SingleR</code>.
-Red diamonds represent the median <em>delta median</em> scores for all cells with high-quality annotations associated with the given cell type label.</p>
+Red diamonds represent the median delta median scores for all cells with high-quality annotations associated with the given cell type label.</p>
 <p>B. Diagnostic plot showing <code>CellAssign</code> cell type annotation quality.
 Cell type annotations are shown on the y-axis, and the probability of the annotated cell type as calculated by <code>CellAssign</code> is shown on the x-axis.
 Each row displays probabilities for only the cells associated with the given cell type annotation, and blue line segments show the probabilities for individual cells in each distribution.
 Taller line segments are shown for any distribution with five or fewer cells.</p>
 <p><br><br></p>
-<!-- Figure S5 -->
-<div id="fig:figs5" class="fignos">
+<!-- Figure S7 -->
+<div id="fig:figs7" class="fignos">
 <figure>
-<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s5.png?sanitize=true" style="width:7in" data-tag="S5" alt="Figure S5: Comparison of cell type annotations across methods." />
-<figcaption aria-hidden="true"><span>Figure S5:</span> <strong>Comparison of cell type annotations across methods.</strong></figcaption>
+<img src="https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s7.png?sanitize=true" style="width:7in" data-tag="S7" alt="Figure S7: Comparison of cell type annotations across methods." />
+<figcaption aria-hidden="true"><span>Figure S7:</span> <strong>Comparison of cell type annotations across methods.</strong></figcaption>
 </figure>
 </div>
-<p>This example heatmap displays a comparison between submitter-provided annotations and annotations with <code>SingleR</code> and <code>CellAssign</code>, shown for library <code>SCPCL000498</code>.
+<p>This example heatmap from the cell type summary report compares submitter-provided annotations to annotations with <code>SingleR</code> and <code>CellAssign</code>, shown for library <code>SCPCL000498</code>.
 This heatmap is only shown in the cell type summary report if submitters provided cell type annotations.
 Heatmap cells are colored by the Jaccard similarity index.
 A value of 1 means that there is complete overlap between which cells are annotated with the two labels being compared, and a value of 0 means that there is no overlap between which cells are annotated with the two labels being compared.</p>
