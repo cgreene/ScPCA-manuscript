@@ -34,7 +34,6 @@ content/02.introduction.md:13:HTAN
 content/02.introduction.md:19:scpca
 content/02.introduction.md:19:ScPCA
 content/02.introduction.md:21:ScPCA
-content/02.introduction.md:23:ADT
 content/02.introduction.md:23:barcoding
 content/02.introduction.md:23:transcriptomics
 content/02.introduction.md:24:AnnData
@@ -43,7 +42,6 @@ content/02.introduction.md:24:SingleCellExperiment
 content/02.introduction.md:26:Nextflow
 content/02.introduction.md:26:scpca
 content/02.introduction.md:26:scpca
-content/02.introduction.md:28:ADT
 content/02.introduction.md:28:alevin
 content/02.introduction.md:28:scpca
 content/02.introduction.md:28:transcriptomics
@@ -70,7 +68,7 @@ content/03.results.md:12:pato
 content/03.results.md:12:PATO
 content/03.results.md:12:uberon
 content/03.results.md:12:UBERON
-content/03.results.md:18:xenografts
+content/03.results.md:17:xenografts
 content/03.results.md:21:mortem
 content/03.results.md:26:ADT
 content/03.results.md:26:HTO
