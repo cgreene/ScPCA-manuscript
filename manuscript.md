@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-03-18" />
   <meta name="citation_publication_date" content="2024-03-18" />
   <meta property="article:published_time" content="2024-03-18" />
-  <meta name="dc.modified" content="2024-03-18T16:22:11+00:00" />
-  <meta property="article:modified_time" content="2024-03-18T16:22:11+00:00" />
+  <meta name="dc.modified" content="2024-03-18T17:39:19+00:00" />
+  <meta property="article:modified_time" content="2024-03-18T17:39:19+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/afd2bdf2b0a21a5b3e0218ad26b06b7ebfcd2a96/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/afd2bdf2b0a21a5b3e0218ad26b06b7ebfcd2a96/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/afd2bdf2b0a21a5b3e0218ad26b06b7ebfcd2a96/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2c32a4b6d19f6059b10346c4728f253da57f9731/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2c32a4b6d19f6059b10346c4728f253da57f9731/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2c32a4b6d19f6059b10346c4728f253da57f9731/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/afd2bdf2b0a21a5b3e0218ad26b06b7ebfcd2a96/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/2c32a4b6d19f6059b10346c4728f253da57f9731/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@afd2bdf](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/afd2bdf2b0a21a5b3e0218ad26b06b7ebfcd2a96)
+from [AlexsLemonade/ScPCA-manuscript@2c32a4b](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/2c32a4b6d19f6059b10346c4728f253da57f9731)
 on March 18, 2024.
 </em></small>
 
@@ -792,7 +792,7 @@ Distributions reflect broad agreement between platforms in the total number of g
 A. Overview of the `scpca-nf` workflow for processing libraries with CITE-seq or antibody-derived tag (ADT) derived data.
 The workflow mirrors that shown in Figure {@fig:fig2}A with several differences accounting for the presence of ADT data.
 First, both an RNA and ADT FASTQ file are required as input to `alevin-fry`, along with a TSV file containing infomation about ADT barcodes.
-The gene-by-cell and ADT-by-cell count matrices are produced and read into `R` to create a `SingleCellExperiment` (SCE) object.
+The gene by cell and ADT by cell count matrices are produced and read into `R` to create a `SingleCellExperiment` (SCE) object.
 Second, during post-processing, statistics are calculated to filter cells based on ADT counts, but the filter is not applied.
 ADT counts are also normalized and included in the `Processed SCE Object`.
 Third, the summary QC report will include a `CITE-seq` section with additional information about ADT-level processing.
@@ -812,7 +812,8 @@ D. UMAP embeddings of log-normalized RNA expression values where each cell is co
 
 E. Overview of the `scpca-nf` workflow for multiplexed libraries.
 The workflow mirrors that shown in Figure {@fig:fig2}A with several differences accounting for the presence of multiplexed data.
-First, a TSV file providing information about library pools is required as input to `alevin-fry` along with the RNA FASTQ file.
+First, both an RNA and HTO FASTQ file are required as input to `alevin-fry`, along with a TSV file providing information about library pools.
+The gene by cell and HTO by cell count matrices are produced and read into `R` to create a `SingleCellExperiment` (SCE) object.
 Second, in parallel, the RNA FASTQ file, the HTO FASTQ file, and, if available, a corresponding Bulk RNA FASTQ file for each sample present in the multiplexed library are provided to a demultiplexing subprocess.
 The workflow calculates demultiplexing results based on HTO counts, as well as genetic demultiplexing results if the library has corresponding bulk RNA FASTQ files.
 Demultiplexing results are stored in all exported `SCE` objects (`Unfiltered`, `Filtered`, and `Processed`), but libraries themselves are not demultiplexed.
