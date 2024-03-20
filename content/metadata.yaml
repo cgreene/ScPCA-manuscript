@@ -1,5 +1,5 @@
 ---
-title: "The Single-cell Pediatric Cancer Atlas: Open-source data and tools for single-cell transcriptomics of pediatric tumors"
+title: "The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors"
 date: null  # Defaults to date generated, but can specify like '2022-10-31'.
 keywords:
   - single-cell RNA-seq
@@ -156,7 +156,6 @@ authors:
     name: Jaclyn N. Taroni
     initials: JNT
     orcid: 0000-0003-4734-4508
-    X: jaclyn_taroni
     email: jaclyn.taroni@ccdatalab.org
     contributions:
       - TODO
