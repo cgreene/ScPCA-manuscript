@@ -17,12 +17,12 @@ customizations
 CZI
 CZI’s
 dataset
-Datasets
+datasets
 deconvolute
 deconvolution
 demultiplex
 demultiplexed
-Demultiplexing
+demultiplexing
 dimensionality
 embeddings
 Ensembl
@@ -36,7 +36,7 @@ Hancestro
 HCA
 heatmap
 hexamer
-HsapDv
+HsapDV
 HTAN
 HTO
 HTOs
@@ -48,6 +48,7 @@ janeroe
 johndoe
 Lun
 Marioni
+microarray
 microenvironment
 MONDO
 mortem
