@@ -54,8 +54,8 @@
   <meta name="dc.date" content="2024-03-21" />
   <meta name="citation_publication_date" content="2024-03-21" />
   <meta property="article:published_time" content="2024-03-21" />
-  <meta name="dc.modified" content="2024-03-21T15:52:10+00:00" />
-  <meta property="article:modified_time" content="2024-03-21T15:52:10+00:00" />
+  <meta name="dc.modified" content="2024-03-21T17:31:02+00:00" />
+  <meta property="article:modified_time" content="2024-03-21T17:31:02+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -95,9 +95,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/2bee8f09f5c9744d153f41bfbdf6003cc56b1755">AlexsLemonade/ScPCA-manuscript@2bee8f0</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/1ddada3e3bacca6b01dfd2948a567635458103ca">AlexsLemonade/ScPCA-manuscript@1ddada3</a>
 on March 21, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -563,7 +563,6 @@ Using Nextflow as the framework for <code>scpca-nf</code> means the workflow is 
 This makes it easy to add support for more modalities in the future, such as single-cell ATAC-seq, and allows others to run the workflow on their samples in their computing environment, maintaining the security of protected raw data.
 Processed output from running <code>scpca-nf</code> on samples from pediatric tumors, cell lines, or other model organisms is eligible for submission to the ScPCA Portal, enabling us to continue increasing the number of available samples freely available to all researchers.</p>
 <h2 class="page_break_before" id="figure-titles-and-legends">Figure Titles and Legends</h2>
-<p><br><br></p>
 <!-- Figure 1 -->
 <div id="fig:fig1" class="fignos">
 <figure>
@@ -654,7 +653,6 @@ Heatmap cells are colored by the Jaccard similarity index.
 A value of 1 means that there is complete overlap between which cells are annotated with the two labels being compared, and a value of 0 means that there is no overlap between which cells are annotated with the two labels being compared.
 The heatmap shown is from library <code>SCPCL000498</code>.</p>
 <h2 class="page_break_before" id="supplementary-figures-and-tables">Supplementary Figures and Tables</h2>
-<p><br><br></p>
 <!-- Table S1 -->
 <p><strong>Table S1. Overview of ScPCA Portal Datasets.</strong>
 This table provides descriptions and sample and library counts for each project in the ScPCA Portal.</p>
@@ -704,7 +702,7 @@ Distributions reflect broad agreement between platforms in the total number of g
 </div>
 <p>A. Overview of the <code>scpca-nf</code> workflow for processing libraries with CITE-seq or antibody-derived tag (ADT) derived data.
 The workflow mirrors that shown in Figure <a href="#fig:fig2">2</a>A with several differences accounting for the presence of ADT data.
-First, both an RNA and ADT FASTQ file are required as input to <code>alevin-fry</code>, along with a TSV file containing infomation about ADT barcodes.
+First, both an RNA and ADT FASTQ file are required as input to <code>alevin-fry</code>, along with a TSV file containing information about ADT barcodes.
 The gene by cell and ADT by cell count matrices are produced and read into <code>R</code> to create a <code>SingleCellExperiment</code> (SCE) object.
 Second, during post-processing, statistics are calculated to filter cells based on ADT counts, but the filter is not applied.
 ADT counts are also normalized and included in the <code>Processed SCE Object</code>.
