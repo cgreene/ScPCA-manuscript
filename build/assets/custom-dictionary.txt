@@ -17,7 +17,7 @@ celldex
 CELLxGENE
 customizations
 CZI
-CZI’s
+CZI's
 dataset
 datasets
 deconvolute
