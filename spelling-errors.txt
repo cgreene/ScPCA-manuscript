@@ -17,12 +17,12 @@ customizations
 CZI
 CZI’s
 dataset
-datasets
+Datasets
 deconvolute
 deconvolution
 demultiplex
 demultiplexed
-demultiplexing
+Demultiplexing
 dimensionality
 embeddings
 Ensembl
@@ -36,7 +36,7 @@ Hancestro
 HCA
 heatmap
 hexamer
-HsapDV
+HsapDv
 HTAN
 HTO
 HTOs
@@ -67,7 +67,7 @@ SingleCellExperiment
 SingleR
 SRA
 subdiagnosis
-Submitters
+submitters
 subprocess
 transcriptionally
 transcriptomics

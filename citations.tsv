@@ -7,6 +7,9 @@ doi:10.7554/eLife.27041	doi:10.7554/eLife.27041	doi:10.7554/elife.27041	vk9ZInF3
 doi:10.1016/j.cell.2020.03.053	doi:10.1016/j.cell.2020.03.053	doi:10.1016/j.cell.2020.03.053	udPM4KR1
 url:https://www.cancer.gov/types/childhood-cancers/child-adolescent-cancers-fact-sheet#how-do-cancers-in-adolescents-and-young-adults-differ-from-those-in-younger-children	url:https://www.cancer.gov/types/childhood-cancers/child-adolescent-cancers-fact-sheet#how-do-cancers-in-adolescents-and-young-adults-differ-from-those-in-younger-children	url:https://www.cancer.gov/types/childhood-cancers/child-adolescent-cancers-fact-sheet#how-do-cancers-in-adolescents-and-young-adults-differ-from-those-in-younger-children	Hqoq5ZTI
 doi:10.1186/s13040-018-0190-8	doi:10.1186/s13040-018-0190-8	doi:10.1186/s13040-018-0190-8	yEQ2v42v
+doi:10.1038/s41592-019-0654-x	doi:10.1038/s41592-019-0654-x	doi:10.1038/s41592-019-0654-x	z8JnDHpr
+doi:10.1186/s13059-017-1382-0	doi:10.1186/s13059-017-1382-0	doi:10.1186/s13059-017-1382-0	qIZTS1II
+doi:10.1038/nbt.3820	doi:10.1038/nbt.3820	doi:10.1038/nbt.3820	4XDvZWxk
 doi:10.1038/s41592-022-01408-3	doi:10.1038/s41592-022-01408-3	doi:10.1038/s41592-022-01408-3	hYvj5GBC
 url:https://www.ebi.ac.uk/ols4/ontologies/hsapdv	url:https://www.ebi.ac.uk/ols4/ontologies/hsapdv	url:https://www.ebi.ac.uk/ols4/ontologies/hsapdv	2n9clgPF
 url:https://www.ebi.ac.uk/ols4/ontologies/pato	url:https://www.ebi.ac.uk/ols4/ontologies/pato	url:https://www.ebi.ac.uk/ols4/ontologies/pato	19R1xim7A
@@ -16,10 +19,8 @@ url:https://www.ebi.ac.uk/ols4/ontologies/uberon	url:https://www.ebi.ac.uk/ols4/
 url:https://www.ebi.ac.uk/ols4/ontologies/hancestro	url:https://www.ebi.ac.uk/ols4/ontologies/hancestro	url:https://www.ebi.ac.uk/ols4/ontologies/hancestro	Opr5odMH
 doi:10.1038/nmeth.4380	doi:10.1038/nmeth.4380	doi:10.1038/nmeth.4380	abp5rbw2
 doi:10.1186/s13059-018-1603-1	doi:10.1186/s13059-018-1603-1	doi:10.1186/s13059-018-1603-1	FZrs73Vp
-url:https://www.nextflow.io/docs/latest/index.html	url:https://www.nextflow.io/docs/latest/index.html	url:https://www.nextflow.io/docs/latest/index.html	2w3W0oqG
 url:https://www.10xgenomics.com/support/software/cell-ranger/latest	url:https://www.10xgenomics.com/support/software/cell-ranger/latest	url:https://www.10xgenomics.com/support/software/cell-ranger/latest	87PPOPmp
 url:https://github.com/AlexsLemonade/alsf-scpca	url:https://github.com/AlexsLemonade/alsf-scpca	url:https://github.com/AlexsLemonade/alsf-scpca	159Z7ABXf
-doi:10.1038/s41592-019-0654-x	doi:10.1038/s41592-019-0654-x	doi:10.1038/s41592-019-0654-x	z8JnDHpr
 doi:10.1186/s13059-019-1662-y	doi:10.1186/s13059-019-1662-y	doi:10.1186/s13059-019-1662-y	U2Fa25dp
 doi:10.1371/journal.pcbi.1009290	doi:10.1371/journal.pcbi.1009290	doi:10.1371/journal.pcbi.1009290	17Yhk1HAt
 doi:10.1186/s13059-016-0947-7	doi:10.1186/s13059-016-0947-7	doi:10.1186/s13059-016-0947-7	vpU0FTFY
@@ -36,7 +37,6 @@ url:https://www.10xgenomics.com/support/software/space-ranger/latest	url:https:/
 url:https://bioconductor.org/books/release/SingleRBook/annotation-diagnostics.html#based-on-the-deltas-across-cells	url:https://bioconductor.org/books/release/SingleRBook/annotation-diagnostics.html#based-on-the-deltas-across-cells	url:https://bioconductor.org/books/release/SingleRBook/annotation-diagnostics.html#based-on-the-deltas-across-cells	xpZq9dBF
 doi:10.3324/haematol.2013.094243	doi:10.3324/haematol.2013.094243	doi:10.3324/haematol.2013.094243	MzCvXTgB
 doi:10.1038/nature11247	doi:10.1038/nature11247	doi:10.1038/nature11247	15J98V2qM
-url:https://www.ebi.ac.uk/ols4/ontologies/cl	url:https://www.ebi.ac.uk/ols4/ontologies/cl	url:https://www.ebi.ac.uk/ols4/ontologies/cl	wBFzn1br
 doi:10.1093/database/baz046	doi:10.1093/database/baz046	doi:10.1093/database/baz046	T3PlZ3Vh
 url:https://cellxgene.cziscience.com	url:https://cellxgene.cziscience.com	url:https://cellxgene.cziscience.com	W0TbGvjF
 url:https://github.com/chanzuckerberg/single-cell-curation/blob/main/schema/3.0.0/schema.md	url:https://github.com/chanzuckerberg/single-cell-curation/blob/main/schema/3.0.0/schema.md	url:https://github.com/chanzuckerberg/single-cell-curation/blob/main/schema/3.0.0/schema.md	QgMCMjVA
@@ -53,3 +53,5 @@ https://cells.ucsc.edu/	https://cells.ucsc.edu/	url:https://cells.ucsc.edu/	VKaQ
 doi:10.1101/2022.03.02.482701	doi:10.1101/2022.03.02.482701	doi:10.1101/2022.03.02.482701	1DswCJYT0
 https://www.kanaverse.org/kana/	https://www.kanaverse.org/kana/	url:https://www.kanaverse.org/kana/	1FzXrvESX
 doi:10.1038/s41467-023-37168-7	doi:10.1038/s41467-023-37168-7	doi:10.1038/s41467-023-37168-7	Whp3r83M
+doi:10.1093/bioinformatics/bty019	doi:10.1093/bioinformatics/bty019	doi:10.1093/bioinformatics/bty019	mgOojr60
+doi:10.1186/s13059-023-03016-6	doi:10.1186/s13059-023-03016-6	doi:10.1186/s13059-023-03016-6	GpuiAcfU
