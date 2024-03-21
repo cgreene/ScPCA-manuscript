@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2024-03-21" />
   <meta name="citation_publication_date" content="2024-03-21" />
   <meta property="article:published_time" content="2024-03-21" />
-  <meta name="dc.modified" content="2024-03-21T15:52:10+00:00" />
-  <meta property="article:modified_time" content="2024-03-21T15:52:10+00:00" />
+  <meta name="dc.modified" content="2024-03-21T17:31:02+00:00" />
+  <meta property="article:modified_time" content="2024-03-21T17:31:02+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/2bee8f09f5c9744d153f41bfbdf6003cc56b1755/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/1ddada3e3bacca6b01dfd2948a567635458103ca/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@2bee8f0](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/2bee8f09f5c9744d153f41bfbdf6003cc56b1755)
+from [AlexsLemonade/ScPCA-manuscript@1ddada3](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/1ddada3e3bacca6b01dfd2948a567635458103ca)
 on March 21, 2024.
 </em></small>
 
@@ -644,8 +644,6 @@ Processed output from running `scpca-nf` on samples from pediatric tumors, cell 
 
 ## Figure Titles and Legends {.page_break_before}
 
-<br><br>
-
 <!-- Figure 1 -->
 ![**Overview of ScPCA Portal contents.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_1.png?sanitize=true){#fig:fig1 tag="1" width="7in"}
 
@@ -738,8 +736,6 @@ The heatmap shown is from library `SCPCL000498`.
 
 ## Supplementary Figures and Tables {.page_break_before}
 
-<br><br>
-
 <!-- Table S1 -->
 **Table S1. Overview of ScPCA Portal Datasets.**
 This table provides descriptions and sample and library counts for each project in the ScPCA Portal.
@@ -792,7 +788,7 @@ Distributions reflect broad agreement between platforms in the total number of g
 
 A. Overview of the `scpca-nf` workflow for processing libraries with CITE-seq or antibody-derived tag (ADT) derived data.
 The workflow mirrors that shown in Figure {@fig:fig2}A with several differences accounting for the presence of ADT data.
-First, both an RNA and ADT FASTQ file are required as input to `alevin-fry`, along with a TSV file containing infomation about ADT barcodes.
+First, both an RNA and ADT FASTQ file are required as input to `alevin-fry`, along with a TSV file containing information about ADT barcodes.
 The gene by cell and ADT by cell count matrices are produced and read into `R` to create a `SingleCellExperiment` (SCE) object.
 Second, during post-processing, statistics are calculated to filter cells based on ADT counts, but the filter is not applied.
 ADT counts are also normalized and included in the `Processed SCE Object`.
