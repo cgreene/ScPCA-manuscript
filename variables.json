@@ -27,7 +27,7 @@
       "Casey S. Greene",
       "Jaclyn N. Taroni"
     ],
-    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta name=\"dc.title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta name=\"citation_title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta property=\"og:title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta property=\"twitter:title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta name=\"dc.date\" content=\"2024-03-22\" />\n<meta name=\"citation_publication_date\" content=\"2024-03-22\" />\n<meta property=\"article:published_time\" content=\"2024-03-22\" />\n<meta name=\"dc.modified\" content=\"2024-03-22T16:27:24+00:00\" />\n<meta property=\"article:modified_time\" content=\"2024-03-22T16:27:24+00:00\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Allegra G. Hawkins\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-6026-3660\" />\n<meta name=\"citation_author\" content=\"Joshua A. Shapiro\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-6224-0347\" />\n<meta name=\"citation_author\" content=\"Stephanie J. Spielman\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-9090-4788\" />\n<meta name=\"citation_author\" content=\"David S. Mejia\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"TODO\" />\n<meta name=\"citation_author\" content=\"Deepashree Venkatesh Prasad\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-5756-4083\" />\n<meta name=\"citation_author\" content=\"Nozomi Ichihara\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author\" content=\"Arkadii Yakovets\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"TODO\" />\n<meta name=\"citation_author\" content=\"Kurt G. Wheeler\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"TODO\" />\n<meta name=\"citation_author\" content=\"Chante J. Bethell\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_institution\" content=\"The University of Texas MD Anderson Cancer Center, UTHealth Houston Graduate School of Biomedical Sciences, Houston, TX, 77030, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-9653-8128\" />\n<meta name=\"citation_author\" content=\"Steven M. Foltz\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_institution\" content=\"Department of Pediatrics, Division of Oncology, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-9526-8194\" />\n<meta name=\"citation_author\" content=\"Jennifer O&#39;Malley\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author\" content=\"Casey S. Greene\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_institution\" content=\"Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA\" />\n<meta name=\"citation_author_institution\" content=\"Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, 80045, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-8713-9213\" />\n<meta name=\"citation_author\" content=\"Jaclyn N. Taroni\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0003-4734-4508\" />\n<link rel=\"canonical\" href=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta property=\"og:url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://AlexsLemonade.github.io/ScPCA-manuscript/v/f81d8947b19b287963de2bd20d25e8ca4ae8f328/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/v/f81d8947b19b287963de2bd20d25e8ca4ae8f328/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/v/f81d8947b19b287963de2bd20d25e8ca4ae8f328/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->\n",
+    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta name=\"dc.title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta name=\"citation_title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta property=\"og:title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta property=\"twitter:title\" content=\"The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors\" />\n<meta name=\"dc.date\" content=\"2024-03-22\" />\n<meta name=\"citation_publication_date\" content=\"2024-03-22\" />\n<meta property=\"article:published_time\" content=\"2024-03-22\" />\n<meta name=\"dc.modified\" content=\"2024-03-22T18:27:02+00:00\" />\n<meta property=\"article:modified_time\" content=\"2024-03-22T18:27:02+00:00\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Allegra G. Hawkins\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-6026-3660\" />\n<meta name=\"citation_author\" content=\"Joshua A. Shapiro\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-6224-0347\" />\n<meta name=\"citation_author\" content=\"Stephanie J. Spielman\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-9090-4788\" />\n<meta name=\"citation_author\" content=\"David S. Mejia\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"TODO\" />\n<meta name=\"citation_author\" content=\"Deepashree Venkatesh Prasad\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-5756-4083\" />\n<meta name=\"citation_author\" content=\"Nozomi Ichihara\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author\" content=\"Arkadii Yakovets\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"TODO\" />\n<meta name=\"citation_author\" content=\"Kurt G. Wheeler\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"TODO\" />\n<meta name=\"citation_author\" content=\"Chante J. Bethell\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_institution\" content=\"The University of Texas MD Anderson Cancer Center, UTHealth Houston Graduate School of Biomedical Sciences, Houston, TX, 77030, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-9653-8128\" />\n<meta name=\"citation_author\" content=\"Steven M. Foltz\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_institution\" content=\"Department of Pediatrics, Division of Oncology, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-9526-8194\" />\n<meta name=\"citation_author\" content=\"Jennifer O&#39;Malley\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author\" content=\"Casey S. Greene\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_institution\" content=\"Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA\" />\n<meta name=\"citation_author_institution\" content=\"Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, 80045, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-8713-9213\" />\n<meta name=\"citation_author\" content=\"Jaclyn N. Taroni\" />\n<meta name=\"citation_author_institution\" content=\"Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0003-4734-4508\" />\n<link rel=\"canonical\" href=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta property=\"og:url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->\n",
     "bibliography": [
       "content/manual-references.json"
     ],
@@ -39,7 +39,7 @@
   "manubot": {
     "date": "2024-03-22",
     "date_long": "March 22, 2024",
-    "generated": "2024-03-22T16:27:24+00:00",
+    "generated": "2024-03-22T18:27:02+00:00",
     "generated_date_long": "March 22, 2024",
     "randomize_author_order": false,
     "authors": [
@@ -51,7 +51,15 @@
         "X": "allyhawkins92",
         "email": "ally.hawkins@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Investigation",
+          "Validation",
+          "Formal analysis",
+          "Data curation",
+          "Writing - Original Draft",
+          "Writing - Review & Editing",
+          "Visualization"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -70,7 +78,16 @@
         "orcid": "0000-0002-6224-0347",
         "email": "josh.shapiro@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Investigation",
+          "Validation",
+          "Formal analysis",
+          "Resources",
+          "Data curation",
+          "Writing - Original Draft",
+          "Writing - Review & Editing",
+          "Visualization"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -89,7 +106,15 @@
         "orcid": "0000-0002-9090-4788",
         "email": "stephanie.spielman@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Investigation",
+          "Validation",
+          "Formal analysis",
+          "Data curation",
+          "Writing - Original Draft",
+          "Writing - Review & Editing",
+          "Visualization"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -109,7 +134,12 @@
         "X": "TODO",
         "email": "david@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Validation",
+          "Data curation",
+          "Writing - Review & Editing",
+          "Resources"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -128,7 +158,11 @@
         "orcid": "0000-0001-5756-4083",
         "email": "deepa.prasad@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Validation",
+          "Visualization",
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -146,7 +180,9 @@
         "initials": "NI",
         "email": "nozomi@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -165,7 +201,12 @@
         "orcid": "TODO",
         "email": "ark@cho.red",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Validation",
+          "Data curation",
+          "Resources",
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -184,7 +225,12 @@
         "orcid": "TODO",
         "email": "kurt.wheeler91@gmail.com",
         "contributions": [
-          "TODO"
+          "Methodology",
+          "Software",
+          "Validation",
+          "Data curation",
+          "Resources",
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -204,7 +250,9 @@
         "X": "cjbethell",
         "email": "chantebethell@gmail.com",
         "contributions": [
-          "TODO"
+          "Software",
+          "Validation",
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA",
@@ -225,7 +273,7 @@
         "email": "foltzs@chop.edu",
         "orcid": "0000-0002-9526-8194",
         "contributions": [
-          "TODO"
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA",
@@ -245,7 +293,9 @@
         "initials": "JO",
         "email": "jen.omalley@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Data curation",
+          "Supervision",
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -265,7 +315,10 @@
         "X": "greenescientist",
         "email": "casey.s.greene@cuanschutz.edu",
         "contributions": [
-          "TODO"
+          "Conceptualization",
+          "Project administration",
+          "Supervision",
+          "Writing - Review & Editing"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA",
@@ -288,7 +341,16 @@
         "orcid": "0000-0003-4734-4508",
         "email": "jaclyn.taroni@ccdatalab.org",
         "contributions": [
-          "TODO"
+          "Conceptualization",
+          "Methodology",
+          "Investigation",
+          "Validation",
+          "Data curation",
+          "Writing - Original Draft",
+          "Writing - Review & Editing",
+          "Visualization",
+          "Supervision",
+          "Project administration"
         ],
         "affiliations": [
           "Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA"
@@ -329,15 +391,15 @@
       "repo_slug": "AlexsLemonade/ScPCA-manuscript",
       "repo_owner": "AlexsLemonade",
       "repo_name": "ScPCA-manuscript",
-      "commit": "f81d8947b19b287963de2bd20d25e8ca4ae8f328",
-      "triggering_commit": "f81d8947b19b287963de2bd20d25e8ca4ae8f328",
-      "build_url": "https://github.com/AlexsLemonade/ScPCA-manuscript/commit/f81d8947b19b287963de2bd20d25e8ca4ae8f328/checks",
-      "job_url": "https://github.com/AlexsLemonade/ScPCA-manuscript/actions/runs/8393407891"
+      "commit": "177295fa86cdd4bcf5b58ce9fe8746387ed7ac10",
+      "triggering_commit": "177295fa86cdd4bcf5b58ce9fe8746387ed7ac10",
+      "build_url": "https://github.com/AlexsLemonade/ScPCA-manuscript/commit/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/checks",
+      "job_url": "https://github.com/AlexsLemonade/ScPCA-manuscript/actions/runs/8394823008"
     },
     "html_url": "https://AlexsLemonade.github.io/ScPCA-manuscript/",
     "pdf_url": "https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf",
-    "html_url_versioned": "https://AlexsLemonade.github.io/ScPCA-manuscript/v/f81d8947b19b287963de2bd20d25e8ca4ae8f328/",
-    "pdf_url_versioned": "https://AlexsLemonade.github.io/ScPCA-manuscript/v/f81d8947b19b287963de2bd20d25e8ca4ae8f328/manuscript.pdf",
+    "html_url_versioned": "https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/",
+    "pdf_url_versioned": "https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/manuscript.pdf",
     "manubot_version": "0.5.6",
     "rootstock_commit": "e786e68ac7f13a24a0824b5bcb9301dda86b7e8c",
     "manuscript_stats": {
