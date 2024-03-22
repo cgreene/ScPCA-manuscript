@@ -1,30 +1,163 @@
 ---
-title: "Manuscript Title"
+title: "The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors"
 date: null  # Defaults to date generated, but can specify like '2022-10-31'.
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - single-cell RNA-seq
+  - single-nuclei RNA-seq
+  - pediatric cancer
+  - resource
+  - Nextflow
+  - open science
+  - reproducibility
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    mastodon: johndoe
-    mastodon-server: mastodon.social
-    email: john.doe@something.com
+  - github: allyhawkins
+    name: Allegra G. Hawkins
+    initials: AGH
+    orcid: 0000-0001-6026-3660
+    X: allyhawkins92
+    email: ally.hawkins@ccdatalab.org
+    contributions:
+      - TODO
     affiliations:
-      - Department of Something, University of Whatever
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
     funders:
-      - Grant XXXXXXXX
-  - github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: jashapiro
+    name: Joshua A. Shapiro
+    initials: JAS
+    orcid: 0000-0002-6224-0347
+    email: josh.shapiro@ccdatalab.org
+    contributions:
+      - TODO
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: sjspielman
+    name: Stephanie J. Spielman
+    initials: SJS
+    orcid: 0000-0002-9090-4788
+    email: stephanie.spielman@ccdatalab.org
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: davidsmejia
+    name: David S. Mejia
+    initials: DSM
+    orcid: TODO
+    X: TODO
+    email: david@ccdatalab.org
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: dvenprasad
+    name: Deepashree Venkatesh Prasad
+    initials: DVP
+    orcid: 0000-0001-5756-4083
+    email: deepa.prasad@ccdatalab.org
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: nozomione
+    name: Nozomi Ichihara
+    initials: NI
+    email: nozomi@ccdatalab.org
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: arkid15r
+    name: Arkadii Yakovets
+    initials: AY
+    orcid: TODO
+    email: ark@cho.red
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: kurtwheeler
+    name: Kurt G. Wheeler
+    initials: KGW
+    orcid: TODO
+    email: kurt.wheeler91@gmail.com
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: cbethell
+    name: Chante J. Bethell
+    initials: CJB
+    orcid: 0000-0001-9653-8128
+    X: cjbethell
+    email: chantebethell@gmail.com
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+      - The University of Texas MD Anderson Cancer Center, UTHealth Houston Graduate School of Biomedical Sciences, Houston, TX, 77030, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: envest
+    name: Steven M. Foltz
+    initials: SMF
+    email: foltzs@chop.edu
+    orcid: 0000-0002-9526-8194
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+      - Department of Pediatrics, Division of Oncology, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: Jen-OMalley
+    name: Jennifer O'Malley
+    initials: JO
+    email: jen.omalley@ccdatalab.org
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: cgreene
+    name: Casey S. Greene
+    initials: CSG
+    orcid: 0000-0001-8713-9213
+    X: greenescientist
+    email: casey.s.greene@cuanschutz.edu
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA
+      - Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, 80045, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+  - github: jaclyn-taroni
+    name: Jaclyn N. Taroni
+    initials: JNT
+    orcid: 0000-0003-4734-4508
+    email: jaclyn.taroni@ccdatalab.org
+    contributions:
+      - TODO
+    affiliations:
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+    funders:
+      - Alex's Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
     corresponding: true
