@@ -20,6 +20,7 @@ authors:
     contributions:
       - Methodology
       - Software
+      - Investigation
       - Validation
       - Formal analysis
       - Data curation
@@ -38,8 +39,10 @@ authors:
     contributions:
       - Methodology
       - Software
+      - Investigation
       - Validation
       - Formal analysis
+      - Resources
       - Data curation
       - Writing - Original Draft
       - Writing - Review & Editing
@@ -56,6 +59,7 @@ authors:
     contributions:
       - Methodology
       - Software
+      - Investigation
       - Validation
       - Formal analysis
       - Data curation
@@ -78,7 +82,7 @@ authors:
       - Validation
       - Data curation
       - Writing - Review & Editing
-      - Visualization
+      - Resources
     affiliations:
       - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
     funders:
@@ -105,7 +109,6 @@ authors:
     contributions:
       - Methodology
       - Software
-      - Visualization
       - Writing - Review & Editing
     affiliations:
       - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
@@ -121,6 +124,7 @@ authors:
       - Software
       - Validation
       - Data curation
+      - Resources
       - Writing - Review & Editing
     affiliations:
       - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
@@ -136,6 +140,7 @@ authors:
       - Software
       - Validation
       - Data curation
+      - Resources
       - Writing - Review & Editing
     affiliations:
       - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
@@ -189,6 +194,7 @@ authors:
     contributions:
       - Conceptualization
       - Project administration
+      - Supervision
       - Writing - Review & Editing
     affiliations:
       - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
@@ -204,7 +210,7 @@ authors:
     contributions:
       - Conceptualization
       - Methodology
-      - Software
+      - Investigation
       - Validation
       - Data curation
       - Writing - Original Draft
