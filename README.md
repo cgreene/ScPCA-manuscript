@@ -1,4 +1,4 @@
-# Automated scholarly manuscripts on GitHub
+# The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
@@ -8,10 +8,8 @@
 
 ## Manuscript description
 
-<!-- usage note: edit this section. -->
-
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+The Single-cell Pediatric Cancer Atlas (ScPCA) Portal (<https://scpca.alexslemonade.org/>) is a data resource for uniformly processed single-cell and single-nuclei RNA sequencing (RNA-seq) data and de-identified metadata from pediatric tumor samples.
+This manuscript describes the ScPCA, ScPCA Portal, and the [`scpca-nf`](https://github.com/alexsLemonade/scpca-nf) open-source pipeline.
 
 ## Manubot
 
