@@ -4,11 +4,22 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="John Doe" />
-  <meta name="author" content="Jane Roe" />
+  <meta name="author" content="Allegra G. Hawkins" />
+  <meta name="author" content="Joshua A. Shapiro" />
+  <meta name="author" content="Stephanie J. Spielman" />
+  <meta name="author" content="David S. Mejia" />
+  <meta name="author" content="Deepashree Venkatesh Prasad" />
+  <meta name="author" content="Nozomi Ichihara" />
+  <meta name="author" content="Arkadii Yakovets" />
+  <meta name="author" content="Kurt G. Wheeler" />
+  <meta name="author" content="Chante J. Bethell" />
+  <meta name="author" content="Steven M. Foltz" />
+  <meta name="author" content="Jennifer O’Malley" />
+  <meta name="author" content="Casey S. Greene" />
+  <meta name="author" content="Jaclyn N. Taroni" />
   <meta name="dcterms.date" content="2024-03-22" />
-  <meta name="keywords" content="markdown, publishing, manubot" />
-  <title>Manuscript Title</title>
+  <meta name="keywords" content="single-cell RNA-seq, single-nuclei RNA-seq, pediatric cancer, resource, Nextflow, open science, reproducibility" />
+  <title>The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -47,38 +58,71 @@
   -->
   <meta name="dc.format" content="text/html" />
   <meta property="og:type" content="article" />
-  <meta name="dc.title" content="Manuscript Title" />
-  <meta name="citation_title" content="Manuscript Title" />
-  <meta property="og:title" content="Manuscript Title" />
-  <meta property="twitter:title" content="Manuscript Title" />
+  <meta name="dc.title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
+  <meta name="citation_title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
+  <meta property="og:title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
+  <meta property="twitter:title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
   <meta name="dc.date" content="2024-03-22" />
   <meta name="citation_publication_date" content="2024-03-22" />
   <meta property="article:published_time" content="2024-03-22" />
-  <meta name="dc.modified" content="2024-03-22T14:17:17+00:00" />
-  <meta property="article:modified_time" content="2024-03-22T14:17:17+00:00" />
+  <meta name="dc.modified" content="2024-03-22T15:06:33+00:00" />
+  <meta property="article:modified_time" content="2024-03-22T15:06:33+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
   <meta name="dc.publisher" content="Manubot" />
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
-  <meta name="citation_author" content="John Doe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
-  <meta name="twitter:creator" content="@johndoe" />
-  <meta name="citation_author" content="Jane Roe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Allegra G. Hawkins" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-6026-3660" />
+  <meta name="citation_author" content="Joshua A. Shapiro" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-6224-0347" />
+  <meta name="citation_author" content="Stephanie J. Spielman" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-9090-4788" />
+  <meta name="citation_author" content="David S. Mejia" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="TODO" />
+  <meta name="citation_author" content="Deepashree Venkatesh Prasad" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-5756-4083" />
+  <meta name="citation_author" content="Nozomi Ichihara" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author" content="Arkadii Yakovets" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="TODO" />
+  <meta name="citation_author" content="Kurt G. Wheeler" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="TODO" />
+  <meta name="citation_author" content="Chante J. Bethell" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_institution" content="The University of Texas MD Anderson Cancer Center, UTHealth Houston Graduate School of Biomedical Sciences, Houston, TX, 77030, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-9653-8128" />
+  <meta name="citation_author" content="Steven M. Foltz" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_institution" content="Department of Pediatrics, Division of Oncology, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-9526-8194" />
+  <meta name="citation_author" content="Jennifer O&#39;Malley" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author" content="Casey S. Greene" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, 80045, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
+  <meta name="citation_author" content="Jaclyn N. Taroni" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA" />
+  <meta name="citation_author_orcid" content="0000-0003-4734-4508" />
   <link rel="canonical" href="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta property="og:url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta property="twitter:url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8ffc2ee04113cc2063a77003d233d19bbe3b3d94/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8ffc2ee04113cc2063a77003d233d19bbe3b3d94/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8ffc2ee04113cc2063a77003d233d19bbe3b3d94/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9a5148c8a58d29c8593c850a58b1a91fdde87bef/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9a5148c8a58d29c8593c850a58b1a91fdde87bef/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9a5148c8a58d29c8593c850a58b1a91fdde87bef/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,47 +135,161 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Manuscript Title</h1>
+<h1 class="title">The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors</h1>
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8ffc2ee04113cc2063a77003d233d19bbe3b3d94/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/9a5148c8a58d29c8593c850a58b1a91fdde87bef/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/8ffc2ee04113cc2063a77003d233d19bbe3b3d94">AlexsLemonade/ScPCA-manuscript@8ffc2ee</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/9a5148c8a58d29c8593c850a58b1a91fdde87bef">AlexsLemonade/ScPCA-manuscript@9a5148c</a>
 on March 22, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
-<li><p><strong>John Doe</strong>
+<li><p><strong>Allegra G. Hawkins</strong>
 <br>
 <img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
-<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
+<a href="https://orcid.org/0000-0001-6026-3660">0000-0001-6026-3660</a>
 · <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/johndoe">johndoe</a>
-· <img src="images/twitter.svg" class="inline_icon" width="16" height="16" alt="Twitter icon" />
-<a href="https://twitter.com/johndoe">johndoe</a>
-· <img src="images/mastodon.svg" class="inline_icon" width="16" height="16" alt="Mastodon icon" />
-<a href="https://mastodon.social/@johndoe">@johndoe@mastodon.social</a>
+<a href="https://github.com/allyhawkins">allyhawkins</a>
 <br>
 <small>
-Department of Something, University of Whatever
-· Funded by Grant XXXXXXXX
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
 </small></p></li>
-<li><p><strong>Jane Roe</strong>
+<li><p><strong>Joshua A. Shapiro</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-6224-0347">0000-0002-6224-0347</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/jashapiro">jashapiro</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Stephanie J. Spielman</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-9090-4788">0000-0002-9090-4788</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/sjspielman">sjspielman</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>David S. Mejia</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/TODO">TODO</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/davidsmejia">davidsmejia</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Deepashree Venkatesh Prasad</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0001-5756-4083">0000-0001-5756-4083</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/dvenprasad">dvenprasad</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Nozomi Ichihara</strong>
+<br>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/nozomione">nozomione</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Arkadii Yakovets</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/TODO">TODO</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/arkid15r">arkid15r</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Kurt G. Wheeler</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/TODO">TODO</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/kurtwheeler">kurtwheeler</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Chante J. Bethell</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0001-9653-8128">0000-0001-9653-8128</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/cbethell">cbethell</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA; The University of Texas MD Anderson Cancer Center, UTHealth Houston Graduate School of Biomedical Sciences, Houston, TX, 77030, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Steven M. Foltz</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-9526-8194">0000-0002-9526-8194</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/envest">envest</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA; Department of Pediatrics, Division of Oncology, Children’s Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Jennifer O’Malley</strong>
+<br>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/Jen-OMalley">Jen-OMalley</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Casey S. Greene</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0001-8713-9213">0000-0001-8713-9213</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/cgreene">cgreene</a>
+<br>
+<small>
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA; Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA; Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO, 80045, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
+</small></p></li>
+<li><p><strong>Jaclyn N. Taroni</strong>
 <sup><a href="#correspondence">✉</a></sup><br>
 <img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
-<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
+<a href="https://orcid.org/0000-0003-4734-4508">0000-0003-4734-4508</a>
 · <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/janeroe">janeroe</a>
+<a href="https://github.com/jaclyn-taroni">jaclyn-taroni</a>
 <br>
 <small>
-Department of Something, University of Whatever; Department of Whatever, University of Something
+Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Bala Cynwyd, PA, 19004, USA
+· Funded by Alex’s Lemonade Stand Foundation Childhood Cancer Data Lab (CCDL)
 </small></p></li>
 </ul>
 <div id="correspondence">
 <p>✉ — Correspondence possible via <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/issues">GitHub Issues</a>
 or email to
-Jane Roe &lt;jane.roe@whatever.edu&gt;.</p>
+Jaclyn N. Taroni &lt;jaclyn.taroni@ccdatalab.org&gt;.</p>
 </div>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
 <p>The Single-cell Pediatric Cancer Atlas (ScPCA) Portal (<a href="https://scpca.alexslemonade.org/" class="uri">https://scpca.alexslemonade.org/</a>) is a data resource for uniformly processed single-cell and single-nuclei RNA sequencing (RNA-seq) data and de-identified metadata from pediatric tumor samples.
