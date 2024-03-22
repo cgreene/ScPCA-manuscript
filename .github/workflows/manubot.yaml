@@ -42,6 +42,7 @@ jobs:
       contents: write
       pull-requests: write
     env:
+      BUILD_DOCX: true
       GITHUB_PULL_REQUEST_SHA: ${{ github.event.pull_request.head.sha }}
       # Set SPELLCHECK to true/false for whether to check spelling in this action.
       # For workflow dispatch jobs, this SPELLCHECK setting will be overridden by the user input.
