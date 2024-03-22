@@ -38,8 +38,8 @@ header-includes: |
   <meta name="dc.date" content="2024-03-22" />
   <meta name="citation_publication_date" content="2024-03-22" />
   <meta property="article:published_time" content="2024-03-22" />
-  <meta name="dc.modified" content="2024-03-22T18:27:02+00:00" />
-  <meta property="article:modified_time" content="2024-03-22T18:27:02+00:00" />
+  <meta name="dc.modified" content="2024-03-22T19:06:48+00:00" />
+  <meta property="article:modified_time" content="2024-03-22T19:06:48+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -93,9 +93,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d9c16e251b5825b9632a8feb9fb443b45ca4c14a/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d9c16e251b5825b9632a8feb9fb443b45ca4c14a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/d9c16e251b5825b9632a8feb9fb443b45ca4c14a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -117,9 +117,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/d9c16e251b5825b9632a8feb9fb443b45ca4c14a/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@177295f](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/177295fa86cdd4bcf5b58ce9fe8746387ed7ac10)
+from [AlexsLemonade/ScPCA-manuscript@d9c16e2](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/d9c16e251b5825b9632a8feb9fb443b45ca4c14a)
 on March 22, 2024.
 </em></small>
 
@@ -358,7 +358,7 @@ In addition to providing a human-readable value for the submitted metadata, we a
 Submitted metadata was mapped to associated ontology term identifiers obtained from HsapDV (age) [@url:https://www.ebi.ac.uk/ols4/ontologies/hsapdv], PATO (sex) [@doi:10.1093/bib/bbx035; @url:https://www.ebi.ac.uk/ols4/ontologies/pato], NCBI taxonomy (organism) [@doi:10.1093/database/baaa062; @url:https://www.ncbi.nlm.nih.gov/taxonomy], MONDO (disease) [@doi:10.1101/2022.04.13.22273750; @url:https://www.ebi.ac.uk/ols4/ontologies/mondo], UBERON (tissue) [@doi:10.1186/2041-1480-5-21; @doi:10.1186/gb-2012-13-1-r5; @url:https://www.ebi.ac.uk/ols4/ontologies/uberon], and Hancestro (ethnicity, if applicable) [@doi:10.1186/s13059-018-1396-2; @url:https://www.ebi.ac.uk/ols4/ontologies/hancestro].
 By providing these ontology term identifiers for each sample, users have access to standardized metadata terms that facilitate comparisons among datasets within the Portal as well as to data from other research projects.
 
-The Portal contains data from 500 samples and over 50 tumor types.
+The Portal contains data from 500 samples and over 50 tumor types [@doi:10.1016/j.devcel.2022.04.003; @doi:10.21203/rs.3.rs-2517703/v1; @doi:10.21203/rs.3.rs-2517758/v1; @doi:10.1038/nature23647; @doi:10.1038/s41467-021-24781-7; @doi:10.1093/neuonc/noad207; @doi:10.1101/2023.12.26.573390].
 <!-- TODO: Update numbers -->
 Figure {@fig:fig1}A summarizes all samples from patient tumors and patient-derived xenografts currently available on the Portal.
 The total number of samples for each diagnosis is shown, along with the proportion of samples from each disease stage within a diagnosis group.
@@ -824,7 +824,7 @@ Colors shown for each additional modality indicate the suspension type used, eit
 For example, 75 single-cell samples and 43 single-nuclei samples have accompanying Bulk RNA-seq data.
 
 C. Example of a project card as displayed on the "Browse" page of the ScPCA Portal.
-This project card is associated with project `SCPCP000009`.
+This project card is associated with project `SCPCP000009` [@doi:10.21203/rs.3.rs-2517703/v1; @doi:10.21203/rs.3.rs-2517758/v1].
 Project cards include information about the number of samples, technologies and modalities, additional sample metadata information, submitter-provided diagnoses, and a submitter-provided abstract.
 Where available, submitter-provided citation information, as well as other databases where this data has been deposited, are also provided.
 <br><br>
@@ -840,7 +840,7 @@ The filtered object undergoes additional post-processing, including removing low
 The object undergoes cell type annotation and is exported as the `Processed SCE Object`.
 A summary QC report and a supplemental cell type report are prepared and exported.
 Finally, all `SCE` files are converted to `AnnData` format and exported.
-Panels B-G show example figures that appear in the summary QC report, shown here for `SCPCL000001`, as follows.
+Panels B-G show example figures that appear in the summary QC report, shown here for `SCPCL000001`, as follows [@doi:10.1093/neuonc/noad207].
 
 B. The total UMI count for each cell in the `Unfiltered SCE Object`, ordered by rank.
 Points are colored by the percentage of cells that pass the empty droplets filter.
@@ -898,7 +898,7 @@ Although not shown in this panel, cell type annotations are also included in the
 B. Example heatmap as shown in the cell type summary report comparing annotations with `SingleR` and `CellAssign`.
 Heatmap cells are colored by the Jaccard similarity index.
 A value of 1 means that there is complete overlap between which cells are annotated with the two labels being compared, and a value of 0 means that there is no overlap between which cells are annotated with the two labels being compared.
-The heatmap shown is from library `SCPCL000498`.
+The heatmap shown is from library `SCPCL000498` [@doi:10.1016/j.devcel.2022.04.003].
 
 ## Supplementary Figures and Tables {.page_break_before}
 
@@ -1009,7 +1009,7 @@ Red diamonds represent the median delta median score for all cells with high-qua
 <!--Figure S5-->
 ![**Cell type annotation with `CellAssign`.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s5.png?sanitize=true){#fig:figS5 tag="S5" width="7in"}
 
-Both plots in this figure are examples of plots that display results from annotating cells with `CellAssign` that can be found in the cell type summary report, shown here for library `SCPCL000490`.
+Both plots in this figure are examples of plots that display results from annotating cells with `CellAssign` that can be found in the cell type summary report, shown here for library `SCPCL000490`[@doi:10.1016/j.devcel.2022.04.003].
 
 A. A grid of UMAPs is shown for each cell type annotated using `CellAssign`, with the cell type of interest shown in color and all other cells belonging to other cell types shown in gray.
 The top four cell types with the greatest number of assigned cells are shown, while all other cells are grouped together and labeled with `All remaining cell types`.
@@ -1022,7 +1022,7 @@ A value of 1 means that there is complete overlap between which cells are annota
 <!-- Figure S6 -->
 ![**Assessment of cell type annotation quality.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s6.png?sanitize=true){#fig:figS6 tag="S6" width="7in"}
 
-Both plots in this figure are examples of diagnostic plots in the cell type summary report, shown for library `SCPCL000001`.
+Both plots in this figure are examples of diagnostic plots in the cell type summary report, shown for library `SCPCL000001` [@doi:10.1093/neuonc/noad207].
 
 A. Diagnostic plot showing `SingleR` cell type annotation quality.
 Cell type annotations are shown on the y-axis, the delta median statistic is shown on the x-axis.
@@ -1040,7 +1040,7 @@ Taller line segments are shown for any distribution with five or fewer cells.
 <!-- Figure S7 -->
 ![**Comparison of cell type annotations across methods.**](https://raw.githubusercontent.com/AlexsLemonade/scpca-paper-figures/main/figures/compiled_figures/pngs/figure_s7.png?sanitize=true){#fig:figS7 tag="S7" width="7in"}
 
-This example heatmap from the cell type summary report compares submitter-provided annotations to annotations with `SingleR` and `CellAssign`, shown for library `SCPCL000498`.
+This example heatmap from the cell type summary report compares submitter-provided annotations to annotations with `SingleR` and `CellAssign`, shown for library `SCPCL000498` [@doi:10.1016/j.devcel.2022.04.003].
 This heatmap is only shown in the cell type summary report if submitters provided cell type annotations.
 Heatmap cells are colored by the Jaccard similarity index.
 A value of 1 means that there is complete overlap between which cells are annotated with the two labels being compared, and a value of 0 means that there is no overlap between which cells are annotated with the two labels being compared.
