@@ -38,8 +38,8 @@ header-includes: |
   <meta name="dc.date" content="2024-03-25" />
   <meta name="citation_publication_date" content="2024-03-25" />
   <meta property="article:published_time" content="2024-03-25" />
-  <meta name="dc.modified" content="2024-03-25T14:07:08+00:00" />
-  <meta property="article:modified_time" content="2024-03-25T14:07:08+00:00" />
+  <meta name="dc.modified" content="2024-03-25T15:56:18+00:00" />
+  <meta property="article:modified_time" content="2024-03-25T15:56:18+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -93,9 +93,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/ebbeac5b02f000f5f0c505e4588f2fbd458d4d02/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/ebbeac5b02f000f5f0c505e4588f2fbd458d4d02/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/ebbeac5b02f000f5f0c505e4588f2fbd458d4d02/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -117,9 +117,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/ebbeac5b02f000f5f0c505e4588f2fbd458d4d02/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@ebbeac5](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/ebbeac5b02f000f5f0c505e4588f2fbd458d4d02)
+from [AlexsLemonade/ScPCA-manuscript@397aa4e](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/397aa4e910534d767c484d41cf912135d82b9c80)
 on March 25, 2024.
 </em></small>
 
@@ -759,7 +759,6 @@ All merged `SingleCellExperiment` objects were converted to `AnnData` objects an
 If a merged `SingleCellExperiment` object contained any ADT data, the RNA and ADT data were exported and saved separately as RNA (`_rna.hdf5`) and ADT (`_adt.hdf5`) objects.
 In contrast, if a merged `SingleCellExperiment` object contained HTO data due to the presence of any multiplexed libraries in the merged object, the HTO data was removed from the `SingleCellExperiment` object and not included in the exported `AnnData` object.
 
-
 ## Code and data availability
 
 All summarized gene expression data and de-identified metadata are available for download on the ScPCA Portal, <https://scpca.alexslemonade.org/>.
@@ -807,6 +806,35 @@ In one command, `scpca-nf` can process raw data from various sequencing types, t
 Using Nextflow as the framework for `scpca-nf` means the workflow is both modular and portable.
 This makes it easy to add support for more modalities in the future, such as single-cell ATAC-seq, and allows others to run the workflow on their samples in their computing environment, maintaining the security of protected raw data.
 Processed output from running `scpca-nf` on samples from pediatric tumors, cell lines, or other model organisms is eligible for submission to the ScPCA Portal, enabling us to continue increasing the number of available samples freely available to all researchers.
+
+
+## Acknowledgments
+
+We thank the data generators and submitters of the Single-cell Pediatric Cancer Atlas.
+
+This work was funded through the Alex's Lemonade Stand Foundation Childhood Cancer Data Lab and Childhood Cancer Data Lab Postdoctoral Fellowship (SMF).
+
+## Author Contributions
+
+|Author|Contributions|
+|---|---|
+|Allegra G. Hawkins|Methodology, Software, Investigation, Validation, Formal analysis, Data curation, Writing - Original Draft, Writing - Review & Editing, Visualization|
+|Joshua A. Shapiro|Methodology, Software, Investigation, Validation, Formal analysis, Resources, Data curation, Writing - Original Draft, Writing - Review & Editing, Visualization|
+|Stephanie J. Spielman|Methodology, Software, Investigation, Validation, Formal analysis, Data curation, Writing - Original Draft, Writing - Review & Editing, Visualization|
+|David S. Mejia|Methodology, Software, Validation, Data curation, Writing - Review & Editing, Resources|
+|Deepashree Venkatesh Prasad|Methodology, Software, Validation, Visualization, Writing - Review & Editing|
+|Nozomi Ichihara|Methodology, Software, Writing - Review & Editing|
+|Arkadii Yakovets|Methodology, Software, Validation, Data curation, Resources, Writing - Review & Editing|
+|Kurt G. Wheeler|Methodology, Software, Validation, Data curation, Resources, Writing - Review & Editing|
+|Chante J. Bethell|Software, Validation, Writing - Review & Editing|
+|Steven M. Foltz|Writing - Review & Editing|
+|Jennifer O'Malley|Data curation, Supervision, Writing - Review & Editing|
+|Casey S. Greene|Conceptualization, Project administration, Supervision, Writing - Review & Editing|
+|Jaclyn N. Taroni|Conceptualization, Methodology, Investigation, Validation, Data curation, Writing - Original Draft, Writing - Review & Editing, Visualization, Supervision, Project administration|
+
+## Declarations of Interest
+
+AGH, JAS, SJS, DSM, DVP, NI, AY, KGW, CJB, JO, and JNT are or were employees of Alex's Lemonade Stand Foundation, a sponsor of this research.
 
 
 ## Figure Titles and Legends {.page_break_before}
