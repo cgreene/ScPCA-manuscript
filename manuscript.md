@@ -9,7 +9,7 @@ keywords:
 - open science
 - reproducibility
 lang: en-US
-date-meta: '2024-03-22'
+date-meta: '2024-03-25'
 author-meta:
 - Allegra G. Hawkins
 - Joshua A. Shapiro
@@ -35,11 +35,11 @@ header-includes: |
   <meta name="citation_title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
   <meta property="og:title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
   <meta property="twitter:title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
-  <meta name="dc.date" content="2024-03-22" />
-  <meta name="citation_publication_date" content="2024-03-22" />
-  <meta property="article:published_time" content="2024-03-22" />
-  <meta name="dc.modified" content="2024-03-22T19:29:18+00:00" />
-  <meta property="article:modified_time" content="2024-03-22T19:29:18+00:00" />
+  <meta name="dc.date" content="2024-03-25" />
+  <meta name="citation_publication_date" content="2024-03-25" />
+  <meta property="article:published_time" content="2024-03-25" />
+  <meta name="dc.modified" content="2024-03-25T13:55:37+00:00" />
+  <meta property="article:modified_time" content="2024-03-25T13:55:37+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -120,7 +120,7 @@ This manuscript
 ([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/ebbeac5b02f000f5f0c505e4588f2fbd458d4d02/))
 was automatically generated
 from [AlexsLemonade/ScPCA-manuscript@ebbeac5](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/ebbeac5b02f000f5f0c505e4588f2fbd458d4d02)
-on March 22, 2024.
+on March 25, 2024.
 </em></small>
 
 
