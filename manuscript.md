@@ -38,8 +38,8 @@ header-includes: |
   <meta name="dc.date" content="2024-03-25" />
   <meta name="citation_publication_date" content="2024-03-25" />
   <meta property="article:published_time" content="2024-03-25" />
-  <meta name="dc.modified" content="2024-03-25T15:56:18+00:00" />
-  <meta property="article:modified_time" content="2024-03-25T15:56:18+00:00" />
+  <meta name="dc.modified" content="2024-03-25T17:56:14+00:00" />
+  <meta property="article:modified_time" content="2024-03-25T17:56:14+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -93,9 +93,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -117,9 +117,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@397aa4e](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/397aa4e910534d767c484d41cf912135d82b9c80)
+from [AlexsLemonade/ScPCA-manuscript@8558b4f](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/8558b4ff6642aea1bc281adf72273b014a0aae57)
 on March 25, 2024.
 </em></small>
 
@@ -406,7 +406,7 @@ This unfiltered counts matrix is stored in a `SingleCellExperiment` object [@doi
 The unfiltered gene by cell counts matrices are filtered to remove any barcodes that are not likely to contain cells using `DropletUtils::emptyDropsCellRanger()`[@doi:10.1186/s13059-019-1662-y], and all cells that pass are saved in a `SingleCellExperiment` object and a file with the suffix `_filtered.rds`.
 Low-quality cells are identified and removed with `miQC` [@doi:10.1371/journal.pcbi.1009290], which jointly models the proportion of mitochondrial reads and detected genes per cell and calculates a probability that each cell is compromised.
 The remaining cells' counts are normalized [@doi:10.1186/s13059-016-0947-7], and reduced-dimension representations are calculated using both principal component analysis (PCA) and uniform manifold approximation and projection (UMAP) [@arxiv:1802.03426].
-Finally, cell types are classified using two automated methods, `SingleR`[@doi:10.1038/s41590-018-0276-y] and `CellAssign`[@doi:10.1038/s41592-019-0529-1].
+Finally, cell types are classified using two automated methods, `SingleR` [@doi:10.1038/s41590-018-0276-y] and `CellAssign` [@doi:10.1038/s41592-019-0529-1].
 The results from this analysis are stored in a processed `SingleCellExperiment` object saved to a file with the suffix `_processed.rds`.
 
 To make downloading from the Portal convenient for R and Python users, downloads are available as either `SingleCellExperiment` or `AnnData`[@doi:10.1101/2021.12.16.473007] objects.

@@ -65,8 +65,8 @@
   <meta name="dc.date" content="2024-03-25" />
   <meta name="citation_publication_date" content="2024-03-25" />
   <meta property="article:published_time" content="2024-03-25" />
-  <meta name="dc.modified" content="2024-03-25T15:56:18+00:00" />
-  <meta property="article:modified_time" content="2024-03-25T15:56:18+00:00" />
+  <meta name="dc.modified" content="2024-03-25T17:56:14+00:00" />
+  <meta property="article:modified_time" content="2024-03-25T17:56:14+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -120,9 +120,9 @@
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/397aa4e910534d767c484d41cf912135d82b9c80/">permalink</a>)
+(<a href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/397aa4e910534d767c484d41cf912135d82b9c80">AlexsLemonade/ScPCA-manuscript@397aa4e</a>
+from <a href="https://github.com/AlexsLemonade/ScPCA-manuscript/tree/8558b4ff6642aea1bc281adf72273b014a0aae57">AlexsLemonade/ScPCA-manuscript@8558b4f</a>
 on March 25, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -382,7 +382,7 @@ This unfiltered counts matrix is stored in a <code>SingleCellExperiment</code> o
 The unfiltered gene by cell counts matrices are filtered to remove any barcodes that are not likely to contain cells using <code>DropletUtils::emptyDropsCellRanger()</code><span class="citation" data-cites="U2Fa25dp">[<a href="#ref-U2Fa25dp" role="doc-biblioref">37</a>]</span>, and all cells that pass are saved in a <code>SingleCellExperiment</code> object and a file with the suffix <code>_filtered.rds</code>.
 Low-quality cells are identified and removed with <code>miQC</code> <span class="citation" data-cites="17Yhk1HAt">[<a href="#ref-17Yhk1HAt" role="doc-biblioref">38</a>]</span>, which jointly models the proportion of mitochondrial reads and detected genes per cell and calculates a probability that each cell is compromised.
 The remaining cells’ counts are normalized <span class="citation" data-cites="vpU0FTFY">[<a href="#ref-vpU0FTFY" role="doc-biblioref">39</a>]</span>, and reduced-dimension representations are calculated using both principal component analysis (PCA) and uniform manifold approximation and projection (UMAP) <span class="citation" data-cites="157h5hA34">[<a href="#ref-157h5hA34" role="doc-biblioref">40</a>]</span>.
-Finally, cell types are classified using two automated methods, <code>SingleR</code><span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">41</a>]</span> and <code>CellAssign</code><span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">42</a>]</span>.
+Finally, cell types are classified using two automated methods, <code>SingleR</code> <span class="citation" data-cites="13P6oSrS0">[<a href="#ref-13P6oSrS0" role="doc-biblioref">41</a>]</span> and <code>CellAssign</code> <span class="citation" data-cites="HES0WO6k">[<a href="#ref-HES0WO6k" role="doc-biblioref">42</a>]</span>.
 The results from this analysis are stored in a processed <code>SingleCellExperiment</code> object saved to a file with the suffix <code>_processed.rds</code>.</p>
 <p>To make downloading from the Portal convenient for R and Python users, downloads are available as either <code>SingleCellExperiment</code> or <code>AnnData</code><span class="citation" data-cites="KRBW8xeZ">[<a href="#ref-KRBW8xeZ" role="doc-biblioref">43</a>]</span> objects.
 <code>scpca-nf</code> converts all <code>SingleCellExperiment</code> objects to <code>AnnData</code> objects, which are saved as <code>.hdf5</code> files (Figure <a href="#fig:fig2">2</a>A).

@@ -35,7 +35,7 @@ SJS
 sjspielman
 SMF
 Spielman
-taroni
+Taroni
 TODO
 UTHealth
 Venkatesh
