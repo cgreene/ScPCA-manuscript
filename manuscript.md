@@ -9,7 +9,7 @@ keywords:
 - open science
 - reproducibility
 lang: en-US
-date-meta: '2024-03-25'
+date-meta: '2024-03-27'
 author-meta:
 - Allegra G. Hawkins
 - Joshua A. Shapiro
@@ -35,11 +35,11 @@ header-includes: |
   <meta name="citation_title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
   <meta property="og:title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
   <meta property="twitter:title" content="The Single-cell Pediatric Cancer Atlas: Data portal and open-source tools for single-cell transcriptomics of pediatric tumors" />
-  <meta name="dc.date" content="2024-03-25" />
-  <meta name="citation_publication_date" content="2024-03-25" />
-  <meta property="article:published_time" content="2024-03-25" />
-  <meta name="dc.modified" content="2024-03-25T17:56:14+00:00" />
-  <meta property="article:modified_time" content="2024-03-25T17:56:14+00:00" />
+  <meta name="dc.date" content="2024-03-27" />
+  <meta name="citation_publication_date" content="2024-03-27" />
+  <meta property="article:published_time" content="2024-03-27" />
+  <meta name="dc.modified" content="2024-03-27T13:09:00+00:00" />
+  <meta property="article:modified_time" content="2024-03-27T13:09:00+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -93,9 +93,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/" />
   <meta name="citation_pdf_url" content="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://AlexsLemonade.github.io/ScPCA-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/" />
-  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/" />
-  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e95df636601c92ea7acaeb0efb75261593b3da11/" />
+  <meta name="manubot_html_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e95df636601c92ea7acaeb0efb75261593b3da11/" />
+  <meta name="manubot_pdf_url_versioned" content="https://AlexsLemonade.github.io/ScPCA-manuscript/v/e95df636601c92ea7acaeb0efb75261593b3da11/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -117,10 +117,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/8558b4ff6642aea1bc281adf72273b014a0aae57/))
+([permalink](https://AlexsLemonade.github.io/ScPCA-manuscript/v/e95df636601c92ea7acaeb0efb75261593b3da11/))
 was automatically generated
-from [AlexsLemonade/ScPCA-manuscript@8558b4f](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/8558b4ff6642aea1bc281adf72273b014a0aae57)
-on March 25, 2024.
+from [AlexsLemonade/ScPCA-manuscript@e95df63](https://github.com/AlexsLemonade/ScPCA-manuscript/tree/e95df636601c92ea7acaeb0efb75261593b3da11)
+on March 27, 2024.
 </em></small>
 
 
