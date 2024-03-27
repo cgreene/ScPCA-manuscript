@@ -15,6 +15,7 @@ benchmarking
 cDNA
 celldex
 CELLxGENE
+curation
 customizations
 CZI
 CZI's
@@ -101,3 +102,14 @@ unspliced
 Visium
 wikidata
 xenografts
+AGH
+JAS
+SJS
+DSM
+DVP
+NI
+AY
+KGW
+CJB
+JO
+JNT
