@@ -109,6 +109,15 @@ jobs:
           CI_BUILD_WEB_URL: https://github.com/${{ github.repository }}/commit/${{ github.sha }}/checks
           CI_JOB_WEB_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: bash ci/deploy.sh
+      - name: Count spelling errors
+        run: |
+          # count the number of spelling errors using the spelling-error-locations.txt file
+          # this file does not include preamble or author list spelling errors
+          if [ -s output/spelling-error-locations.txt ]; then
+            echo "SPELLING_ERRORS=$(wc -l < output/spelling-error-locations.txt)" >> $GITHUB_ENV
+          else
+            echo "SPELLING_ERRORS=0" >> $GITHUB_ENV
+          fi
       - name: Post artifact comment to PR
         if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v4
@@ -119,12 +128,14 @@ jobs:
             This build is associated with commit ${{ env.TRIGGERING_SHA_7 }}.
 
             [Manuscript build](${{ steps.artifact-upload-step.outputs.artifact-url }})
-      - name: Fail if there are spelling errors
+
+            **There were ${{ env.SPELLING_ERRORS }} spelling errors.**
+            Check the build link above for details.
+
+      - name: Fail for spelling errors in manual builds
+        # if: github.event_name == 'workflow_dispatch' && env.SPELLCHECK == 'true'
         run: |
-          # only check the the spelling locations, which skips the preambles/authors
-          if [ -s output/spelling-error-locations.txt ]; then
-            echo "No spelling errors in text"
-          else
+          if [ $SPELLING_ERRORS ]; then
             echo "Spelling errors (some may be in the author list):"
             cat output/spelling_errors.txt
             exit 1
