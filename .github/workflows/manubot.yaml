@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - jashapiro/*
   pull_request:
     branches:
       - main
@@ -133,10 +132,10 @@ jobs:
             Check the build link above for details.
 
       - name: Fail for spelling errors in manual builds
-        # if: github.event_name == 'workflow_dispatch' && env.SPELLCHECK == 'true'
+        if: github.event_name == 'workflow_dispatch' && env.SPELLCHECK == 'true'
         run: |
           if [ $SPELLING_ERRORS ]; then
             echo "Spelling errors (some may be in the author list):"
-            cat output/spelling_errors.txt
+            cat output/spelling-errors.txt
             exit 1
           fi
