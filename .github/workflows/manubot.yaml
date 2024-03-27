@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - jashapiro/*
   pull_request:
     branches:
       - main
@@ -118,3 +119,13 @@ jobs:
             This build is associated with commit ${{ env.TRIGGERING_SHA_7 }}.
 
             [Manuscript build](${{ steps.artifact-upload-step.outputs.artifact-url }})
+      - name: Fail if there are spelling errors
+        run: |
+          # only check the the spelling locations, which skips the preambles/authors
+          if [ -s output/spelling-error-locations.txt ]; then
+            echo "No spelling errors in text"
+          else
+            echo "Spelling errors (some may be in the author list):"
+            cat output/spelling_errors.txt
+            exit 1
+          fi
